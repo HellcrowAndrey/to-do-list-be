@@ -1,6 +1,6 @@
 package com.client.api.delegat;
 
-import com.cache.manager.UsersCacheManager;
+import com.cache.manager.CacheManager;
 import com.dao.service.users.IServiceUsers;
 import com.dao.service.users.impl.ServiceUsersImpl;
 import com.helper.controller.model.user.UserModel;
@@ -21,7 +21,7 @@ public class RegistrationDelegate {
     }
 
     public boolean setUser(final UserModel user) {
-        UsersCacheManager cacheManager = UsersCacheManager.getInstance();
+        CacheManager cacheManager = CacheManager.getInstance();
         UserModel userInCache = cacheManager.fetchRegUser(user);
         if (userInCache == null) {
             logger.info("User doesn't exist in cache. Do check in data base.", RegistrationDelegate.class);

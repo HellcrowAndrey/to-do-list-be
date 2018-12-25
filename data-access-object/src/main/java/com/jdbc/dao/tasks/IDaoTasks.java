@@ -8,10 +8,10 @@ public interface IDaoTasks {
 
     int create(Task data);
 
-    List<Task> read(Task data);
+    List<Task> read(String data);
 
     int update(Task data);
 
-    int delete(int id);
+    int delete(Task data);
 
 }

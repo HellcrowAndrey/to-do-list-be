@@ -5,9 +5,9 @@ import com.helper.controller.model.user.UserModel;
 
 import java.util.*;
 
-public class UsersCacheManager {
+public class CacheManager {
 
-    private static UsersCacheManager instance;
+    private static CacheManager instance;
 
     private static final int MAX_CACHE_SIZE = 80;
 
@@ -15,12 +15,11 @@ public class UsersCacheManager {
 
     private List<UserModel> users = new ArrayList<>();
 
-    //todo add logic to this map
     private Map<String, List<Task>> tasks = new LinkedHashMap<>();
 
-    public static synchronized UsersCacheManager getInstance() {
+    public static synchronized CacheManager getInstance() {
         if (instance == null) {
-            instance = new UsersCacheManager();
+            instance = new CacheManager();
         }
         return instance;
     }
@@ -49,6 +48,13 @@ public class UsersCacheManager {
         return true;
     }
 
+    public List<Task> fetchTasks(UserModel user) {
+        if (user == null) {
+            return null;
+        }
+        return tasks.get(user.getUser());
+    }
+
     private boolean fetchUser(final UserModel user, final UserModel currentUser) {
         if (user.getUser().equals(currentUser.getUser()) &&
                 user.getPassword().equals(currentUser.getPassword())) {
@@ -65,11 +71,47 @@ public class UsersCacheManager {
             return false;
         }
         if (currentCacheSize >= MAX_CACHE_SIZE) {
+            UserModel firstUser = users.get(0);
+            tasks.remove(firstUser.getUser());
             users.remove(0);
             return users.add(user);
         }
         currentCacheSize++;
         return users.add(user);
+    }
+
+    public List<Task> addTasks(List<Task> data, String key) {
+        if (data == null || key == null || key.equals("")) {
+            return null;
+        }
+        tasks.put(key, data);
+        return tasks.get(key);
+    }
+
+    public boolean addTask(Task data) {
+        if (data != null) {
+            List<Task> list = tasks.get(data.getUser());
+            return list.add(data);
+        }
+        return false;
+    }
+
+    public boolean deleteTask(Task data) {
+        if (data != null) {
+            List<Task> list = tasks.get(data.getUser());
+            return list.remove(data);
+        }
+        return false;
+    }
+
+    public Task updateTask(Task data) {
+        if (data != null) {
+            List<Task> list = tasks.get(data.getUser());
+            long index = list.stream().filter(current ->
+                    data.getId() == current.getId()).count();
+            return list.set((int) index, data);
+        }
+        return null;
     }
 
 }

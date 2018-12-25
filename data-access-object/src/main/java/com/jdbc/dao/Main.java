@@ -17,8 +17,8 @@ public class Main {
         Task task = new Task("task test", "do test task", (byte) 1, "vasia");
         //int id = tasks.create(task);
         //System.out.println(id);
-        List<Task> taskList = tasks.read(task);
-        System.out.println(Arrays.toString(taskList.toArray()));
+        //List<Task> taskList = tasks.read(task);
+        //System.out.println(Arrays.toString(taskList.toArray()));
     }
 
 }
