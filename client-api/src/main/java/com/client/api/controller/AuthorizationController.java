@@ -30,16 +30,16 @@ public class AuthorizationController {
     @Async
     @RequestMapping(value = "/authorization", method = {GET, POST})
     public ResponseEntity<ResponseModel> isAuthorization(
-            @RequestParam(value = "user", defaultValue = "") String user,
+            @RequestParam(value = "login", defaultValue = "") String login,
             @RequestParam(value = "email", defaultValue = "") String email,
             @RequestParam(value = "password") String password) {
         ResponseModel responseModel;
-        if (!AuthorizationDelegate.isParams(user, email, password)) {
+        if (!AuthorizationDelegate.isParams(login, email, password)) {
             logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS, AuthorizationController.class);
             responseModel = new ResponseModel(gen.getCounter(), ControllerUtils.IS_NOT_VALID_PARAMS);
             return new ResponseEntity<>(responseModel, HttpStatus.NON_AUTHORITATIVE_INFORMATION);
         }
-        UserModel model = new UserModel(user, email, password);
+        UserModel model = new UserModel(login, email, password);
         AuthorizationDelegate delegate = new AuthorizationDelegate();
         List<Task> response = delegate.getData(model);
         if (response == null) {
