@@ -21,6 +21,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class RegistrationController {
 
     private Logger logger = LoggerFactory.getLogger(RegistrationController.class);
+
     private IdGenerator gen = IdGenerator.getInstance();
 
     @Async

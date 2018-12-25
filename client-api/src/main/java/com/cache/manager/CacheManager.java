@@ -32,6 +32,17 @@ public class CacheManager {
                 fetchUser(user, currentUser)).findFirst().orElse(null);
     }
 
+    private boolean fetchUser(final UserModel user, final UserModel currentUser) {
+        if (user.getLogin().equals(currentUser.getLogin()) &&
+                user.getPassword().equals(currentUser.getPassword())) {
+            return true;
+        } else if (user.getEmail().equals(currentUser.getEmail()) &&
+                user.getPassword().equals(currentUser.getPassword())) {
+            return true;
+        }
+        return false;
+    }
+
     public UserModel fetchRegUser(final UserModel user) {
         if (user == null) {
             return null;
@@ -48,22 +59,16 @@ public class CacheManager {
         return true;
     }
 
+    public UserModel fetchToken(String login) {
+        return users.stream().filter(current ->
+                current.getLogin().equals(login)).findFirst().orElse(null);
+    }
+
     public List<Task> fetchTasks(UserModel user) {
         if (user == null) {
             return null;
         }
         return tasks.get(user.getLogin());
-    }
-
-    private boolean fetchUser(final UserModel user, final UserModel currentUser) {
-        if (user.getLogin().equals(currentUser.getLogin()) &&
-                user.getPassword().equals(currentUser.getPassword())) {
-            return true;
-        } else if (user.getEmail().equals(currentUser.getEmail()) &&
-                user.getPassword().equals(currentUser.getPassword())) {
-            return true;
-        }
-        return false;
     }
 
     public boolean addUser(final UserModel user) {

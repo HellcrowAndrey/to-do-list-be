@@ -50,20 +50,24 @@ public class TasksDelegate {
                     new ResponseModel(gen.getCounter(), "Incorrect data"),
                     HttpStatus.OK);
         }
-        IServiceTasks serviceTasks = new ServiceTasksImpl();
-        int id = serviceTasks.create(data);
-        if (id > 0) {
-            CacheManager cacheManager = CacheManager.getInstance();
-            cacheManager.addTask(data);
-            logger.info("Create task " + id, TasksDelegate.class);
-            return new ResponseEntity(
-                    new ResponseModel(gen.getCounter(), id), HttpStatus.OK);
-        } else {
-            logger.warn("Doesn't create task.", TasksDelegate.class);
-            return new ResponseEntity(
-                    new ResponseModel(gen.getCounter(), "Task doesn't create"),
-                    HttpStatus.OK);
+        CacheManager cacheManager = CacheManager.getInstance();
+        if (!repeatAuth(data.getLogin(), cacheManager)) {
+            IServiceTasks serviceTasks = new ServiceTasksImpl();
+            int id = serviceTasks.create(data);
+            if (id > 0) {
+                cacheManager.addTask(data);
+                logger.info("Create task " + id, TasksDelegate.class);
+                return new ResponseEntity(
+                        new ResponseModel(gen.getCounter(), id), HttpStatus.OK);
+            } else {
+                logger.warn("Doesn't create task.", TasksDelegate.class);
+                return new ResponseEntity(
+                        new ResponseModel(gen.getCounter(), "Task doesn't create"),
+                        HttpStatus.OK);
+            }
         }
+        return new ResponseEntity(new ResponseModel(gen.getCounter(),
+                "You mast repeat authorization"), HttpStatus.OK);
     }
 
     private ResponseEntity update(Task data) {
@@ -74,20 +78,24 @@ public class TasksDelegate {
                     new ResponseModel(gen.getCounter(), "Incorrect data"),
                     HttpStatus.OK);
         }
-        IServiceTasks serviceTasks = new ServiceTasksImpl();
-        int id = serviceTasks.update(data);
-        if (id > 0) {
-            CacheManager cacheManager = CacheManager.getInstance();
-            cacheManager.updateTask(data);
-            logger.info("Update task " + id, TasksDelegate.class);
-            return new ResponseEntity(
-                    new ResponseModel(gen.getCounter(), id),
-                    HttpStatus.OK);
-        } else {
-            logger.warn("Doesn't update task.", TasksDelegate.class);
-            return new ResponseEntity(new ResponseModel(gen.getCounter(),
-                    "Task doesn't delete"), HttpStatus.OK);
+        CacheManager cacheManager = CacheManager.getInstance();
+        if (!repeatAuth(data.getLogin(), cacheManager)) {
+            IServiceTasks serviceTasks = new ServiceTasksImpl();
+            int id = serviceTasks.update(data);
+            if (id > 0) {
+                cacheManager.updateTask(data);
+                logger.info("Update task " + id, TasksDelegate.class);
+                return new ResponseEntity(
+                        new ResponseModel(gen.getCounter(), id),
+                        HttpStatus.OK);
+            } else {
+                logger.warn("Doesn't update task.", TasksDelegate.class);
+                return new ResponseEntity(new ResponseModel(gen.getCounter(),
+                        "Task doesn't delete"), HttpStatus.OK);
+            }
         }
+        return new ResponseEntity(new ResponseModel(gen.getCounter(),
+                "You mast repeat authorization"), HttpStatus.OK);
     }
 
     private ResponseEntity delete(Task data) {
@@ -98,21 +106,32 @@ public class TasksDelegate {
                     new ResponseModel(gen.getCounter(),
                             "Incorrect data"), HttpStatus.OK);
         }
-        IServiceTasks serviceTasks = new ServiceTasksImpl();
-        int id = serviceTasks.delete(data);
-        if (id > 0) {
-            CacheManager cacheManager = CacheManager.getInstance();
-            cacheManager.deleteTask(data);
-            logger.info("Delete task " + id, TasksDelegate.class);
-            return new ResponseEntity(
-                    new ResponseModel(gen.getCounter(),
-                            id), HttpStatus.OK);
-        } else {
-            logger.warn("Doesn't delete task.", TasksDelegate.class);
-            return new ResponseEntity(
-                    new ResponseModel(gen.getCounter(),
-                            "Task doesn't create"), HttpStatus.OK);
+        CacheManager cacheManager = CacheManager.getInstance();
+        if (!repeatAuth(data.getLogin(), cacheManager)) {
+            IServiceTasks serviceTasks = new ServiceTasksImpl();
+            int id = serviceTasks.delete(data);
+            if (id > 0) {
+                cacheManager.deleteTask(data);
+                logger.info("Delete task " + id, TasksDelegate.class);
+                return new ResponseEntity(
+                        new ResponseModel(gen.getCounter(),
+                                id), HttpStatus.OK);
+            } else {
+                logger.warn("Doesn't delete task.", TasksDelegate.class);
+                return new ResponseEntity(
+                        new ResponseModel(gen.getCounter(),
+                                "Task doesn't create"), HttpStatus.OK);
+            }
         }
+        return new ResponseEntity(new ResponseModel(gen.getCounter(),
+                "You mast repeat authorization"), HttpStatus.OK);
+    }
+
+    private boolean repeatAuth(String login, CacheManager cacheManager) {
+        if (cacheManager.fetchToken(login) == null) {
+            return true;
+        }
+        return false;
     }
 
 }
