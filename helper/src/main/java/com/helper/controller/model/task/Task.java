@@ -12,25 +12,25 @@ public class Task {
 
     private byte status;
 
-    private String user;
+    private String login;
 
-    public Task(long id, String taskName, String task, byte status, String user) {
+    public Task(long id, String taskName, String task, byte status, String login) {
         this.id = id;
         this.taskName = taskName;
         this.task = task;
         this.status = status;
-        this.user = user;
+        this.login = login;
     }
 
-    public Task(String taskName, String task, byte status, String user) {
+    public Task(String taskName, String task, byte status, String login) {
         this.taskName = taskName;
         this.task = task;
         this.status = status;
-        this.user = user;
+        this.login = login;
     }
 
-    public Task(String user) {
-        this.user = user;
+    public Task(String login) {
+        this.login = login;
     }
 
     public long getId() {
@@ -49,8 +49,8 @@ public class Task {
         return status;
     }
 
-    public String getUser() {
-        return user;
+    public String getLogin() {
+        return login;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Task {
                 ", taskName='" + taskName + '\'' +
                 ", task='" + task + '\'' +
                 ", status=" + status +
-                ", user='" + user + '\'' +
+                ", login='" + login + '\'' +
                 '}';
     }
 }

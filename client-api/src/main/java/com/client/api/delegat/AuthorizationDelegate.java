@@ -56,9 +56,9 @@ public class AuthorizationDelegate {
             logger.info("User find in db and add to cache.", AuthorizationDelegate.class);
             manager.addUser(userInDb);
             IServiceTasks serviceTasks = new ServiceTasksImpl();
-            List<Task> tasks = serviceTasks.read(userInDb.getUser());
+            List<Task> tasks = serviceTasks.read(userInDb.getLogin());
             logger.info("Return Tasks by user.", AuthorizationDelegate.class);
-            return manager.addTasks(tasks, authUser.getUser());
+            return manager.addTasks(tasks, authUser.getLogin());
         }
     }
 

@@ -33,7 +33,7 @@ public class DaoTasksImpl implements IDaoTasks {
             statement.setString(1, data.getTaskName());
             statement.setString(2, data.getTask());
             statement.setByte(3, data.getStatus());
-            statement.setString(4, data.getUser());
+            statement.setString(4, data.getLogin());
             int result = statement.executeUpdate();
             taskId = returnId(result, statement);
         } catch (IllegalAccessException e) {
