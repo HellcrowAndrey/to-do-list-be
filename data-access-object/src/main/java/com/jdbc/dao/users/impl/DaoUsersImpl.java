@@ -36,7 +36,7 @@ public class DaoUsersImpl implements IDaoUsers {
                 "FROM Users WHERE USER=? OR EMAIL=? AND PASSWORD=?;";
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, user.getUser());
+            statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
             ResultSet resultSet = statement.executeQuery();
@@ -95,7 +95,7 @@ public class DaoUsersImpl implements IDaoUsers {
     }
 
     private int userFields(PreparedStatement statement, UserModel user) throws SQLException {
-        statement.setString(1, user.getUser());
+        statement.setString(1, user.getLogin());
         statement.setString(2, user.getEmail());
         statement.setString(3, user.getPassword());
         return statement.executeUpdate();

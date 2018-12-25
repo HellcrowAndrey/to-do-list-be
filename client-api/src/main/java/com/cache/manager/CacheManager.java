@@ -41,7 +41,7 @@ public class CacheManager {
     }
 
     private boolean fetchRegUser(final UserModel user, final UserModel currentUser) {
-        if (user.getUser().equals(currentUser.getUser()) ||
+        if (user.getLogin().equals(currentUser.getLogin()) ||
                 user.getEmail().equals(currentUser.getEmail())) {
             return false;
         }
@@ -52,11 +52,11 @@ public class CacheManager {
         if (user == null) {
             return null;
         }
-        return tasks.get(user.getUser());
+        return tasks.get(user.getLogin());
     }
 
     private boolean fetchUser(final UserModel user, final UserModel currentUser) {
-        if (user.getUser().equals(currentUser.getUser()) &&
+        if (user.getLogin().equals(currentUser.getLogin()) &&
                 user.getPassword().equals(currentUser.getPassword())) {
             return true;
         } else if (user.getEmail().equals(currentUser.getEmail()) &&
@@ -72,7 +72,7 @@ public class CacheManager {
         }
         if (currentCacheSize >= MAX_CACHE_SIZE) {
             UserModel firstUser = users.get(0);
-            tasks.remove(firstUser.getUser());
+            tasks.remove(firstUser.getLogin());
             users.remove(0);
             return users.add(user);
         }
@@ -90,7 +90,7 @@ public class CacheManager {
 
     public boolean addTask(Task data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getUser());
+            List<Task> list = tasks.get(data.getLogin());
             return list.add(data);
         }
         return false;
@@ -98,7 +98,7 @@ public class CacheManager {
 
     public boolean deleteTask(Task data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getUser());
+            List<Task> list = tasks.get(data.getLogin());
             return list.remove(data);
         }
         return false;
@@ -106,7 +106,7 @@ public class CacheManager {
 
     public Task updateTask(Task data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getUser());
+            List<Task> list = tasks.get(data.getLogin());
             long index = list.stream().filter(current ->
                     data.getId() == current.getId()).count();
             return list.set((int) index, data);
