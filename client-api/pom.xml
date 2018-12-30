@@ -46,7 +46,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.Main</mainClass>
+                            <mainClass>com.todo.app.Main</mainClass>
                         </configuration>
                     </execution>
                 </executions>
