@@ -11,6 +11,7 @@ import com.todo.app.controller.model.user.UserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.validation.Valid;
 import java.util.List;
 
 public class AuthorizationDelegate {
@@ -32,7 +33,7 @@ public class AuthorizationDelegate {
         return true;
     }
 
-    public List<Task> getData(UserModel authUser) {
+    public List<Task> getData(@Valid UserModel authUser) {
         if (authUser == null) {
             logger.warn("User model is not valid.", AuthorizationDelegate.class);
             return null;

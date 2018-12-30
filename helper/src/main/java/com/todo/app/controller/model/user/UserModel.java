@@ -1,7 +1,13 @@
 package com.todo.app.controller.model.user;
 
+import com.todo.app.validation.FieldMatch;
+
+import javax.validation.constraints.AssertTrue;
 import java.util.Objects;
 
+@FieldMatch.List({
+        @FieldMatch(first = "email", second = "password", message = "First 1")
+})
 public class UserModel {
 
     private long id;
@@ -17,6 +23,9 @@ public class UserModel {
     private String hashLoginPass;
 
     private String hashEmailPass;
+
+    @AssertTrue
+    private Boolean terms;
 
     public UserModel(long id, String login, String email) {
         this.id = id;
@@ -86,6 +95,14 @@ public class UserModel {
 
     public void setHashLoginPass(String hashLoginPass) {
         this.hashLoginPass = hashLoginPass;
+    }
+
+    public Boolean getTerms() {
+        return terms;
+    }
+
+    public void setTerms(Boolean terms) {
+        this.terms = terms;
     }
 
     @Override
