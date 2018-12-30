@@ -1,13 +1,8 @@
 package com.todo.app.controller.model.user;
 
-import com.todo.app.validation.FieldMatch;
-
 import javax.validation.constraints.AssertTrue;
 import java.util.Objects;
 
-@FieldMatch.List({
-        @FieldMatch(first = "email", second = "password", message = "First 1")
-})
 public class UserModel {
 
     private long id;
