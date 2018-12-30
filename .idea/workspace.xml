@@ -2,63 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/InfoUpdateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/utils/DaoUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/hash/MDFive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/IServiceUsers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/impl/ServiceUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/utils/ControllerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/utils/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/IdGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/cache/manager/CacheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/cache/manager/CacheManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/AuthorizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/AuthorizationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/InfoUpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/InfoUpdateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/AuthorizationDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/AuthorizationDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/RegistrationDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/RegistrationDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/TasksDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/TasksDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/IServiceUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/IServiceUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/impl/ServiceUsersImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/impl/ServiceUsersImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/utils/ControllerUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/utils/ControllerUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/IDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/IDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/MySqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/impl/MySqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/IDaoTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/IDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/IDaoUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/tasks/impl/DaoTasksImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/tasks/impl/DaoTasksImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/IDaoUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/IDaoUsers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/impl/DaoUsersImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/impl/DaoUsersImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/query/table_tasks" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/query/table_tasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/query/table_users" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/query/table_users" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/ResponseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/task/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/user/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/user/UserModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jmeter-template/user-auth.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/jmeter-template/user-auth.jmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,28 +27,81 @@
     </option>
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/to_do_list_be$Main.ic" NAME="Main Coverage Results" MODIFIED="1545498705573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/to_do_list_be$Main.ic" NAME="Main Coverage Results" MODIFIED="1546203510987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.todo.app.*</FILTER>
+    </SUITE>
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="235" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="444">
+                  <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -124,12 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/IDataSource.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/MySqlConnection.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/AuthCacheManager.java" />
-        <option value="$PROJECT_DIR$/properties/checkstyle-configuration.xml" />
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/AuthUserModel.java" />
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/UserModel.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/AuthUsersImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/config/ConfigDaoService.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/config/AuthDelegateConfig.java" />
@@ -157,7 +152,6 @@
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/InfoUpdateDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" />
         <option value="$PROJECT_DIR$/data-access-object/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/hash/MDFive.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" />
@@ -173,8 +167,15 @@
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/app/client/api/delegat/RegistrationDelegate.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/helper/pom.xml" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatchValidator.java" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatch.java" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
       </list>
     </option>
   </component>
@@ -215,10 +216,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="40" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -293,6 +294,84 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="delegat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
               <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,12 +425,51 @@
               <item name="todo" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,8 +479,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546185903717" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../register-user" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546209744342" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -380,21 +498,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RunManager">
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="client-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.todo.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.todo.app.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="client-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -425,17 +547,18 @@
       <workItem from="1546072817844" duration="16567000" />
       <workItem from="1546100088129" duration="1612000" />
       <workItem from="1546165505288" duration="2121000" />
-      <workItem from="1546179442735" duration="3243000" />
+      <workItem from="1546179442735" duration="7962000" />
+      <workItem from="1546191988620" duration="8622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124165000" />
+    <option name="totallyTimeSpent" value="137506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29994467" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3032651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -480,36 +603,25 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatchValidator.java</url>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java</url>
-          <line>41</line>
+          <line>31</line>
           <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java</url>
+          <line>67</line>
           <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="user.getPassword()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -531,20 +643,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/cache/startup/StartCacheManager.java" />
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/config/ConfigDaoService.java" />
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration.java" />
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/concurrent/atomic/AtomicLong.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1873#1874#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/sql/Statement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -689,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/InfoUpdateController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -714,13 +805,6 @@
             <element signature="e#416#417#0" expanded="true" />
             <element signature="e#464#465#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -769,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -797,13 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -815,33 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -862,13 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="98" column="59" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/ResponseModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -886,24 +922,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation.java" />
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar!/javax/validation/constraints/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatchValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="83" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="315">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="195">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="195">
+          <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

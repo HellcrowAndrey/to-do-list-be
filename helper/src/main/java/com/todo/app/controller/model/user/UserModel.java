@@ -1,5 +1,6 @@
 package com.todo.app.controller.model.user;
 
+import javax.validation.constraints.AssertTrue;
 import java.util.Objects;
 
 public class UserModel {
@@ -17,6 +18,9 @@ public class UserModel {
     private String hashLoginPass;
 
     private String hashEmailPass;
+
+    @AssertTrue
+    private Boolean terms;
 
     public UserModel(long id, String login, String email) {
         this.id = id;
@@ -86,6 +90,14 @@ public class UserModel {
 
     public void setHashLoginPass(String hashLoginPass) {
         this.hashLoginPass = hashLoginPass;
+    }
+
+    public Boolean getTerms() {
+        return terms;
+    }
+
+    public void setTerms(Boolean terms) {
+        this.terms = terms;
     }
 
     @Override

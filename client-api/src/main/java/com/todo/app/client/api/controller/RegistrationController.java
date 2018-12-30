@@ -26,20 +26,19 @@ public class RegistrationController {
 
     @Async
     @RequestMapping(value = "/registration", method = {GET, POST})
-    public ResponseEntity registration(
+    public ResponseEntity submitRegistration(
             @RequestParam(value = "login") String login,
             @RequestParam(value = "email") String email,
             @RequestParam(value = "password") String password) {
-        ResponseModel responseModel;
-        if (!RegistrationDelegate.isParams(login, email, password)) {
-            logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS, RegistrationController.class);
-            responseModel = new ResponseModel(
-                    gen.getCounter(), ControllerUtils.IS_NOT_VALID_PARAMS);
-            return new ResponseEntity<>(responseModel, HttpStatus.NO_CONTENT);
+        ResponseEntity valid = RegistrationDelegate.isParams(login, email, password);
+        if (valid != null) {
+            logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
+            return valid;
         }
         UserModel userModel = new UserModel(login, email, password);
         RegistrationDelegate delegate = new RegistrationDelegate();
-        responseModel = new ResponseModel(gen.getCounter(), delegate.userRegistration(userModel));
+        ResponseModel responseModel = new ResponseModel(gen.getCounter(),
+                delegate.submitRegistration(userModel));
         return new ResponseEntity<>(responseModel, HttpStatus.OK);
     }
 
