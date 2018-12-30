@@ -2,10 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/InfoUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/utils/DaoUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/hash/MDFive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/IServiceUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/impl/ServiceUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/utils/ControllerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/utils/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/IdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/cache/manager/CacheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/cache/manager/CacheManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/AuthorizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/AuthorizationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/InfoUpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/InfoUpdateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/AuthorizationDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/AuthorizationDelegate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/RegistrationDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/RegistrationDelegate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/TasksDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/client/api/delegat/TasksDelegate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/IServiceUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/IServiceUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/impl/ServiceUsersImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/dao/service/users/impl/ServiceUsersImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/utils/ControllerUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/classes/com/utils/ControllerUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/IDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/IDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/MySqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/impl/MySqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/IDaoTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/IDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/IDaoUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/tasks/impl/DaoTasksImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/tasks/impl/DaoTasksImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/IDaoUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/IDaoUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/impl/DaoUsersImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/com/jdbc/dao/users/impl/DaoUsersImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/query/table_tasks" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/query/table_tasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/query/table_users" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/classes/query/table_users" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/task/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/user/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/helper/controller/model/user/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmeter-template/user-auth.jmx" beforeDir="false" afterPath="$PROJECT_DIR$/jmeter-template/user-auth.jmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,73 +85,12 @@
     <option name="myElementSize" value="235" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java">
+        <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/ResponseModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -132,20 +124,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/DaoUsers.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/ServiceUsers.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/DataSourceMySql.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/Connection.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/MySqlConnection.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/Main.java" />
-        <option value="$PROJECT_DIR$/check-style/check-style" />
-        <option value="$PROJECT_DIR$/check-style/check-style.xml" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/impl/ServiceAuthUsersImpl.java" />
-        <option value="$PROJECT_DIR$/helper/pom.xml" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/IDataSource.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/MySqlConnection.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/AuthCacheManager.java" />
-        <option value="$PROJECT_DIR$/data-access-object/pom.xml" />
         <option value="$PROJECT_DIR$/properties/checkstyle-configuration.xml" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/AuthUserModel.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/UserModel.java" />
@@ -154,35 +135,46 @@
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/config/AuthDelegateConfig.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/impl/ServiceUsersImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/startup/StartCacheManager.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration/RegistrationModel.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserDataModel.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/IDaoUsers.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/UsersImpl.java" />
         <option value="$PROJECT_DIR$/to-do-list-be/README.md" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/AuthorizationModel.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/Main.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/AuthorizationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/UsersCacheManager.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/client-api/pom.xml" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/utils/ControllerUtils.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/OutModel.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/utils/IdGenerator.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java" />
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserModel.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/task/Task.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/utils/DaoUtils.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/InfoUpdateDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" />
+        <option value="$PROJECT_DIR$/data-access-object/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/hash/MDFive.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/utils/ControllerUtils.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserModel.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/UserDecorator.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/IDaoUsers.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/DaoUsersImpl.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/IServiceUsers.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/impl/ServiceUsersImpl.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/AuthorizationDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/app/client/api/delegat/RegistrationDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" />
       </list>
     </option>
   </component>
@@ -285,7 +277,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
@@ -295,134 +287,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="delegat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
@@ -467,7 +333,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
@@ -477,46 +343,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -533,8 +361,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545767824026" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/properties/checkstyle-configuration.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546185903717" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../register-user" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -553,15 +381,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jdbc.dao.Main" />
-      <module name="data-access-object" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jdbc.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="client-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.todo.app.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -573,11 +395,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -603,17 +420,22 @@
       <workItem from="1545595457983" duration="10829000" />
       <workItem from="1545606512187" duration="1937000" />
       <workItem from="1545737561298" duration="27413000" />
+      <workItem from="1545769656988" duration="2122000" />
+      <workItem from="1546030660385" duration="2231000" />
+      <workItem from="1546072817844" duration="16567000" />
+      <workItem from="1546100088129" duration="1612000" />
+      <workItem from="1546165505288" duration="2121000" />
+      <workItem from="1546179442735" duration="3243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96269000" />
+    <option name="totallyTimeSpent" value="124165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28666297" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29994467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -624,7 +446,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33851278" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46059933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -654,45 +476,61 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="user.getPassword()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>user.getPassword()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>currentUser.getHashLoginPass()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>users</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/helper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/target/site/xref/index.html" />
-    <entry file="file://$PROJECT_DIR$/helper/target/site/pmd.html" />
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.0.5.RELEASE/spring-boot-starter-parent-2.0.5.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/properties/checkstyle-configuration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1016">
-          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/IDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/config/AuthDelegateConfig.java" />
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/cache/startup/StartCacheManager.java" />
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/config/ConfigDaoService.java" />
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration.java" />
@@ -707,38 +545,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/IDaoUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/impl/ServiceUsersImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/sql/Statement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/users/IServiceUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -753,21 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/users/impl/DaoUsersImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/Main.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
@@ -781,13 +577,6 @@
           <folding>
             <element signature="e#23833#23834#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
@@ -823,7 +612,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/IDaoTasks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
@@ -840,14 +629,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/utils/ControllerUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
@@ -857,52 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/utils/IdGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/AuthorizationDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/RegistrationDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/data/source/impl/MySqlConnection.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/impl/MySqlConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -916,30 +653,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration/RegistrationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/ResponseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/task/Task.java">
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration/RegistrationModel.java" />
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -957,59 +672,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/AuthorizationController.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="75">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserModel.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/utils/DaoUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/impl/DaoTasksImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/TasksDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/InfoUpdateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/IdGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/impl/DaoTasksImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/stream/ReferencePipeline.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/IDaoUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/impl/DaoUsersImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="98" column="59" selection-start-line="98" selection-start-column="59" selection-end-line="98" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/ResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/hash/MDFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
