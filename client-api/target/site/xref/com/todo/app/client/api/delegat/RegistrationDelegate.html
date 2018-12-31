@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>RegistrationDelegate xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/com/todo/app/client/api/delegat/RegistrationDelegate.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> com.todo.app.client.api.delegat;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> com.todo.app.cache.manager.CacheManager;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> com.todo.app.controller.model.ResponseModel;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> com.todo.app.decorator.UserDecorator;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> com.todo.app.service.users.IServiceUsers;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> com.todo.app.service.users.impl.ServiceUsersImpl;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> com.todo.app.controller.model.user.UserModel;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> com.todo.app.client.api.controller.RegistrationController;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> com.todo.app.utils.ControllerUtils;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> com.todo.app.utils.IdGenerator;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> org.springframework.http.HttpStatus;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> org.springframework.http.ResponseEntity;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="RegistrationDelegate" href="../../../../../../com/todo/app/client/api/delegat/RegistrationDelegate.html#RegistrationDelegate">RegistrationDelegate</a> {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> Logger logger = LoggerFactory.getLogger(RegistrationDelegate.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> ResponseEntity isParams(String user, String email, String password) {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">if</strong> (user == <strong class="jxr_keyword">null</strong> || user.equals(<span class="jxr_string">""</span>) ||
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>                  email == <strong class="jxr_keyword">null</strong> || email.equals(<span class="jxr_string">""</span>) ||
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>                  password == <strong class="jxr_keyword">null</strong> || password.equals(<span class="jxr_string">""</span>)) {
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>              ResponseModel responseModel = <strong class="jxr_keyword">new</strong> ResponseModel(IdGenerator.getInstance()
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>                      .getCounter(), ControllerUtils.IS_NOT_VALID_PARAMS);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ResponseEntity&lt;&gt;(responseModel, HttpStatus.NO_CONTENT);
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          }
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      }
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">public</strong> String submitRegistration(UserModel user) {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <strong class="jxr_keyword">if</strong> (user == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>              <strong class="jxr_keyword">return</strong> ControllerUtils.IS_NOT_VALID_PARAMS;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          }
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <a name="CacheManager" href="../../../../../../com/todo/app/cache/manager/CacheManager.html#CacheManager">CacheManager</a> manager = CacheManager.getInstance();
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <strong class="jxr_keyword">if</strong> (manager.fetchRegUser(user) == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>              logger.info(<span class="jxr_string">"User doesn't exist in cache. Do check in data base."</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>              <a name="IServiceUsers" href="../../../../../../com/todo/app/service/users/IServiceUsers.html#IServiceUsers">IServiceUsers</a> service = <strong class="jxr_keyword">new</strong> <a name="ServiceUsersImpl" href="../../../../../../com/todo/app/service/users/impl/ServiceUsersImpl.html#ServiceUsersImpl">ServiceUsersImpl</a>();
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>              <strong class="jxr_keyword">long</strong> id = service.read(user.getLogin(), user.getEmail());
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>              <strong class="jxr_keyword">if</strong> (id &gt; 0) {
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  logger.info(<span class="jxr_string">"This user exist in data base."</span>);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>                  <strong class="jxr_keyword">return</strong> ControllerUtils.USER_EXIT;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>              }
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              <a name="UserDecorator" href="../../../../../../com/todo/app/decora<a name="UserDecorator" href="../../../../../../com/todo/app/decorator/UserDecorator.html#UserDecorator">UserDecorator</a>ator.html#UserDecorator">UserDecorator</a> decorator = <strong class="jxr_keyword">new</strong> <a name="UserDecorator" href="../../../../../../com/todo/app/decorator/UserDecorator.html#UserDecorator">UserDecorator</a>();
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              UserModel newUser = decorator.createHash(user);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              manager.addUser(newUser);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              <strong class="jxr_keyword">return</strong> service.create(newUser);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>              logger.info(<span class="jxr_string">"User with this params exist in cache."</span>);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>              <strong class="jxr_keyword">return</strong> ControllerUtils.USER_EXIT;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      }
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2018 <a href="http://github.com">hell-crow</a>. All rights reserved.</div>
+</body>
+</html>

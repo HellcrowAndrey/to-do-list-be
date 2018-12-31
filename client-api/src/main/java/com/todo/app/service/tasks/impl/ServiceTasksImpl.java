@@ -2,10 +2,10 @@ package com.todo.app.service.tasks.impl;
 
 import com.todo.app.controller.model.task.Task;
 import com.todo.app.service.tasks.IServiceTasks;
-import app.jdbc.dao.data.source.IDataSource;
-import app.jdbc.dao.data.source.impl.MySqlConnection;
-import app.jdbc.dao.tasks.IDaoTasks;
-import app.jdbc.dao.tasks.impl.DaoTasksImpl;
+import com.todo.app.jdbc.dao.data.source.IDataSource;
+import com.todo.app.jdbc.dao.data.source.impl.MySqlConnection;
+import com.todo.app.jdbc.dao.tasks.IDaoTasks;
+import com.todo.app.jdbc.dao.tasks.impl.DaoTasksImpl;
 
 import java.util.List;
 

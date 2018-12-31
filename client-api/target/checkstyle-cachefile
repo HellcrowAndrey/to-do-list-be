@@ -1,0 +1,19 @@
+#Mon Dec 31 18:13:33 EET 2018
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/utils/IdGenerator.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java=1546272778000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java=1546209821000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java=1546209821000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java=1546272620000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/controller/InfoUpdateController.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/Main.java=1546186006000
+configuration*?=190D2B477CF1B667ECA3A9E3E13E94DF14652428
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java=1546209821000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java=1546272255000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java=1546272255000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java=1546186006000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java=1546272797000
+/home/hellcrow/intelli-ide-workspace/to-do-list-be/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java=1546186006000
