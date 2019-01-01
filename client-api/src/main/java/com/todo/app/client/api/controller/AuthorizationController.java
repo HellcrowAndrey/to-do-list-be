@@ -33,6 +33,7 @@ public class AuthorizationController {
             @RequestParam(value = "login", defaultValue = "") String login,
             @RequestParam(value = "email", defaultValue = "") String email,
             @RequestParam(value = "password") String password) {
+        System.out.println("Params: " + login + " " + email + " " + password);
         ResponseEntity valid = AuthorizationDelegate.isParams(login, email, password);
         if (valid != null) {
             logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);

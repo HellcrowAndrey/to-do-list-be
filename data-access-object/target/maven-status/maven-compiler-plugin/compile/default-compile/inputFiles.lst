@@ -1,7 +1,0 @@
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/utils/DaoUtils.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/IDataSource.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java
-/home/hellcrow/intelli-ide-workspace/to-do-list-be/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.java

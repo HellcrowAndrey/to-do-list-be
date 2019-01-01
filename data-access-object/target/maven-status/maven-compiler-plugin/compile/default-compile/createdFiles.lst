@@ -1,7 +1,0 @@
-com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.class
-com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.class
-com/todo/app/jdbc/dao/tasks/IDaoTasks.class
-com/todo/app/jdbc/utils/DaoUtils.class
-com/todo/app/jdbc/dao/data/source/IDataSource.class
-com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.class
-com/todo/app/jdbc/dao/users/IDaoUsers.class

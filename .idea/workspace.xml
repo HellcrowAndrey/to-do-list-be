@@ -3,54 +3,257 @@
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/META-INF/client-api.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/cache/manager/CacheManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/controller/AuthorizationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/controller/InfoUpdateController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/controller/RegistrationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/controller/TasksController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/delegat/AuthorizationDelegate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/delegat/InfoUpdateDelegate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/delegat/RegistrationDelegate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/client/api/delegat/TasksDelegate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/decorator/UserDecorator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/service/tasks/IServiceTasks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/service/tasks/impl/ServiceTasksImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/service/users/IServiceUsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/service/users/impl/ServiceUsersImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/utils/ControllerUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/target/classes/com/todo/app/utils/IdGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/IDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/IDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/data/source/impl/MySqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/IDaoTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/IDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/app/jdbc/utils/DaoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/utils/DaoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/META-INF/data-access-object.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/data/source/IDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/data/source/impl/MySqlConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/tasks/IDaoTasks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/tasks/impl/DaoTasksImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/users/IDaoUsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/dao/users/impl/DaoUsersImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/target/classes/app/jdbc/utils/DaoUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/helper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/META-INF/helper.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/ResponseModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/ResponseModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/task/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/user/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/todo/app/controller/model/user/UserModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/target/classes/com/todo/app/hash/MDFive.class" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/classes/com/todo/app/hash/MDFive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/CacheManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/CacheManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/class-use/CacheManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/class-use/CacheManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/cache/manager/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/class-use/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/class-use/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/AuthorizationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/AuthorizationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/InfoUpdateController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/InfoUpdateController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/RegistrationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/RegistrationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/TasksController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/TasksController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/AuthorizationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/AuthorizationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/InfoUpdateController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/InfoUpdateController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/RegistrationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/RegistrationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/TasksController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/class-use/TasksController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/controller/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/AuthorizationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/AuthorizationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/InfoUpdateDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/InfoUpdateDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/RegistrationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/RegistrationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/TasksDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/TasksDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/AuthorizationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/AuthorizationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/InfoUpdateDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/InfoUpdateDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/RegistrationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/RegistrationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/TasksDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/class-use/TasksDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/client/api/delegat/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/UserDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/UserDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/class-use/UserDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/class-use/UserDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/decorator/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/IServiceTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/IServiceTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/class-use/IServiceTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/class-use/IServiceTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/ServiceTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/ServiceTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/class-use/ServiceTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/class-use/ServiceTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/impl/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/tasks/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/IServiceUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/IServiceUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/class-use/IServiceUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/class-use/IServiceUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/ServiceUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/ServiceUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/class-use/ServiceUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/class-use/ServiceUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/impl/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/service/users/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/ControllerUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/ControllerUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/IdGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/IdGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/class-use/ControllerUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/class-use/ControllerUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/class-use/IdGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/class-use/IdGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/com/todo/app/utils/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/overview-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT-javadoc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT-javadoc.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/client-api-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/dep_current.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/dep_current.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/dependency-sources/data-access-object-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/dependency-sources/data-access-object-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/dependency-sources/helper-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/dependency-sources/helper-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/dependency/data-access-object.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/dependency/data-access-object.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/dependency/helper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/dependency/helper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/cache/manager/CacheManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/cache/manager/CacheManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/cache/manager/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/cache/manager/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/AuthorizationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/AuthorizationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/InfoUpdateController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/InfoUpdateController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/RegistrationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/RegistrationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/TasksController.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/TasksController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/controller/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/AuthorizationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/AuthorizationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/InfoUpdateDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/InfoUpdateDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/RegistrationDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/RegistrationDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/TasksDelegate.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/TasksDelegate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/client/api/delegat/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/decorator/UserDecorator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/decorator/UserDecorator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/decorator/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/decorator/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/IServiceTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/IServiceTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/impl/ServiceTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/impl/ServiceTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/tasks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/IServiceUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/IServiceUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/impl/ServiceUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/impl/ServiceUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/service/users/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/ControllerUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/ControllerUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/IdGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/IdGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/utils/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/target/site/xref/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/target/site/xref/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/IDataSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/IDataSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/class-use/IDataSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/class-use/IDataSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/class-use/MySqlConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/class-use/MySqlConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/impl/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/data/source/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/IDaoTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/IDaoTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/class-use/IDaoTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/class-use/IDaoTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/class-use/DaoTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/class-use/DaoTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/impl/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/tasks/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/IDaoUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/IDaoUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/class-use/IDaoUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/class-use/IDaoUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/class-use/DaoUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/class-use/DaoUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/impl/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/dao/users/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/DaoUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/DaoUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/class-use/DaoUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/class-use/DaoUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/com/todo/app/jdbc/utils/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT-javadoc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT-javadoc.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/data-access-object-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/dep_current.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/dep_current.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/dependency-sources/helper-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/dependency-sources/helper-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/dependency/helper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/dependency/helper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/IDataSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/IDataSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/data/source/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/IDaoTasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/IDaoTasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/tasks/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/IDaoUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/IDaoUsers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/impl/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/impl/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/dao/users/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/utils/DaoUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/utils/DaoUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/com/todo/app/jdbc/utils/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/target/site/xref/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/target/site/xref/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/ResponseModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/ResponseModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/class-use/ResponseModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/class-use/ResponseModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/Task.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/Task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/class-use/Task.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/class-use/Task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/task/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/UserModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/UserModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/class-use/UserModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/class-use/UserModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/controller/model/user/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/MDFive.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/MDFive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/class-use/MDFive.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/class-use/MDFive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/com/todo/app/hash/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/overview-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/dep_current.txt" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/dep_current.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT-javadoc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT-javadoc.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/helper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/ResponseModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/ResponseModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/task/Task.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/task/Task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/task/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/task/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/user/UserModel.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/user/UserModel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/user/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/controller/model/user/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/hash/MDFive.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/hash/MDFive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/hash/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/com/todo/app/hash/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/target/site/xref/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/helper/target/site/xref/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-checker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dep_current.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/dep_current.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,32 +283,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1935">
+              <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1050">
+              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
+        <entry file="file://$PROJECT_DIR$/helper/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            <state relative-caret-position="195">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -132,6 +341,8 @@
       <find>reporting</find>
       <find>put</find>
       <find>AtomicLong</find>
+      <find>junit:junit:jar was excluded in DepMgt, but version 4.12 has been found in the dependency tree.</find>
+      <find>analyze</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,7 +363,6 @@
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java" />
-        <option value="$PROJECT_DIR$/client-api/pom.xml" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/auth/OutModel.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/utils/IdGenerator.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/TasksController.java" />
@@ -163,7 +373,6 @@
         <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_tasks" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/delegat/InfoUpdateDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/InfoUpdateController.java" />
-        <option value="$PROJECT_DIR$/data-access-object/pom.xml" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/helper/hash/MDFive.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/client/api/controller/RegistrationController.java" />
@@ -183,14 +392,16 @@
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatch.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" />
-        <option value="$PROJECT_DIR$/helper/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
+        <option value="$PROJECT_DIR$/data-access-object/pom.xml" />
+        <option value="$PROJECT_DIR$/client-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/helper/pom.xml" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" />
       </list>
     </option>
   </component>
@@ -234,6 +445,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -584,8 +797,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,12 +806,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546272797344" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546285690235" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -665,18 +879,28 @@
       <workItem from="1546165505288" duration="2121000" />
       <workItem from="1546179442735" duration="7962000" />
       <workItem from="1546191988620" duration="8622000" />
-      <workItem from="1546269714900" duration="1626000" />
+      <workItem from="1546269714900" duration="8106000" />
+      <workItem from="1546285735964" duration="35000" />
+      <workItem from="1546340562911" duration="867000" />
+      <workItem from="1546341684750" duration="641000" />
+      <workItem from="1546342379607" duration="31000" />
+      <workItem from="1546342433031" duration="57000" />
+      <workItem from="1546343519143" duration="49000" />
+      <workItem from="1546344598091" duration="133000" />
+      <workItem from="1546346517723" duration="99000" />
+      <workItem from="1546347836360" duration="7000" />
+      <workItem from="1546348671221" duration="1291000" />
+      <workItem from="1546352962428" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139132000" />
+    <option name="totallyTimeSpent" value="149423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3032651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34532374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -686,13 +910,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33851278" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33851278" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46059933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32890365" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32852387" />
       <window_info anchor="bottom" id="Docker" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32852387" />
@@ -704,7 +928,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.32982844" />
+      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.32982844" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -755,34 +979,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/sql/Statement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/user/UserDataModel.java" />
-    <entry file="file://$PROJECT_DIR$/to-do-list-be/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="32" selection-start-column="32" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar!/ch/qos/logback/classic/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="696" selection-start-line="696" selection-end-line="696" />
-          <folding>
-            <element signature="e#23833#23834#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/Map.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
@@ -849,13 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/helper/controller/model/registration/RegistrationModel.java" />
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/Task.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -910,13 +1099,6 @@
             <element signature="e#416#417#0" expanded="true" />
             <element signature="e#464#465#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1047,13 +1229,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatchValidator.java" />
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/validation/FieldMatch.java" />
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1068,31 +1243,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/Main.java" />
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1119,13 +1274,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/target/site/xref/com/todo/app/cache/manager/CacheManager.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/target/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/target/test-classes/image_info.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>client-api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
