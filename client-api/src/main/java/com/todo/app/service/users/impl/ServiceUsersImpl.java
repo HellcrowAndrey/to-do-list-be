@@ -2,10 +2,10 @@ package com.todo.app.service.users.impl;
 
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.controller.model.user.UserModel;
-import app.jdbc.dao.data.source.IDataSource;
-import app.jdbc.dao.data.source.impl.MySqlConnection;
-import app.jdbc.dao.users.IDaoUsers;
-import app.jdbc.dao.users.impl.DaoUsersImpl;
+import com.todo.app.jdbc.dao.data.source.IDataSource;
+import com.todo.app.jdbc.dao.data.source.impl.MySqlConnection;
+import com.todo.app.jdbc.dao.users.IDaoUsers;
+import com.todo.app.jdbc.dao.users.impl.DaoUsersImpl;
 import com.todo.app.utils.ControllerUtils;
 
 public class ServiceUsersImpl implements IServiceUsers {

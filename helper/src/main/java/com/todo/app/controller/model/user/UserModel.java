@@ -1,6 +1,5 @@
 package com.todo.app.controller.model.user;
 
-import javax.validation.constraints.AssertTrue;
 import java.util.Objects;
 
 public class UserModel {
@@ -19,7 +18,6 @@ public class UserModel {
 
     private String hashEmailPass;
 
-    @AssertTrue
     private Boolean terms;
 
     public UserModel(long id, String login, String email) {
@@ -47,7 +45,6 @@ public class UserModel {
         this.id = id;
         this.login = login;
         this.email = email;
-        this.password = password;
         this.hashLoginPass = hashLoginPass;
         this.hashEmailPass = hashEmailPass;
     }

@@ -18,7 +18,8 @@ public class TasksController {
 
     @Async
     @RequestMapping(value = "/tasks/{command}", method = {GET, POST})
-    public ResponseEntity tasks(@PathVariable String command, @RequestParam(value = "data") String data) {
+    public ResponseEntity tasks(@PathVariable String command,
+                                @RequestParam(value = "data") String data) {
         if (command == null || command.equals("") ||
                 data == null || data.equals("")) {
             return new ResponseEntity(
