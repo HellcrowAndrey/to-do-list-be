@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ITCreateUsersTest {
+public class CreateUsersIT {
 
     private IDataSource connection = null;
     private CreateDataBase dataBase = null;
@@ -18,7 +18,7 @@ public class ITCreateUsersTest {
 
     @BeforeClass
     public static void initClass() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(8000);
     }
 
     @Before
@@ -40,14 +40,6 @@ public class ITCreateUsersTest {
 
     @Test
     public void createUserManyIT() {
-        System.out.println("=============================================================");
-        System.out.println("=============================================================");
-        System.out.println("=============================================================");
-        System.out.println("====================== This is my tests =====================");
-        System.out.println("=============================================================");
-        System.out.println("=============================================================");
-        System.out.println("=============================================================");
-
         UserModel model1 = new UserModel(1l, "vasia", "vasia@ya.ru", "32143423", "32142314");
         UserModel model2 = new UserModel(2l, "kolian", "kolian@ya.ru", "32143423", "32142314");
         UserModel model3 = new UserModel(3l, "vasian", "vasian@ya.ru", "32143423", "32142314");

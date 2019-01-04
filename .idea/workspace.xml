@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlTestConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="817" column="40" selection-start-line="817" selection-start-column="40" selection-end-line="817" selection-end-column="40" />
+            <state relative-caret-position="1121">
+              <caret line="839" selection-start-line="839" selection-end-line="839" />
             </state>
           </provider>
         </entry>
@@ -96,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="221">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -138,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/cache/manager/UsersCacheManager.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/jdbc/dao/tasks/IDaoTasks.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/impl/ServiceTasksImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/dao/service/tasks/IServiceTasks.java" />
@@ -187,8 +179,9 @@
         <option value="$PROJECT_DIR$/data-access-object/src/integration-tests/java/CreateUsersIT.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-tests/java/CreateUsersTest.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlTestConnection.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java" />
       </list>
     </option>
   </component>
@@ -417,7 +410,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546638323553" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546639616079" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../docker_tests-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -439,49 +432,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ITCreateUsersTest">
-    <configuration name="ITCreateUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreateUsersIT">
+    <configuration name="CreateUsersIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-access-object" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ITCreateUsersTest" />
+      <option name="MAIN_CLASS_NAME" value="CreateUsersIT" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITCreateUsersTest.createUserIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUsersIT.createUserIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-access-object" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ITCreateUsersTest" />
+      <option name="MAIN_CLASS_NAME" value="CreateUsersIT" />
       <option name="METHOD_NAME" value="createUserIT" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITCreateUsersTest.createUserManyIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUsersIT.createUserManyIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-access-object" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ITCreateUsersTest" />
+      <option name="MAIN_CLASS_NAME" value="CreateUsersIT" />
       <option name="METHOD_NAME" value="createUserManyIT" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITCreateUsersTest.deleteUserNullIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUsersIT.deleteUserNullIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-access-object" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ITCreateUsersTest" />
+      <option name="MAIN_CLASS_NAME" value="CreateUsersIT" />
       <option name="METHOD_NAME" value="deleteUserNullIT" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ITCreateUsersTest.updateUserManyIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateUsersIT.updateUserManyIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-access-object" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ITCreateUsersTest" />
+      <option name="MAIN_CLASS_NAME" value="CreateUsersIT" />
       <option name="METHOD_NAME" value="updateUserManyIT" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -497,11 +490,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ITCreateUsersTest" />
-        <item itemvalue="JUnit.ITCreateUsersTest.updateUserManyIT" />
-        <item itemvalue="JUnit.ITCreateUsersTest.createUserManyIT" />
-        <item itemvalue="JUnit.ITCreateUsersTest.deleteUserNullIT" />
-        <item itemvalue="JUnit.ITCreateUsersTest.createUserIT" />
+        <item itemvalue="JUnit.CreateUsersIT" />
+        <item itemvalue="JUnit.CreateUsersIT.updateUserManyIT" />
+        <item itemvalue="JUnit.CreateUsersIT.createUserManyIT" />
+        <item itemvalue="JUnit.CreateUsersIT.deleteUserNullIT" />
+        <item itemvalue="JUnit.CreateUsersIT.createUserIT" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +545,7 @@
       <workItem from="1546535821060" duration="349000" />
       <workItem from="1546536270211" duration="26104000" />
       <workItem from="1546630844189" duration="7106000" />
-      <workItem from="1546638493053" duration="647000" />
+      <workItem from="1546638493053" duration="983000" />
     </task>
     <servers />
   </component>
@@ -589,12 +582,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194136000" />
+    <option name="totallyTimeSpent" value="194472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22136137" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22136137" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -604,7 +598,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36514983" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36514983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46059933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -939,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="817" column="40" selection-start-line="817" selection-start-column="40" selection-end-line="817" selection-end-column="40" />
+        <state relative-caret-position="1121">
+          <caret line="839" selection-start-line="839" selection-end-line="839" />
         </state>
       </provider>
     </entry>
@@ -981,10 +975,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/ITCreateUsersTest.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateUsersIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="221">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
     </entry>
