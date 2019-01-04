@@ -45,7 +45,6 @@ public class UserModel {
         this.id = id;
         this.login = login;
         this.email = email;
-        this.password = password;
         this.hashLoginPass = hashLoginPass;
         this.hashEmailPass = hashEmailPass;
     }

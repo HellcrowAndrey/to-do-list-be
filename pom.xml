@@ -98,7 +98,7 @@
         <!--Include dependency-->
         <sl4g.logger>1.7.25</sl4g.logger>
         <!--DB dependency-->
-        <my-sql-version>5.1.47</my-sql-version>
+        <my-sql-version>8.0.13</my-sql-version>
         <!--tests versions-->
         <junit.version>4.12</junit.version>
         <mockito.version>2.8.47</mockito.version>
@@ -132,7 +132,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.14</version>
                 <configuration>
-                    <imageName>docker_example</imageName>
+                    <imageName>to-do-app</imageName>
                     <baseImage>java</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <!-- copy the service's jar file from target into the root directory of the image -->
@@ -711,6 +711,132 @@
         </profile>
         <profile>
             <id>check-style</id>
+        </profile>
+
+        <profile>
+            <id>integration-tests</id>
+            <properties>
+                <build.profile.id>integration-test</build.profile.id>
+                <skip.unit.tests>true</skip.unit.tests>
+            </properties>
+            <modules>
+                <module>data-access-object</module>
+                <module>client-api</module>
+            </modules>
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>1.9.1</version>
+                        <executions>
+                            <execution>
+                                <id>add-integration-test-sources</id>
+                                <phase>generate-test-sources</phase>
+                                <goals>
+                                    <goal>add-test-source</goal>
+                                </goals>
+                                <configuration>
+                                    <sources>
+                                        <source>src/integration-test/java</source>
+                                    </sources>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>add-integration-test-resources</id>
+                                <phase>generate-test-resources</phase>
+                                <goals>
+                                    <goal>add-test-resource</goal>
+                                </goals>
+                                <configuration>
+                                    <resources>
+                                        <resource>
+                                            <filtering>true</filtering>
+                                            <directory>src/integration-test/resources</directory>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <version>0.20.1</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <images>
+                                <image>
+                                    <alias>database</alias>
+                                    <name>mysql:8.0.13</name>
+                                    <run>
+                                        <wait>
+                                            <log>mysqld: ready for connections</log>
+                                            <time>20000</time>
+                                        </wait>
+                                        <env>
+                                            <MYSQL_ROOT_PASSWORD>root</MYSQL_ROOT_PASSWORD>
+                                            <MYSQL_DATABASE>firstdb</MYSQL_DATABASE>
+                                            <MYSQL_USER>user</MYSQL_USER>
+                                            <MYSQL_PASSWORD>pass123</MYSQL_PASSWORD>
+                                        </env>
+                                        <ports>
+                                            <port>6603:3306</port>
+                                        </ports>
+                                    </run>
+                                </image>
+                            </images>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>docker:start</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>docker:stop</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.18</version>
+                        <configuration>
+                            <skipTests>${skip.unit.tests}</skipTests>
+                            <excludes>
+                                <exclude>**/IT*.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>2.17</version>
+                        <executions>
+                            <execution>
+                                <id>integration-test</id>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>verify</id>
+                                <goals>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 

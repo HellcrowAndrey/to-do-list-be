@@ -5,10 +5,7 @@ import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import com.todo.app.jdbc.utils.DaoUtils;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DaoUsersImpl implements IDaoUsers {
 
@@ -23,18 +20,17 @@ public class DaoUsersImpl implements IDaoUsers {
         if (user == null) {
             return 0;
         }
-        String generatedColumns[] = {"ID"};
         String query = "INSERT INTO Users (LOGIN, EMAIL, HASH_LOGIN," +
                 " HASH_EMAIL) VALUES (?, ?, ?, ?);";
-        int userId = 0;
+        int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, generatedColumns)) {
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getHashLoginPass());
             statement.setString(4, user.getHashEmailPass());
-            int result = statement.executeUpdate();
-            userId = DaoUtils.returnId(result, statement);
+            result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -44,7 +40,7 @@ public class DaoUsersImpl implements IDaoUsers {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return userId;
+        return result;
     }
 
     @Override
@@ -113,16 +109,20 @@ public class DaoUsersImpl implements IDaoUsers {
         if (user == null) {
             return 0;
         }
-        String generatedColumns[] = {"ID"};
-        String query = "UPDATE Users SET PASSWORD=? WHERE LOGIN=?, EMAIL=?;";
-        int userId = 0;
+        String query = "UPDATE Users SET LOGIN=?, EMAIL=?, HASH_LOGIN=?, HASH_EMAIL=?" +
+                " WHERE LOGIN=? OR EMAIL=?;";
+        int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, generatedColumns)) {
-            statement.setString(1, user.getPassword());
-            statement.setString(2, user.getLogin());
-            statement.setString(3, user.getPassword());
-            int result = statement.executeUpdate();
-            userId = DaoUtils.returnId(result, statement);
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
+            statement.setString(1, user.getLogin());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getHashEmailPass());
+            statement.setString(4, user.getHashEmailPass());
+
+            statement.setString(5, user.getLogin());
+            statement.setString(6, user.getEmail());
+            result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -132,7 +132,7 @@ public class DaoUsersImpl implements IDaoUsers {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return userId;
+        return result;
     }
 
     @Override
@@ -140,8 +140,24 @@ public class DaoUsersImpl implements IDaoUsers {
         if (user == null) {
             return 0;
         }
-        String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=? AND PASSWORD=?";
-        return doStaffUser(user, query);
+        String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=?";
+        int result = 0;
+        try (Connection connection = source.getConnect();
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
+            statement.setString(1, user.getLogin());
+            statement.setString(2, user.getEmail());
+            result = statement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     private int doStaffUser(UserModel user, String query) {
