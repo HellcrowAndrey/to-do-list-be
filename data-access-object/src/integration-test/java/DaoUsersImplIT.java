@@ -16,11 +16,6 @@ public class DaoUsersImplIT {
     private CreateDataBase dataBase = null;
     private IDaoUsers users = null;
 
-    @BeforeClass
-    public static void initClass() throws InterruptedException {
-        Thread.sleep(8000);
-    }
-
     @Before
     public void init() {
         connection = new MySqlTestConnection();

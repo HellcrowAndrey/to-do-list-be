@@ -28,11 +28,6 @@ import static org.junit.Assert.*;
 })
 public class DaoTasksImplIT {
 
-    @BeforeClass
-    public static void initClass() throws InterruptedException {
-        Thread.sleep(8000);
-    }
-
     //=========================================================
     //================ CREATE TASKS TESTS ======================
     //=========================================================
