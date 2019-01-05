@@ -5,10 +5,7 @@ import com.todo.app.jdbc.dao.tasks.IDaoTasks;
 import com.todo.app.jdbc.utils.DaoUtils;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,18 +22,17 @@ public class DaoTasksImpl implements IDaoTasks {
         if (data == null) {
             return 0;
         }
-        String generatedColumns[] = {"ID"};
         String query = "INSERT INTO Tasks(NAME, TASK, STATUS, ID_USER) VALUES" +
                 " (?, ?, ?, (SELECT ID FROM Users WHERE LOGIN = ?));";
-        int taskId = 0;
+        int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, generatedColumns)) {
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, data.getTaskName());
             statement.setString(2, data.getTask());
             statement.setByte(3, data.getStatus());
             statement.setString(4, data.getLogin());
-            int result = statement.executeUpdate();
-            taskId = DaoUtils.returnId(result, statement);
+            result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -46,7 +42,7 @@ public class DaoTasksImpl implements IDaoTasks {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return taskId;
+        return result;
     }
 
     @Override
@@ -88,17 +84,16 @@ public class DaoTasksImpl implements IDaoTasks {
         if (task == null) {
             return 0;
         }
-        String generatedColumns[] = {"ID"};
-        int taskId = 0;
+        int result = 0;
         String query = "UPDATE Tasks SET NAME = ?, TASK = ?, STATUS = ? WHERE ID = ?;";
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, generatedColumns)) {
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, task.getTaskName());
             statement.setString(2, task.getTask());
             statement.setByte(3, task.getStatus());
             statement.setLong(4, task.getId());
-            int result = statement.executeUpdate();
-            taskId = DaoUtils.returnId(result, statement);
+            result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -108,7 +103,7 @@ public class DaoTasksImpl implements IDaoTasks {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return taskId;
+        return result;
     }
 
     @Override
@@ -117,13 +112,12 @@ public class DaoTasksImpl implements IDaoTasks {
             return 0;
         }
         String query = "DELETE FROM Tasks WHERE ID = ?;";
-        String generatedColumns[] = {"ID"};
-        int taskId = 0;
+        int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, generatedColumns)) {
+             PreparedStatement statement = connection.prepareStatement(query,
+                     Statement.RETURN_GENERATED_KEYS)) {
             statement.setLong(1, data.getId());
-            int result = statement.executeUpdate();
-            taskId = DaoUtils.returnId(result, statement);
+            result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -133,7 +127,7 @@ public class DaoTasksImpl implements IDaoTasks {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return taskId;
+        return result;
     }
 
 }
