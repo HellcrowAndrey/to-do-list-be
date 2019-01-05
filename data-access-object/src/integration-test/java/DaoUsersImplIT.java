@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class CreateUsersIT {
+public class DaoUsersImplIT {
 
     private IDataSource connection = null;
     private CreateDataBase dataBase = null;

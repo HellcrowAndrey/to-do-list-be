@@ -3,7 +3,6 @@ package com.todo.app.jdbc.dao.users.impl;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
-import com.todo.app.jdbc.utils.DaoUtils;
 
 import java.sql.*;
 
@@ -119,7 +118,6 @@ public class DaoUsersImpl implements IDaoUsers {
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getHashEmailPass());
             statement.setString(4, user.getHashEmailPass());
-
             statement.setString(5, user.getLogin());
             statement.setString(6, user.getEmail());
             result = statement.executeUpdate();
