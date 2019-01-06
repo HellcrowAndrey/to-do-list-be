@@ -129,9 +129,9 @@ page at http://checkstyle.sourceforge.net/config.html -->
         </module>
 
         <!--<module name="FinalLocalVariable">-->
-            <!--&lt;!&ndash; Checks that local variables that never have their values changed are declared final. &ndash;&gt;-->
-            <!--<property name="tokens" value="VARIABLE_DEF"/>-->
-            <!--<property name="validateEnhancedForLoopVariable" value="true"/>-->
+        <!--&lt;!&ndash; Checks that local variables that never have their values changed are declared final. &ndash;&gt;-->
+        <!--<property name="tokens" value="VARIABLE_DEF"/>-->
+        <!--<property name="validateEnhancedForLoopVariable" value="true"/>-->
         <!--</module>-->
 
         <!--LENGTH and CODING CHECKS-->
@@ -141,11 +141,9 @@ page at http://checkstyle.sourceforge.net/config.html -->
             <property name="max" value="${com.puppycrawl.tools.checkstyle.checks.sizes.LineLength.max}" default="100"/>
             <property name="severity" value="error"/>
 
-            <!--
-              The default ignore pattern exempts the following elements:
+            <!-- The default ignore pattern exempts the following elements:
                 - import statements
-                - long URLs inside comments
-            -->
+                - long URLs inside comments -->
 
             <property name="ignorePattern"
                       value="${com.puppycrawl.tools.checkstyle.checks.sizes.LineLength.ignorePattern}"
