@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Main {
 
-    private static Logger logger = LoggerFactory.getLogger(Main.class);
+    private static Logger logger = LoggerFactory.getLogger(RunApp.class);
 
     public static void main(String[] args) {
         logger.info("Start client api.");
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(RunApp.class, args);
     }
 }
