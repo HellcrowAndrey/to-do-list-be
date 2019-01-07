@@ -5,6 +5,9 @@ import com.todo.app.controller.model.task.Task;
 import com.todo.app.utils.IdGenerator;
 import com.google.gson.Gson;
 import com.todo.app.controller.model.ResponseModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
@@ -15,6 +18,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
 public class TasksController {
+
+    @Autowired
+    private TasksDelegate delegate;
+
+    private Logger logger = LoggerFactory.getLogger(TasksController.class);
 
     @Async
     @RequestMapping(value = "/tasks/{command}", method = {GET, POST})
@@ -28,7 +36,6 @@ public class TasksController {
         }
         Gson gson = new Gson();
         Task task = gson.fromJson(data, Task.class);
-        TasksDelegate delegate = new TasksDelegate();
         return delegate.dispatcher(command, task);
     }
 

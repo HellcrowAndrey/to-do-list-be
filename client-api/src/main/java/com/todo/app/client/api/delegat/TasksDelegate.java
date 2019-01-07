@@ -9,14 +9,24 @@ import com.todo.app.controller.model.task.Task;
 import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
+@Component
+@Primary
 public class TasksDelegate {
 
     private IdGenerator gen = IdGenerator.getInstance();
 
     private Logger logger = LoggerFactory.getLogger(TasksDelegate.class);
+
+    private IServiceTasks serviceTasks;
+
+    public TasksDelegate(IServiceTasks serviceTasks) {
+        this.serviceTasks = serviceTasks;
+    }
 
     public ResponseEntity dispatcher(String command, Task data) {
         ResponseEntity entity;
@@ -52,7 +62,6 @@ public class TasksDelegate {
         }
         CacheManager cacheManager = CacheManager.getInstance();
         if (!repeatAuth(data.getLogin(), cacheManager)) {
-            IServiceTasks serviceTasks = new ServiceTasksImpl();
             int id = serviceTasks.create(data);
             if (id > 0) {
                 cacheManager.addTask(data);
@@ -80,7 +89,6 @@ public class TasksDelegate {
         }
         CacheManager cacheManager = CacheManager.getInstance();
         if (!repeatAuth(data.getLogin(), cacheManager)) {
-            IServiceTasks serviceTasks = new ServiceTasksImpl();
             int id = serviceTasks.update(data);
             if (id > 0) {
                 cacheManager.updateTask(data);
@@ -108,7 +116,6 @@ public class TasksDelegate {
         }
         CacheManager cacheManager = CacheManager.getInstance();
         if (!repeatAuth(data.getLogin(), cacheManager)) {
-            IServiceTasks serviceTasks = new ServiceTasksImpl();
             int id = serviceTasks.delete(data);
             if (id > 0) {
                 cacheManager.deleteTask(data);

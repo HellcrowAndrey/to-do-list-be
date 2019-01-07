@@ -2,7 +2,6 @@ package com.todo.app.jdbc.dao.tasks.impl;
 
 import com.todo.app.controller.model.task.Task;
 import com.todo.app.jdbc.dao.tasks.IDaoTasks;
-import com.todo.app.jdbc.utils.DaoUtils;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 
 import java.sql.*;

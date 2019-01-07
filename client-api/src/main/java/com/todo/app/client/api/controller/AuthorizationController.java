@@ -8,6 +8,7 @@ import com.todo.app.utils.ControllerUtils;
 import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
@@ -23,6 +24,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class AuthorizationController {
 
+    @Autowired
+    private AuthorizationDelegate delegate;
+
     private IdGenerator gen = IdGenerator.getInstance();
 
     private Logger logger = LoggerFactory.getLogger(AuthorizationController.class);
@@ -33,7 +37,6 @@ public class AuthorizationController {
             @RequestParam(value = "login", defaultValue = "") String login,
             @RequestParam(value = "email", defaultValue = "") String email,
             @RequestParam(value = "password") String password) {
-        System.out.println("Params: " + login + " " + email + " " + password);
         ResponseEntity valid = AuthorizationDelegate.isParams(login, email, password);
         if (valid != null) {
             logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
@@ -41,7 +44,6 @@ public class AuthorizationController {
         }
         ResponseModel responseModel;
         UserModel model = new UserModel(login, email, password);
-        AuthorizationDelegate delegate = new AuthorizationDelegate();
         List<Task> response = delegate.getData(model);
         if (response == null) {
             logger.warn(ControllerUtils.USER_NOT_FOUNT);

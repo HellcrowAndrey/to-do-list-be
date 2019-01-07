@@ -6,17 +6,26 @@ import com.todo.app.decorator.UserDecorator;
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.service.users.impl.ServiceUsersImpl;
 import com.todo.app.controller.model.user.UserModel;
-import com.todo.app.client.api.controller.RegistrationController;
 import com.todo.app.utils.ControllerUtils;
 import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
+@Component
+@Primary
 public class RegistrationDelegate {
 
     private Logger logger = LoggerFactory.getLogger(RegistrationDelegate.class);
+
+    private IServiceUsers serviceUsers;
+
+    public RegistrationDelegate(IServiceUsers serviceUsers) {
+        this.serviceUsers = serviceUsers;
+    }
 
     public static ResponseEntity isParams(String user, String email, String password) {
         if (user == null || user.equals("") ||
@@ -37,8 +46,7 @@ public class RegistrationDelegate {
         CacheManager manager = CacheManager.getInstance();
         if (manager.fetchRegUser(user) == null) {
             logger.info("User doesn't exist in cache. Do check in data base.");
-            IServiceUsers service = new ServiceUsersImpl();
-            long id = service.read(user.getLogin(), user.getEmail());
+            long id = serviceUsers.read(user.getLogin(), user.getEmail());
             if (id > 0) {
                 logger.info("This user exist in data base.");
                 return ControllerUtils.USER_EXIT;
@@ -46,7 +54,7 @@ public class RegistrationDelegate {
             UserDecorator decorator = new UserDecorator();
             UserModel newUser = decorator.createHash(user);
             manager.addUser(newUser);
-            return service.create(newUser);
+            return serviceUsers.create(newUser);
         } else {
             logger.info("User with this params exist in cache.");
             return ControllerUtils.USER_EXIT;

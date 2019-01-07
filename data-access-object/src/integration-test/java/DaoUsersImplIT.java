@@ -1,6 +1,5 @@
 
 import com.todo.app.controller.model.user.UserModel;
-import com.todo.app.jdbc.DaoConfig;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import com.todo.app.jdbc.dao.data.source.impl.MySqlTestConnection;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
@@ -11,9 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;

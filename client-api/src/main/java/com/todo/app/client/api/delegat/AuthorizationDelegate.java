@@ -13,15 +13,28 @@ import com.todo.app.utils.ControllerUtils;
 import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
-import javax.validation.Valid;
 import java.util.List;
 
+@Component
+@Primary
 public class AuthorizationDelegate {
 
     private Logger logger = LoggerFactory.getLogger(AuthorizationDelegate.class);
+
+    private IServiceUsers serviceUsers;
+
+    private IServiceTasks serviceTasks;
+
+    public AuthorizationDelegate(IServiceUsers serviceUsers, IServiceTasks serviceTasks) {
+        this.serviceUsers = serviceUsers;
+        this.serviceTasks = serviceTasks;
+    }
 
     public static ResponseEntity isParams(final String login,
                                           final String email,
@@ -43,7 +56,7 @@ public class AuthorizationDelegate {
         }
     }
 
-    public List<Task> getData(@Valid UserModel authUser) {
+    public List<Task> getData(UserModel authUser) {
         if (authUser == null) {
             logger.warn("User model is not valid.", AuthorizationDelegate.class);
             return null;
@@ -58,7 +71,6 @@ public class AuthorizationDelegate {
     }
 
     private List<Task> findData(UserModel authUser) {
-        IServiceUsers serviceUsers = new ServiceUsersImpl();
         UserDecorator decorator = new UserDecorator();
         UserModel userInDb = serviceUsers.read(decorator.createHash(authUser));
         if (userInDb == null) {
@@ -68,7 +80,7 @@ public class AuthorizationDelegate {
             CacheManager manager = CacheManager.getInstance();
             logger.info("User find in db and add to cache.", AuthorizationDelegate.class);
             manager.addUser(userInDb);
-            IServiceTasks serviceTasks = new ServiceTasksImpl();
+            //IServiceTasks serviceTasks = new ServiceTasksImpl();
             List<Task> tasks = serviceTasks.read(userInDb.getLogin());
             logger.info("Return Tasks by user.", AuthorizationDelegate.class);
             return manager.addTasks(tasks, userInDb.getLogin());
