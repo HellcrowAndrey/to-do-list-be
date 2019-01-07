@@ -14,6 +14,7 @@ import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +32,8 @@ public class AuthorizationDelegate {
 
     private IServiceTasks serviceTasks;
 
-    public AuthorizationDelegate(IServiceUsers serviceUsers, IServiceTasks serviceTasks) {
+    public AuthorizationDelegate(@Qualifier("serviceUsersImpl") IServiceUsers serviceUsers,
+                                 @Qualifier("serviceTasksImpl") IServiceTasks serviceTasks) {
         this.serviceUsers = serviceUsers;
         this.serviceTasks = serviceTasks;
     }

@@ -10,6 +10,7 @@ import com.todo.app.utils.ControllerUtils;
 import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class RegistrationDelegate {
 
     private IServiceUsers serviceUsers;
 
-    public RegistrationDelegate(IServiceUsers serviceUsers) {
+    public RegistrationDelegate(@Qualifier("serviceUsersImpl") IServiceUsers serviceUsers) {
         this.serviceUsers = serviceUsers;
     }
 

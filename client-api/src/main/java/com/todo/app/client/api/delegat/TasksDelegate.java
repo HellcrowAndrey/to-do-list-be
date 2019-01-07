@@ -9,6 +9,7 @@ import com.todo.app.controller.model.task.Task;
 import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class TasksDelegate {
 
     private IServiceTasks serviceTasks;
 
-    public TasksDelegate(IServiceTasks serviceTasks) {
+    public TasksDelegate(@Qualifier("serviceTasksImpl") IServiceTasks serviceTasks) {
         this.serviceTasks = serviceTasks;
     }
 
