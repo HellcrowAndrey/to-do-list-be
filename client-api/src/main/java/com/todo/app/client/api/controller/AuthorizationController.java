@@ -2,7 +2,7 @@ package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.AuthorizationDelegate;
 import com.todo.app.controller.model.ResponseModel;
-import com.todo.app.controller.model.task.Task;
+import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.utils.ControllerUtils;
 import com.todo.app.utils.IdGenerator;
@@ -44,7 +44,7 @@ public class AuthorizationController {
         }
         ResponseModel responseModel;
         UserModel model = new UserModel(login, email, password);
-        List<Task> response = delegate.getData(model);
+        List<TaskModel> response = delegate.getData(model);
         if (response == null) {
             logger.warn(ControllerUtils.USER_NOT_FOUNT);
             responseModel = new ResponseModel(gen.getCounter(), ControllerUtils.USER_NOT_FOUNT);

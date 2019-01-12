@@ -4,42 +4,38 @@ import java.util.Objects;
 
 public class ResponseModel<T> {
 
-    private long id;
+    private final long idMessage;
 
-    private T resoinse;
+    private final T response;
 
-    public ResponseModel(long id, T resoinse) {
-        this.id = id;
-        this.resoinse = resoinse;
+    public ResponseModel(final long idMessage, final T response) {
+        this.idMessage = idMessage;
+        this.response = response;
     }
 
-    public long getId() {
-        return id;
+    public long getIdMessage() {
+        return idMessage;
     }
 
-    public T getResoinse() {
-        return resoinse;
+    public T getResponse() {
+        return response;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ResponseModel<?> that = (ResponseModel<?>) o;
-        return id == that.id &&
-                Objects.equals(resoinse, that.resoinse);
+    public boolean equals(final Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        final ResponseModel<?> that = (ResponseModel<?>) object;
+        return idMessage == that.idMessage &&
+                Objects.equals(response, that.response);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, resoinse);
-    }
-
-    @Override
-    public String toString() {
-        return "ResponseModel{" +
-                "id=" + id +
-                ", resoinse=" + resoinse +
-                '}';
+        return Objects.hash(idMessage, response);
     }
 }

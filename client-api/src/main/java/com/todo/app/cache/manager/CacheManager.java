@@ -1,7 +1,7 @@
 package com.todo.app.cache.manager;
 
+import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.decorator.UserDecorator;
-import com.todo.app.controller.model.task.Task;
 import com.todo.app.controller.model.user.UserModel;
 
 import java.util.*;
@@ -16,7 +16,7 @@ public class CacheManager extends UserDecorator {
 
     private List<UserModel> users = new ArrayList<>();
 
-    private Map<String, List<Task>> tasks = new LinkedHashMap<>();
+    private Map<String, List<TaskModel>> tasks = new LinkedHashMap<>();
 
     public static synchronized CacheManager getInstance() {
         if (instance == null) {
@@ -65,7 +65,7 @@ public class CacheManager extends UserDecorator {
                 current.getLogin().equals(login)).findFirst().orElse(null);
     }
 
-    public List<Task> fetchTasks(UserModel user) {
+    public List<TaskModel> fetchTasks(UserModel user) {
         if (user == null) {
             return null;
         }
@@ -86,7 +86,7 @@ public class CacheManager extends UserDecorator {
         return users.add(user);
     }
 
-    public List<Task> addTasks(List<Task> data, String key) {
+    public List<TaskModel> addTasks(List<TaskModel> data, String key) {
         if (data == null || key == null || key.equals("")) {
             return null;
         }
@@ -94,27 +94,27 @@ public class CacheManager extends UserDecorator {
         return tasks.get(key);
     }
 
-    public boolean addTask(Task data) {
+    public boolean addTask(TaskModel data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getLogin());
+            List<TaskModel> list = tasks.get(data.getLogin());
             return list.add(data);
         }
         return false;
     }
 
-    public boolean deleteTask(Task data) {
+    public boolean deleteTask(TaskModel data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getLogin());
+            List<TaskModel> list = tasks.get(data.getLogin());
             return list.remove(data);
         }
         return false;
     }
 
-    public Task updateTask(Task data) {
+    public TaskModel updateTask(TaskModel data) {
         if (data != null) {
-            List<Task> list = tasks.get(data.getLogin());
+            List<TaskModel> list = tasks.get(data.getLogin());
             long index = list.stream().filter(current ->
-                    data.getId() == current.getId()).count();
+                    data.getIdTask() == current.getIdTask()).count();
             return list.set((int) index, data);
         }
         return null;

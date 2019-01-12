@@ -4,11 +4,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class IdGenerator {
 
-    private static IdGenerator instance;
+    private static volatile IdGenerator instance;
 
     private AtomicLong counter = new AtomicLong();
 
-    public static IdGenerator getInstance() {
+    public static synchronized IdGenerator getInstance() {
         if (instance == null) {
             instance = new IdGenerator();
         }

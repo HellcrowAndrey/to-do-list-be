@@ -1,6 +1,6 @@
 package com.todo.app.service.tasks;
 
-import com.todo.app.controller.model.task.Task;
+import com.todo.app.controller.model.task.TaskModel;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -10,12 +10,12 @@ import java.util.List;
 @Primary
 public interface IServiceTasks {
 
-    int create(Task task);
+    int create(TaskModel task);
 
-    List<Task> read(String data);
+    List<TaskModel> read(String data);
 
-    int update(Task data);
+    int update(TaskModel data);
 
-    int delete(Task data);
+    int delete(TaskModel data);
 
 }

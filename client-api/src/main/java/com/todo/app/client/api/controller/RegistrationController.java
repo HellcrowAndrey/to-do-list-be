@@ -40,8 +40,7 @@ public class RegistrationController {
             return valid;
         }
         UserModel userModel = new UserModel(login, email, password);
-        ResponseModel responseModel = new ResponseModel(gen.getCounter(),
-                delegate.submitRegistration(userModel));
+        ResponseModel responseModel = new ResponseModel(gen.getCounter(), delegate.submitRegistration(userModel));
         return new ResponseEntity<>(responseModel, HttpStatus.OK);
     }
 

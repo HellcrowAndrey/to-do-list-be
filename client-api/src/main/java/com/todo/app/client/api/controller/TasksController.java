@@ -1,7 +1,7 @@
 package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.TasksDelegate;
-import com.todo.app.controller.model.task.Task;
+import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.utils.IdGenerator;
 import com.google.gson.Gson;
 import com.todo.app.controller.model.ResponseModel;
@@ -35,7 +35,7 @@ public class TasksController {
                             "Incorrect data"), HttpStatus.OK);
         }
         Gson gson = new Gson();
-        Task task = gson.fromJson(data, Task.class);
+        TaskModel task = gson.fromJson(data, TaskModel.class);
         return delegate.dispatcher(command, task);
     }
 

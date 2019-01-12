@@ -16,20 +16,21 @@ import java.sql.SQLException;
 public class MySqlTestConnection implements IDataSource {
 
     @Value("${spring.jdbc_driver}")
-    private String JDBC_DRIVER;
+    private String jdbcDriver;
 
     @Value("${spring.db_url}")
-    private String DB_URL;
+    private String dbUrl;
 
     @Value("${spring.user}")
-    private String USER;
+    private String user;
 
     @Value("${spring.pass}")
-    private String PASS;
+    private String pass;
 
     @Override
-    public Connection getConnect() throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
-        Class.forName(JDBC_DRIVER).newInstance();
-        return DriverManager.getConnection(DB_URL, USER, PASS);
+    public Connection getConnect() throws ClassNotFoundException,
+            IllegalAccessException, InstantiationException, SQLException {
+        Class.forName(jdbcDriver).newInstance();
+        return DriverManager.getConnection(dbUrl, user, pass);
     }
 }

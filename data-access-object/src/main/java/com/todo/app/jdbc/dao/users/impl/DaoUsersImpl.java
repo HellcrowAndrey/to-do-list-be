@@ -3,23 +3,27 @@ package com.todo.app.jdbc.dao.users.impl;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 
 public class DaoUsersImpl implements IDaoUsers {
 
-    private IDataSource source;
+    private final IDataSource source;
 
-    public DaoUsersImpl(IDataSource source) {
+    private static final Logger LOGGER = LoggerFactory.getLogger(DaoUsersImpl.class);
+
+    public DaoUsersImpl(final IDataSource source) {
         this.source = source;
     }
 
     @Override
-    public int create(UserModel user) {
+    public int create(final UserModel user) {
         if (user == null) {
             return 0;
         }
-        String query = "INSERT INTO Users (LOGIN, EMAIL, HASH_LOGIN," +
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH_LOGIN," +
                 " HASH_EMAIL) VALUES (?, ?, ?, ?);";
         int result = 0;
         try (Connection connection = source.getConnect();
@@ -31,84 +35,93 @@ public class DaoUsersImpl implements IDaoUsers {
             statement.setString(4, user.getHashEmailPass());
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
+    private boolean isParams(final String login, final String email) {
+        return login == null || login.equals("") || email == null || email.equals("");
+    }
+
     @Override
-    public long read(String login, String email) {
-        if (login == null || login.equals("") ||
-                email == null || email.equals("")) {
+    public long read(final String login, final String email) {
+        if (isParams(login, email)) {
             return 0;
         }
         long result = 0;
-        String query = "SELECT ID FROM Users WHERE LOGIN = ? OR EMAIL = ?;";
+        final String query = "SELECT ID FROM Users WHERE LOGIN = ? OR EMAIL = ?;";
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
             statement.setString(1, login);
             statement.setString(2, login);
-            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 result = resultSet.getLong(1);
             }
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
+    private PreparedStatement getStatement(Connection connection,
+                                           String query,
+                                           UserModel user) throws SQLException {
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, user.getHashLoginPass());
+        statement.setString(2, user.getHashEmailPass());
+        return statement;
+    }
+
     @Override
-    public UserModel read(UserModel user) {
+    public UserModel read(final UserModel user) {
         if (user == null) {
             return null;
         }
-        UserModel result = null;
-        String query = "SELECT ID, LOGIN, EMAIL, HASH_LOGIN, HASH_EMAIL" +
-                " FROM Users WHERE HASH_LOGIN = ? OR HASH_EMAIL = ?;";
+        final UserModel result = new UserModel();
+        final String query = "SELECT ID, LOGIN, EMAIL, HASH_LOGIN, HASH_EMAIL" +
+                " FROM Users WHERE HASH_LOGIN = ? OR HASH_EMAIL = ?";
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, user.getHashLoginPass());
-            statement.setString(2, user.getHashEmailPass());
-            ResultSet resultSet = statement.executeQuery();
+             PreparedStatement statement = getStatement(connection, query, user);
+             ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
-                long id = resultSet.getLong(1);
-                String login = resultSet.getString(2);
-                String email = resultSet.getString(3);
-                String hashLogin = resultSet.getString(4);
-                String hashEmail = resultSet.getString(5);
-                result = new UserModel(id, login, email, hashLogin, hashEmail);
+                result.setIdUser(resultSet.getLong(1));
+                result.setLogin(resultSet.getString(2));
+                result.setEmail(resultSet.getString(3));
+                result.setHashLoginPass(resultSet.getString(4));
+                result.setHashEmailPass(resultSet.getString(5));
             }
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
     @Override
-    public int update(UserModel user) {
+    public int update(final UserModel user) {
         if (user == null) {
             return 0;
         }
-        String query = "UPDATE Users SET LOGIN=?, EMAIL=?, HASH_LOGIN=?, HASH_EMAIL=?" +
+        final String query = "UPDATE Users SET LOGIN=?, EMAIL=?, HASH_LOGIN=?, HASH_EMAIL=?" +
                 " WHERE LOGIN=? OR EMAIL=?;";
         int result = 0;
         try (Connection connection = source.getConnect();
@@ -122,23 +135,23 @@ public class DaoUsersImpl implements IDaoUsers {
             statement.setString(6, user.getEmail());
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
     @Override
-    public int delete(UserModel user) {
+    public int delete(final UserModel user) {
         if (user == null) {
             return 0;
         }
-        String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=?";
+        final String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=?";
         int result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
@@ -147,39 +160,15 @@ public class DaoUsersImpl implements IDaoUsers {
             statement.setString(2, user.getEmail());
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
-    }
-
-    private int doStaffUser(UserModel user, String query) {
-        int result = 0;
-        try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            result = userFields(statement, user);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    private int userFields(PreparedStatement statement, UserModel user) throws SQLException {
-        statement.setString(1, user.getLogin());
-        statement.setString(2, user.getEmail());
-        statement.setString(3, user.getPassword());
-        return statement.executeUpdate();
     }
 
 }

@@ -7,10 +7,11 @@ public class UserDecorator {
 
     public UserModel createHash(UserModel user) {
         MDFive md = new MDFive();
-        user.setHashEmailPass(md.getHash(user.getEmail() +
-                user.getPassword()));
-        user.setHashLoginPass(md.getHash(user.getLogin() +
-                user.getPassword()));
+        if (user.getEmail() == null || user.getEmail().equals("")) {
+            user.setHashLoginPass(md.getHash(user.getLogin() + user.getPassword()));
+        } else if (user.getLogin() == null || user.getLogin().equals("")) {
+            user.setHashEmailPass(md.getHash(user.getEmail() + user.getPassword()));
+        }
         return user;
     }
 

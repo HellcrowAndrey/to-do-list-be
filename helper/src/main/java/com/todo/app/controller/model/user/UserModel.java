@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class UserModel {
 
-    private long id;
+    private long idUser;
 
     private String login;
 
@@ -12,16 +12,21 @@ public class UserModel {
 
     private String password;
 
-    private String role = "user";
+    private static final String ROLE = "user";
 
     private String hashLoginPass;
 
     private String hashEmailPass;
 
-    private Boolean terms;
+    /**
+     * Default constructor this class
+     */
+    public UserModel() {
+        // Use for instance new object inside loops
+    }
 
-    public UserModel(long id, String login, String email) {
-        this.id = id;
+    public UserModel(final long idUser, final String login, final String email) {
+        this.idUser = idUser;
         this.login = login;
         this.email = email;
     }
@@ -32,25 +37,37 @@ public class UserModel {
         this.password = password;
     }
 
-    public UserModel(final long id, final String login,
+    public UserModel(final long idUser, final String login,
                      final String email, final String password) {
-        this.id = id;
+        this.idUser = idUser;
         this.login = login;
         this.email = email;
         this.password = password;
     }
 
-    public UserModel(long id, String login, String email,
-                     String hashLoginPass, String hashEmailPass) {
-        this.id = id;
+    public UserModel(final long idUser, final String login, final String email,
+                     final String hashLoginPass, final String hashEmailPass) {
+        this.idUser = idUser;
         this.login = login;
         this.email = email;
         this.hashLoginPass = hashLoginPass;
         this.hashEmailPass = hashEmailPass;
     }
 
-    public long getId() {
-        return id;
+    public void setIdUser(final long idUser) {
+        this.idUser = idUser;
+    }
+
+    public void setLogin(final String login) {
+        this.login = login;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
+    public long getIdUser() {
+        return idUser;
     }
 
     public String getLogin() {
@@ -61,7 +78,7 @@ public class UserModel {
         return email;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(final String password) {
         this.password = password;
     }
 
@@ -70,14 +87,14 @@ public class UserModel {
     }
 
     public String getRole() {
-        return role;
+        return ROLE;
     }
 
     public String getHashEmailPass() {
         return hashEmailPass;
     }
 
-    public void setHashEmailPass(String hashEmailPass) {
+    public void setHashEmailPass(final String hashEmailPass) {
         this.hashEmailPass = hashEmailPass;
     }
 
@@ -85,43 +102,39 @@ public class UserModel {
         return hashLoginPass;
     }
 
-    public void setHashLoginPass(String hashLoginPass) {
+    public void setHashLoginPass(final String hashLoginPass) {
         this.hashLoginPass = hashLoginPass;
     }
 
-    public Boolean getTerms() {
-        return terms;
-    }
-
-    public void setTerms(Boolean terms) {
-        this.terms = terms;
-    }
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UserModel model = (UserModel) o;
-        return id == model.id &&
+    public boolean equals(final Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        final UserModel model = (UserModel) object;
+        return idUser == model.idUser &&
                 Objects.equals(login, model.login) &&
                 Objects.equals(email, model.email) &&
                 Objects.equals(password, model.password) &&
-                Objects.equals(role, model.role);
+                Objects.equals(ROLE, model.ROLE);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, email, password, role);
+        return Objects.hash(idUser, login, email, password, ROLE);
     }
 
     @Override
     public String toString() {
         return "UserModel{" +
-                "id=" + id +
+                "id=" + idUser +
                 ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
+                ", role='" + ROLE + '\'' +
                 ", hashLoginPass='" + hashLoginPass + '\'' +
                 ", hashEmailPass='" + hashEmailPass + '\'' +
                 '}';

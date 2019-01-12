@@ -3,9 +3,8 @@ package com.todo.app.client.api.delegat;
 import com.todo.app.utils.IdGenerator;
 import com.todo.app.cache.manager.CacheManager;
 import com.todo.app.service.tasks.IServiceTasks;
-import com.todo.app.service.tasks.impl.ServiceTasksImpl;
 import com.todo.app.controller.model.ResponseModel;
-import com.todo.app.controller.model.task.Task;
+import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +28,7 @@ public class TasksDelegate {
         this.serviceTasks = serviceTasks;
     }
 
-    public ResponseEntity dispatcher(String command, Task data) {
+    public ResponseEntity dispatcher(String command, TaskModel data) {
         ResponseEntity entity;
         switch (command) {
             case ControllerUtils.CREATE:
@@ -53,7 +52,7 @@ public class TasksDelegate {
         return entity;
     }
 
-    private ResponseEntity create(Task data) {
+    private ResponseEntity create(TaskModel data) {
         if (data == null) {
             logger.error("Incorrect data in method create.",
                     TasksDelegate.class);
@@ -72,7 +71,7 @@ public class TasksDelegate {
             } else {
                 logger.warn("Doesn't create task.", TasksDelegate.class);
                 return new ResponseEntity(
-                        new ResponseModel(gen.getCounter(), "Task doesn't create"),
+                        new ResponseModel(gen.getCounter(), "TaskModel doesn't create"),
                         HttpStatus.OK);
             }
         }
@@ -80,7 +79,7 @@ public class TasksDelegate {
                 "You mast repeat authorization"), HttpStatus.OK);
     }
 
-    private ResponseEntity update(Task data) {
+    private ResponseEntity update(TaskModel data) {
         if (data == null) {
             logger.error("Incorrect data in method update.",
                     TasksDelegate.class);
@@ -100,14 +99,14 @@ public class TasksDelegate {
             } else {
                 logger.warn("Doesn't update task.", TasksDelegate.class);
                 return new ResponseEntity(new ResponseModel(gen.getCounter(),
-                        "Task doesn't delete"), HttpStatus.OK);
+                        "TaskModel doesn't delete"), HttpStatus.OK);
             }
         }
         return new ResponseEntity(new ResponseModel(gen.getCounter(),
                 "You mast repeat authorization"), HttpStatus.OK);
     }
 
-    private ResponseEntity delete(Task data) {
+    private ResponseEntity delete(TaskModel data) {
         if (data == null) {
             logger.error("Incorrect data in method delete.",
                     TasksDelegate.class);
@@ -128,7 +127,7 @@ public class TasksDelegate {
                 logger.warn("Doesn't delete task.", TasksDelegate.class);
                 return new ResponseEntity(
                         new ResponseModel(gen.getCounter(),
-                                "Task doesn't create"), HttpStatus.OK);
+                                "TaskModel doesn't create"), HttpStatus.OK);
             }
         }
         return new ResponseEntity(new ResponseModel(gen.getCounter(),
