@@ -71,18 +71,19 @@ public class AuthorizationDelegate {
 
     private List<TaskModel> findData(UserModel authUser) {
         UserDecorator decorator = new UserDecorator();
-        UserModel userInDb = serviceUsers.read(decorator.createHash(authUser));
-        if (userInDb == null) {
-            logger.warn("User doesn't find in db.", AuthorizationDelegate.class);
-            return null;
-        } else {
-            CacheManager manager = CacheManager.getInstance();
-            logger.info("User find in db and add to cache.", AuthorizationDelegate.class);
-            manager.addUser(userInDb);
-            List<TaskModel> tasks = serviceTasks.read(userInDb.getLogin());
-            logger.info("Return Tasks by user.", AuthorizationDelegate.class);
-            return manager.addTasks(tasks, userInDb.getLogin());
-        }
+        //UserModel userInDb = serviceUsers.read(decorator.createHash(authUser));
+//        if (userInDb == null) {
+//            logger.warn("User doesn't find in db.", AuthorizationDelegate.class);
+//            return null;
+//        } else {
+//            CacheManager manager = CacheManager.getInstance();
+//            logger.info("User find in db and add to cache.", AuthorizationDelegate.class);
+//            manager.addUser(userInDb);
+//            //List<TaskModel> tasks = serviceTasks.read(userInDb.getLogin());
+//            logger.info("Return Tasks by user.", AuthorizationDelegate.class);
+//            return null; // manager.addTasks(tasks, userInDb.getLogin());
+//        }
+        return null;
     }
 
 }

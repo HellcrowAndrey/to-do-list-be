@@ -1,21 +1,21 @@
 package com.todo.app.service.tasks;
 
-import com.todo.app.controller.model.task.TaskModel;
+import com.todo.app.controller.model.task.TasksListModel;
+import com.todo.app.dao.model.TaskDaoModel;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 @Primary
 public interface IServiceTasks {
 
-    int create(TaskModel task);
+    long create(TaskDaoModel task);
 
-    List<TaskModel> read(String data);
+    TasksListModel read(String data);
 
-    int update(TaskModel data);
+    long update(TaskDaoModel data);
 
-    int delete(TaskModel data);
+    long delete(long idTask);
 
 }

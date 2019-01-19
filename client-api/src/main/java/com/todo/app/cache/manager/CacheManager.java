@@ -35,13 +35,14 @@ public class CacheManager extends UserDecorator {
 
     private boolean fetchUser(UserModel user, UserModel currentUser) {
         user = createHash(user);
-        if (user.getLogin() == null || user.getLogin().equals("")) {
-            return currentUser.getHashEmailPass().equals(
-                    createHash(user).getHashEmailPass());
-        } else {
-            return currentUser.getHashLoginPass().equals(
-                    createHash(user).getHashLoginPass());
-        }
+//        if (user.getLogin() == null || user.getLogin().equals("")) {
+//            return currentUser.getHashEmailPass().equals(
+//                    createHash(user).getHashEmailPass());
+//        } else {
+//            return currentUser.getHashLoginPass().equals(
+//                    createHash(user).getHashLoginPass());
+//        }
+        return false;
     }
 
     public UserModel fetchRegUser(final UserModel user) {
@@ -96,26 +97,26 @@ public class CacheManager extends UserDecorator {
 
     public boolean addTask(TaskModel data) {
         if (data != null) {
-            List<TaskModel> list = tasks.get(data.getLogin());
-            return list.add(data);
+            //List<TaskModel> list = tasks.get(data.getLogin());
+            return false; // list.add(data);
         }
         return false;
     }
 
     public boolean deleteTask(TaskModel data) {
         if (data != null) {
-            List<TaskModel> list = tasks.get(data.getLogin());
-            return list.remove(data);
+            //List<TaskModel> list = tasks.get(data.getLogin());
+            return false; // list.remove(data);
         }
         return false;
     }
 
     public TaskModel updateTask(TaskModel data) {
         if (data != null) {
-            List<TaskModel> list = tasks.get(data.getLogin());
-            long index = list.stream().filter(current ->
-                    data.getIdTask() == current.getIdTask()).count();
-            return list.set((int) index, data);
+//            List<TaskModel> list = tasks.get(data.getLogin());
+//            long index = list.stream().filter(current ->
+//                    data.getIdTask() == current.getIdTask()).count();
+            return null; //list.set((int) index, data);
         }
         return null;
     }

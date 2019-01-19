@@ -1,6 +1,10 @@
 package com.todo.app.config;
 
 import com.todo.app.jdbc.dao.data.source.IDataSource;
+import com.todo.app.jdbc.dao.tasks.IDaoTasks;
+import com.todo.app.jdbc.dao.tasks.impl.DaoTasksImpl;
+import com.todo.app.jdbc.dao.users.IDaoUsers;
+import com.todo.app.jdbc.dao.users.impl.DaoUsersImpl;
 import com.todo.app.service.tasks.IServiceTasks;
 import com.todo.app.service.tasks.impl.ServiceTasksImpl;
 import com.todo.app.service.users.IServiceUsers;
@@ -11,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.todo.app.jdbc.dao.data.source")
+@ComponentScan({"com.todo.app.jdbc.dao.data.source", "com.todo.app.jdbc.dao.users"})
 public class ServiceConfig {
 
     @Autowired

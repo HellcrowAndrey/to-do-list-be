@@ -4,15 +4,13 @@ import java.util.Objects;
 
 public class TaskModel {
 
-    private long idTask;
+    protected long idTask;
 
-    private String taskName;
+    protected String taskName;
 
-    private String task;
+    protected String task;
 
-    private byte status;
-
-    private String login;
+    protected byte status;
 
     /**
      * This is default constructor class TaskModel.
@@ -21,21 +19,17 @@ public class TaskModel {
         // Use for avoid instance new object inside loops
     }
 
-    public TaskModel(final long idTask, final String taskName,
-                     final String task, final byte status, final String login) {
+    public TaskModel(long idTask, String taskName, String task, byte status) {
         this.idTask = idTask;
         this.taskName = taskName;
         this.task = task;
         this.status = status;
-        this.login = login;
     }
 
-    public TaskModel(final String taskName, final String task,
-                     final byte status, final String login) {
+    public TaskModel(String taskName, String task, byte status) {
         this.taskName = taskName;
         this.task = task;
         this.status = status;
-        this.login = login;
     }
 
     public void setIdTask(final long idTask) {
@@ -54,14 +48,6 @@ public class TaskModel {
         this.status = status;
     }
 
-    public void setLogin(final String login) {
-        this.login = login;
-    }
-
-    public TaskModel(final String login) {
-        this.login = login;
-    }
-
     public long getIdTask() {
         return idTask;
     }
@@ -76,10 +62,6 @@ public class TaskModel {
 
     public byte getStatus() {
         return status;
-    }
-
-    public String getLogin() {
-        return login;
     }
 
     @Override
@@ -105,11 +87,10 @@ public class TaskModel {
     @Override
     public String toString() {
         return "TaskModel{" +
-                "id=" + idTask +
+                "idTask=" + idTask +
                 ", taskName='" + taskName + '\'' +
                 ", task='" + task + '\'' +
                 ", status=" + status +
-                ", login='" + login + '\'' +
                 '}';
     }
 }

@@ -1,6 +1,8 @@
 package com.todo.app.jdbc.dao.tasks.impl;
 
 import com.todo.app.controller.model.task.TaskModel;
+import com.todo.app.controller.model.task.TasksListModel;
+import com.todo.app.dao.model.TaskDaoModel;
 import com.todo.app.jdbc.dao.tasks.IDaoTasks;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import org.slf4j.Logger;
@@ -21,20 +23,18 @@ public class DaoTasksImpl implements IDaoTasks {
     }
 
     @Override
-    public int create(final TaskModel data) {
+    public long create(final TaskDaoModel data) {
         if (data == null) {
             return 0;
         }
-        final String query = "INSERT INTO Tasks(NAME, TASK, STATUS, ID_USER) VALUES" +
-                " (?, ?, ?, (SELECT ID FROM Users WHERE LOGIN = ?));";
+        final String query = "INSERT INTO Tasks(NAME, TASK, STATUS, ID_USER) VALUES (?, ?, ?, (SELECT ID FROM Users WHERE TOKEN = ?));";
         int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, data.getTaskName());
-            statement.setString(2, data.getTask());
-            statement.setByte(3, data.getStatus());
-            statement.setString(4, data.getLogin());
+             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+            statement.setString(1, data.getTaskModel().getTaskName());
+            statement.setString(2, data.getTaskModel().getTask());
+            statement.setByte(3, data.getTaskModel().getStatus());
+            statement.setString(4, data.getToken());
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             LOGGER.error(e.getMessage());
@@ -48,35 +48,33 @@ public class DaoTasksImpl implements IDaoTasks {
         return result;
     }
 
-    private PreparedStatement getStatement(Connection connection,
-                                          String query,
-                                          String data) throws SQLException {
-        PreparedStatement statement = connection.prepareStatement(query);
+    private PreparedStatement getStatement(final Connection connection,
+                                           final String data) throws SQLException {
+        final String query = "SELECT T.ID, T.NAME, T.TASK, T.STATUS FROM" +
+                " Tasks AS T INNER JOIN Users AS U ON  U.ID = T.ID_USER" +
+                " WHERE U.TOKEN = ?;";
+        final PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, data);
         return statement;
     }
 
     @Override
-    public List<TaskModel> read(final String data) {
-        if (data == null || data.equals("")) {
+    public List<TaskModel> read(String token) {
+        if (token == null || token.equals("")) {
             return null;
         }
         final List<TaskModel> tasks = new ArrayList<>();
-        final String query = "SELECT T.ID, T.NAME, T.TASK, T.STATUS, U.LOGIN FROM" +
-                " Tasks AS T INNER JOIN Users AS U ON  U.ID = T.ID_USER" +
-                " WHERE U.LOGIN = ?;";
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = getStatement(connection, query, data);
+             PreparedStatement statement = getStatement(connection, token);
              ResultSet resultSet = statement.executeQuery()) {
-            statement.setString(1, data);
-            final TaskModel entity = new TaskModel();
+            statement.setString(1, token);
             while (resultSet.next()) {
-                entity.setIdTask(resultSet.getLong(1));
-                entity.setTaskName(resultSet.getString(2));
-                entity.setTask(resultSet.getString(3));
-                entity.setStatus(resultSet.getByte(4));
-                entity.setLogin(resultSet.getString(5));
-                tasks.add(entity);
+                TaskModel task = new TaskModel();
+                task.setIdTask(resultSet.getLong(1));
+                task.setTaskName(resultSet.getString(2));
+                task.setTask(resultSet.getString(3));
+                task.setStatus(resultSet.getByte(4));
+                tasks.add(task);
             }
         } catch (IllegalAccessException e) {
             LOGGER.error(e.getMessage());
@@ -91,8 +89,8 @@ public class DaoTasksImpl implements IDaoTasks {
     }
 
     @Override
-    public int update(final TaskModel task) {
-        if (task == null) {
+    public long update(TaskDaoModel data) {
+        if (data == null) {
             return 0;
         }
         int result = 0;
@@ -100,10 +98,10 @@ public class DaoTasksImpl implements IDaoTasks {
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, task.getTaskName());
-            statement.setString(2, task.getTask());
-            statement.setByte(3, task.getStatus());
-            statement.setLong(4, task.getIdTask());
+            statement.setString(1, data.getTaskModel().getTaskName());
+            statement.setString(2, data.getTaskModel().getTask());
+            statement.setByte(3, data.getTaskModel().getStatus());
+            statement.setLong(4, data.getTaskModel().getIdTask());
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             LOGGER.error(e.getMessage());
@@ -118,8 +116,8 @@ public class DaoTasksImpl implements IDaoTasks {
     }
 
     @Override
-    public int delete(final TaskModel data) {
-        if (data == null) {
+    public long delete(final long idTask) {
+        if (idTask == 0) {
             return 0;
         }
         final String query = "DELETE FROM Tasks WHERE ID = ?;";
@@ -127,7 +125,7 @@ public class DaoTasksImpl implements IDaoTasks {
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {
-            statement.setLong(1, data.getIdTask());
+            statement.setLong(1, idTask);
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             LOGGER.error(e.getMessage());
@@ -140,5 +138,4 @@ public class DaoTasksImpl implements IDaoTasks {
         }
         return result;
     }
-
 }

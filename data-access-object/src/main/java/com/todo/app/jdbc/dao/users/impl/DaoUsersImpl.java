@@ -1,7 +1,7 @@
 package com.todo.app.jdbc.dao.users.impl;
 
+import com.todo.app.dao.model.UserDaoModel;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
-import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,20 +19,20 @@ public class DaoUsersImpl implements IDaoUsers {
     }
 
     @Override
-    public int create(final UserModel user) {
+    public long create(UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH_LOGIN," +
-                " HASH_EMAIL) VALUES (?, ?, ?, ?);";
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
         int result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
-            statement.setString(3, user.getHashLoginPass());
-            statement.setString(4, user.getHashEmailPass());
+            statement.setString(3, user.getPasswordHash());
+            statement.setString(4, user.getSalt());
+            statement.setString(5, user.getToken());
+            statement.setBoolean(6, user.isEnable());
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
             LOGGER.error(e.getMessage());
@@ -46,63 +46,34 @@ public class DaoUsersImpl implements IDaoUsers {
         return result;
     }
 
-    private boolean isParams(final String login, final String email) {
-        return login == null || login.equals("") || email == null || email.equals("");
-    }
-
-    @Override
-    public long read(final String login, final String email) {
-        if (isParams(login, email)) {
-            return 0;
-        }
-        long result = 0;
-        final String query = "SELECT ID FROM Users WHERE LOGIN = ? OR EMAIL = ?;";
-        try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query);
-             ResultSet resultSet = statement.executeQuery()) {
-            statement.setString(1, login);
-            statement.setString(2, login);
-            while (resultSet.next()) {
-                result = resultSet.getLong(1);
-            }
-        } catch (ClassNotFoundException e) {
-            LOGGER.error(e.getMessage());
-        } catch (IllegalAccessException e) {
-            LOGGER.error(e.getMessage());
-        } catch (InstantiationException e) {
-            LOGGER.error(e.getMessage());
-        } catch (SQLException e) {
-            LOGGER.error(e.getMessage());
-        }
-        return result;
-    }
-
-    private PreparedStatement getStatement(Connection connection,
-                                           String query,
-                                           UserModel user) throws SQLException {
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, user.getHashLoginPass());
-        statement.setString(2, user.getHashEmailPass());
+    private PreparedStatement getStatement(final Connection connection,
+                                           final String data) throws SQLException {
+        final String query = "SELECT ID, LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE" +
+                " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
+        final PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, data);
+        statement.setString(2, data);
         return statement;
     }
 
     @Override
-    public UserModel read(final UserModel user) {
-        if (user == null) {
+    public UserDaoModel read(String data) {
+        if (data == null || data.equals("")) {
             return null;
         }
-        final UserModel result = new UserModel();
-        final String query = "SELECT ID, LOGIN, EMAIL, HASH_LOGIN, HASH_EMAIL" +
-                " FROM Users WHERE HASH_LOGIN = ? OR HASH_EMAIL = ?";
+        final UserDaoModel result = new UserDaoModel();
+
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = getStatement(connection, query, user);
+             PreparedStatement statement = getStatement(connection, data);
              ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 result.setIdUser(resultSet.getLong(1));
                 result.setLogin(resultSet.getString(2));
                 result.setEmail(resultSet.getString(3));
-                result.setHashLoginPass(resultSet.getString(4));
-                result.setHashEmailPass(resultSet.getString(5));
+                result.setPasswordHash(resultSet.getString(4));
+                result.setSalt(resultSet.getString(5));
+                result.setToken(resultSet.getString(6));
+                result.setEnable(resultSet.getBoolean(7));
             }
         } catch (ClassNotFoundException e) {
             LOGGER.error(e.getMessage());
@@ -117,22 +88,18 @@ public class DaoUsersImpl implements IDaoUsers {
     }
 
     @Override
-    public int update(final UserModel user) {
+    public long update(UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        final String query = "UPDATE Users SET LOGIN=?, EMAIL=?, HASH_LOGIN=?, HASH_EMAIL=?" +
-                " WHERE LOGIN=? OR EMAIL=?;";
-        int result = 0;
+        final String query = "UPDATE Users SET LOGIN=?, PASSWORD_HASH=?, ENABLE=? WHERE EMAIL=?;";
+        long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getHashEmailPass());
-            statement.setString(4, user.getHashEmailPass());
-            statement.setString(5, user.getLogin());
-            statement.setString(6, user.getEmail());
+            statement.setString(2, user.getPasswordHash());
+            statement.setBoolean(3, user.isEnable());
+            statement.setString(4, user.getEmail());
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
             LOGGER.error(e.getMessage());
@@ -147,17 +114,16 @@ public class DaoUsersImpl implements IDaoUsers {
     }
 
     @Override
-    public int delete(final UserModel user) {
-        if (user == null) {
+    public long delete(String email) {
+        if (email == null || email.equals("")) {
             return 0;
         }
-        final String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=?";
+        final String query = "DELETE FROM Users WHERE EMAIL=?";
         int result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, user.getLogin());
-            statement.setString(2, user.getEmail());
+            statement.setString(1, email);
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
             LOGGER.error(e.getMessage());
@@ -170,5 +136,4 @@ public class DaoUsersImpl implements IDaoUsers {
         }
         return result;
     }
-
 }

@@ -1,3 +1,5 @@
+package com.todo.app.jdbc.dao;
+
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 
 import java.sql.Connection;
@@ -19,8 +21,10 @@ public class CreateDataBase {
                     "  ID int NOT NULL AUTO_INCREMENT," +
                     "  LOGIN VARCHAR (50) NOT NULL," +
                     "  EMAIL VARCHAR (100) NOT NULL," +
-                    "  HASH_LOGIN VARCHAR (255) NOT NULL," +
-                    "  HASH_EMAIL VARCHAR (255) NOT NULL," +
+                    "  PASSWORD_HASH VARCHAR (255) NOT NULL," +
+                    "  SALT VARCHAR (255) NOT NULL," +
+                    "  TOKEN VARCHAR (255) NOT NULL," +
+                    "  ENABLE BOOLEAN, " +
                     "  PRIMARY KEY (ID));";
             stmt.executeUpdate(sql);
         } catch (IllegalAccessException e) {
@@ -42,7 +46,7 @@ public class CreateDataBase {
                     "  NAME VARCHAR (50) NOT NULL," +
                     "  TASK VARCHAR (255) NOT NULL," +
                     "  STATUS BIT NOT NULL," +
-                    "  ID_USER INT," +
+                    "  ID_USER INT NOT NULL," +
                     "  PRIMARY KEY (ID)," +
                     "  FOREIGN KEY (ID_USER) REFERENCES Users(ID));";
             stmt.executeUpdate(sql);

@@ -1,17 +1,18 @@
 package com.todo.app.jdbc.dao.tasks;
 
 import com.todo.app.controller.model.task.TaskModel;
+import com.todo.app.dao.model.TaskDaoModel;
 
 import java.util.List;
 
 public interface IDaoTasks {
 
-    int create(TaskModel data);
+    long create(final TaskDaoModel data);
 
-    List<TaskModel> read(String data);
+    List<TaskModel> read(final String data);
 
-    int update(TaskModel data);
+    long update(final TaskDaoModel data);
 
-    int delete(TaskModel data);
+    long delete(final long idTask);
 
 }

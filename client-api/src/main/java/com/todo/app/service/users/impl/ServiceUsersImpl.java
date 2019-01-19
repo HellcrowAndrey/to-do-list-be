@@ -1,5 +1,6 @@
 package com.todo.app.service.users.impl;
 
+import com.todo.app.dao.model.UserDaoModel;
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
@@ -20,35 +21,27 @@ public class ServiceUsersImpl implements IServiceUsers {
     }
 
     @Override
-    public String create(UserModel user) {
+    public long create(UserDaoModel  user) {
         IDaoUsers users = new DaoUsersImpl(source);
-        return users.create(user) > 0 ?
-                ControllerUtils.USER_REGISTRATION_SUCCESS :
-                ControllerUtils.USER_REGISTRATION_FAILURE;
+        return users.create(user);
     }
 
     @Override
-    public long read(String login, String email) {
-        IDaoUsers users = new DaoUsersImpl(source);
-        return users.read(login, email);
-    }
-
-    @Override
-    public UserModel read(UserModel user) {
+    public UserDaoModel read(String  user) {
         IDaoUsers users = new DaoUsersImpl(source);
         return users.read(user);
     }
 
     @Override
-    public boolean update(UserModel user) {
+    public long update(UserDaoModel user) {
         IDaoUsers users = new DaoUsersImpl(source);
-        return users.update(user) > 0 ? true : false;
+        return users.update(user);
     }
 
     @Override
-    public boolean delete(UserModel user) {
+    public long delete(String email) {
         IDaoUsers users = new DaoUsersImpl(source);
-        return users.delete(user) > 0 ? true : false;
+        return users.delete(email);
     }
 
 }

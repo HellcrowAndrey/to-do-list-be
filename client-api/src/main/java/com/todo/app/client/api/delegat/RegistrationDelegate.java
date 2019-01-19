@@ -40,26 +40,27 @@ public class RegistrationDelegate {
     }
 
     public String submitRegistration(UserModel user) {
-        if (user == null) {
-            logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
-            return ControllerUtils.IS_NOT_VALID_PARAMS;
-        }
-        CacheManager manager = CacheManager.getInstance();
-        if (manager.fetchRegUser(user) == null) {
-            logger.info("User doesn't exist in cache. Do check in data base.");
-            long id = serviceUsers.read(user.getLogin(), user.getEmail());
-            if (id > 0) {
-                logger.info("This user exist in data base.");
-                return ControllerUtils.USER_EXIT;
-            }
-            UserDecorator decorator = new UserDecorator();
-            UserModel newUser = decorator.createHash(user);
-            manager.addUser(newUser);
-            return serviceUsers.create(newUser);
-        } else {
-            logger.info("User with this params exist in cache.");
-            return ControllerUtils.USER_EXIT;
-        }
+//        if (user == null) {
+//            logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
+//            return ControllerUtils.IS_NOT_VALID_PARAMS;
+//        }
+//        CacheManager manager = CacheManager.getInstance();
+//        if (manager.fetchRegUser(user) == null) {
+//            logger.info("User doesn't exist in cache. Do check in data base.");
+//            long id = serviceUsers.read(user.getLogin(), user.getEmail());
+//            if (id > 0) {
+//                logger.info("This user exist in data base.");
+//                return ControllerUtils.USER_EXIT;
+//            }
+//            UserDecorator decorator = new UserDecorator();
+//            UserModel newUser = decorator.createHash(user);
+//            manager.addUser(newUser);
+//            return serviceUsers.create(newUser);
+//        } else {
+//            logger.info("User with this params exist in cache.");
+//            return ControllerUtils.USER_EXIT;
+//        }
+        return null;
     }
 
 }
