@@ -8,23 +8,60 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 
+/**
+ * The DaoUsersImpl class do implements interface IDaoUsers and
+ * release these method. This class has linc on IDataSource interface,
+ * exemplar class Logger, constructor class with param IDataSource.
+ * Has next method:
+ * - create with param UserDaoModel and do create user in date base (db);
+ * - getStatement with params connection, data after call to this method
+ * do create PreparedStatement.
+ * - read with param do read user in db.
+ * - update with param UserDaoModel do update user in db.
+ * - delete with param do delete user in db.
+ */
 public class DaoUsersImpl implements IDaoUsers {
 
+    /**
+     * This is link on IDataSource interface. This interface has
+     * method getConnect(). After call to this method do return
+     * connection with params by profile.
+     */
     private final IDataSource source;
 
+    /**
+     * This field is logger use for show error.
+     */
     private static final Logger LOGGER = LoggerFactory.getLogger(DaoUsersImpl.class);
 
+    /**
+     * This is constructor class DaoUsersImpl with param. Received IDataSource interface
+     * in param and do init source link.
+     *
+     * @param source this is interface IDataSource.
+     */
     public DaoUsersImpl(final IDataSource source) {
         this.source = source;
     }
 
+    /**
+     * This is method create. Received UserDaoModel and do create user
+     * in db. Field login, email and token in db are unique. After call
+     * to this method do check on null if received object is null do
+     * return zero else do create user in date base. In this method do
+     * handlers on date base exceptions if catch it do return zero.
+     *
+     * @param user object user model in date base.
+     * @return id or zero if received exception or received null object
+     * in param.
+     */
     @Override
     public long create(UserDaoModel user) {
         if (user == null) {
             return 0;
         }
         final String query = "INSERT INTO Users (LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
-        int result = 0;
+        long result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
@@ -46,6 +83,16 @@ public class DaoUsersImpl implements IDaoUsers {
         return result;
     }
 
+    /**
+     * This method do create PreparedStatement object. Received in params
+     * connection and data.
+     *
+     * @param connection class connection.
+     * @param data       its user login or email
+     * @return object PreparedStatement
+     * @throws SQLException An exception that provides information on
+     *                      a database access error or other errors.
+     */
     private PreparedStatement getStatement(final Connection connection,
                                            final String data) throws SQLException {
         final String query = "SELECT ID, LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE" +
@@ -56,13 +103,21 @@ public class DaoUsersImpl implements IDaoUsers {
         return statement;
     }
 
+    /**
+     * This method do read user in date base received login or email in
+     * param. After call to this method do check on null or empty and if
+     * data valid do read user in db else return null. In this method
+     * do handlers on date base exception if catch it do return null.
+     *
+     * @param data This is login or email.
+     * @return null or data about user.
+     */
     @Override
     public UserDaoModel read(String data) {
         if (data == null || data.equals("")) {
             return null;
         }
         final UserDaoModel result = new UserDaoModel();
-
         try (Connection connection = source.getConnect();
              PreparedStatement statement = getStatement(connection, data);
              ResultSet resultSet = statement.executeQuery()) {
@@ -87,6 +142,15 @@ public class DaoUsersImpl implements IDaoUsers {
         return result;
     }
 
+    /**
+     * This method do update user in db, received UserDaoModel. After call to this
+     * method do check on null, if data null do return zero else do update user in
+     * data base. In this method do handlers on data base exception if catch it do
+     * return zero.
+     *
+     * @param user object user model in date base.
+     * @return id or zero if received wrong data or received exception.
+     */
     @Override
     public long update(UserDaoModel user) {
         if (user == null) {
@@ -113,13 +177,22 @@ public class DaoUsersImpl implements IDaoUsers {
         return result;
     }
 
+    /**
+     * This method do delete user in db, received use email. After call to this
+     * method do check on null or empty. If data don't valid do return zero else
+     * do delete user in data base. In this method do handlers data base exception
+     * if catch it do return zero.
+     *
+     * @param email this is user email.
+     * @return id or zero if received wrong data or catch exception.
+     */
     @Override
     public long delete(String email) {
         if (email == null || email.equals("")) {
             return 0;
         }
         final String query = "DELETE FROM Users WHERE EMAIL=?";
-        int result = 0;
+        long result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {

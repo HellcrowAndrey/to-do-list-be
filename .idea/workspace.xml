@@ -2,48 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlDebugConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/debug/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksCreateImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksDeleteImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksReadImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksUpdateImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersCreateImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersDeleteImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersUpdateImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TasksListModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/TaskDaoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/UserDaoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/controller/model/task/TaskModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/controller/model/task/TasksListModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/controller/model/user/UserModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/dao/model/TaskDaoModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/dao/model/UserDaoModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/CreateDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/DaoTasksImplIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/DaoUsersImplIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/it/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/it/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,25 +79,61 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#1846#1847#0" expanded="true" />
+                    <element signature="e#1913#1914#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="414">
+                  <caret line="34" selection-start-line="34" selection-end-line="34" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/helper/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="AnnotationType" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -166,9 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlConnection.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/Main.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/MainClientApi.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/user/UserModel.java" />
         <option value="$PROJECT_DIR$/helper/src/test/java/com/todo/app/controller/model/user/UserModelTest.java" />
@@ -202,7 +199,6 @@
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/ServiceConfig.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" />
@@ -212,11 +208,15 @@
         <option value="$PROJECT_DIR$/data-access-object/src/main/resources/debug/application.properties" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/CreateDataBase.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" />
-        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" />
+        <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
+        <option value="$PROJECT_DIR$/client-api/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
+        <option value="$PROJECT_DIR$/helper/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" />
       </list>
     </option>
   </component>
@@ -254,7 +254,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-191" />
     <option name="y" value="93" />
     <option name="width" value="1936" />
@@ -267,7 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,7 +334,187 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -346,7 +526,7 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -356,453 +536,11 @@
               <item name="cache" type="462c0819:PsiDirectoryNode" />
               <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="delegat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="decorator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="hash" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -812,10 +550,10 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547917481307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547979898164" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/client-api/src/test/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring_Crud-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -827,15 +565,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.todo.app.cache.manager" />
       <recent name="com.todo.app.jdbc.dao.tasks.impl" />
       <recent name="com.todo.app.controller.model.task" />
       <recent name="com.todo.app.dao.model" />
       <recent name="com.todo.app.jdbc.dao.users.impl" />
-      <recent name="com.todo.app.controller.model.user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/it" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.todo.app.jdbc.dao" />
       <recent name="com.todo.app.jdbc.dao.users.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/debug" />
@@ -843,12 +587,6 @@
       <recent name="$PROJECT_DIR$/client-api/src/main/resources" />
       <recent name="$PROJECT_DIR$/data-access-object/src/integration-test/resources/it" />
       <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/realise" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/it" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1022,7 +760,10 @@
       <workItem from="1547484964723" duration="184000" />
       <workItem from="1547489938884" duration="1749000" />
       <workItem from="1547579361617" duration="312000" />
-      <workItem from="1547889925799" duration="13498000" />
+      <workItem from="1547889925799" duration="13633000" />
+      <workItem from="1547970964029" duration="2281000" />
+      <workItem from="1547978524086" duration="2001000" />
+      <workItem from="1547983460297" duration="175000" />
     </task>
     <servers />
   </component>
@@ -1059,7 +800,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317958000" />
+    <option name="totallyTimeSpent" value="322550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1072,7 +813,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -1081,10 +821,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.26175982" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.26840067" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36514983" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36514983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.46059933" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1191,23 +931,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/powermock/powermock-module-junit4/1.7.4/powermock-module-junit4-1.7.4-sources.jar!/org/powermock/modules/junit4/internal/impl/PowerMockJUnit44RunnerDelegateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="330" selection-start-line="330" selection-end-line="330" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersDeleteImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersUpdateImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1287,20 +1010,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersCreateImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksCreateImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1416,13 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/cache/manager/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1523,17 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/TaskDaoModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1542,13 +1233,6 @@
             <element signature="e#391#392#0" expanded="true" />
             <element signature="e#419#420#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1589,28 +1273,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
-          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <caret line="58" column="7" selection-start-line="50" selection-start-column="4" selection-end-line="58" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/IDaoTasks.java">
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="789">
+          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" />
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/tasks/impl/DaoTasksCreateImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersCreateImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
