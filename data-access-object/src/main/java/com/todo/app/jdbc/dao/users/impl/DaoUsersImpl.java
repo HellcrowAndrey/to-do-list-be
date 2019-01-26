@@ -1,185 +1,212 @@
 package com.todo.app.jdbc.dao.users.impl;
 
+import com.todo.app.dao.model.UserDaoModel;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
-import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 
+/**
+ * The DaoUsersImpl class do implements interface IDaoUsers and
+ * release these method. This class has linc on IDataSource interface,
+ * exemplar class Logger, constructor class with param IDataSource.
+ * Has next method:
+ * - create with param UserDaoModel and do create user in date base (db);
+ * - getStatement with params connection, data after call to this method
+ * do create PreparedStatement.
+ * - read with param do read user in db.
+ * - update with param UserDaoModel do update user in db.
+ * - delete with param do delete user in db.
+ */
 public class DaoUsersImpl implements IDaoUsers {
 
-    private IDataSource source;
+    /**
+     * This is link on IDataSource interface. This interface has
+     * method getConnect(). After call to this method do return
+     * connection with params by profile.
+     */
+    private final IDataSource source;
 
-    public DaoUsersImpl(IDataSource source) {
+    /**
+     * This field is logger use for show error.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(DaoUsersImpl.class);
+
+    /**
+     * This is constructor class DaoUsersImpl with param. Received IDataSource interface
+     * in param and do init source link.
+     *
+     * @param source this is interface IDataSource.
+     */
+    public DaoUsersImpl(final IDataSource source) {
         this.source = source;
     }
 
+    /**
+     * This is method create. Received UserDaoModel and do create user
+     * in db. Field login, email and token in db are unique. After call
+     * to this method do check on null if received object is null do
+     * return zero else do create user in date base. In this method do
+     * handlers on date base exceptions if catch it do return zero.
+     *
+     * @param user object user model in date base.
+     * @return id or zero if received exception or received null object
+     * in param.
+     */
     @Override
-    public int create(UserModel user) {
+    public long create(UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        String query = "INSERT INTO Users (LOGIN, EMAIL, HASH_LOGIN," +
-                " HASH_EMAIL) VALUES (?, ?, ?, ?);";
-        int result = 0;
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
+        long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
-            statement.setString(3, user.getHashLoginPass());
-            statement.setString(4, user.getHashEmailPass());
+            statement.setString(3, user.getPasswordHash());
+            statement.setString(4, user.getSalt());
+            statement.setString(5, user.getToken());
+            statement.setBoolean(6, user.isEnable());
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
-    @Override
-    public long read(String login, String email) {
-        if (login == null || login.equals("") ||
-                email == null || email.equals("")) {
-            return 0;
-        }
-        long result = 0;
-        String query = "SELECT ID FROM Users WHERE LOGIN = ? OR EMAIL = ?;";
-        try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, login);
-            statement.setString(2, login);
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                result = resultSet.getLong(1);
-            }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
+    /**
+     * This method do create PreparedStatement object. Received in params
+     * connection and data.
+     *
+     * @param connection class connection.
+     * @param data       its user login or email
+     * @return object PreparedStatement
+     * @throws SQLException An exception that provides information on
+     *                      a database access error or other errors.
+     */
+    private PreparedStatement getStatement(final Connection connection,
+                                           final String data) throws SQLException {
+        final String query = "SELECT ID, LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE" +
+                " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
+        final PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, data);
+        statement.setString(2, data);
+        return statement;
     }
 
+    /**
+     * This method do read user in date base received login or email in
+     * param. After call to this method do check on null or empty and if
+     * data valid do read user in db else return null. In this method
+     * do handlers on date base exception if catch it do return null.
+     *
+     * @param data This is login or email.
+     * @return null or data about user.
+     */
     @Override
-    public UserModel read(UserModel user) {
-        if (user == null) {
+    public UserDaoModel read(String data) {
+        if (data == null || data.equals("")) {
             return null;
         }
-        UserModel result = null;
-        String query = "SELECT ID, LOGIN, EMAIL, HASH_LOGIN, HASH_EMAIL" +
-                " FROM Users WHERE HASH_LOGIN = ? OR HASH_EMAIL = ?;";
+        final UserDaoModel result = new UserDaoModel();
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, user.getHashLoginPass());
-            statement.setString(2, user.getHashEmailPass());
-            ResultSet resultSet = statement.executeQuery();
+             PreparedStatement statement = getStatement(connection, data);
+             ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
-                long id = resultSet.getLong(1);
-                String login = resultSet.getString(2);
-                String email = resultSet.getString(3);
-                String hashLogin = resultSet.getString(4);
-                String hashEmail = resultSet.getString(5);
-                result = new UserModel(id, login, email, hashLogin, hashEmail);
+                result.setIdUser(resultSet.getLong(1));
+                result.setLogin(resultSet.getString(2));
+                result.setEmail(resultSet.getString(3));
+                result.setPasswordHash(resultSet.getString(4));
+                result.setSalt(resultSet.getString(5));
+                result.setToken(resultSet.getString(6));
+                result.setEnable(resultSet.getBoolean(7));
             }
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
+    /**
+     * This method do update user in db, received UserDaoModel. After call to this
+     * method do check on null, if data null do return zero else do update user in
+     * data base. In this method do handlers on data base exception if catch it do
+     * return zero.
+     *
+     * @param user object user model in date base.
+     * @return id or zero if received wrong data or received exception.
+     */
     @Override
-    public int update(UserModel user) {
+    public long update(UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        String query = "UPDATE Users SET LOGIN=?, EMAIL=?, HASH_LOGIN=?, HASH_EMAIL=?" +
-                " WHERE LOGIN=? OR EMAIL=?;";
-        int result = 0;
+        final String query = "UPDATE Users SET LOGIN=?, PASSWORD_HASH=?, ENABLE=? WHERE EMAIL=?;";
+        long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getHashEmailPass());
-            statement.setString(4, user.getHashEmailPass());
-            statement.setString(5, user.getLogin());
-            statement.setString(6, user.getEmail());
+            statement.setString(2, user.getPasswordHash());
+            statement.setBoolean(3, user.isEnable());
+            statement.setString(4, user.getEmail());
             result = statement.executeUpdate();
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
 
+    /**
+     * This method do delete user in db, received use email. After call to this
+     * method do check on null or empty. If data don't valid do return zero else
+     * do delete user in data base. In this method do handlers data base exception
+     * if catch it do return zero.
+     *
+     * @param email this is user email.
+     * @return id or zero if received wrong data or catch exception.
+     */
     @Override
-    public int delete(UserModel user) {
-        if (user == null) {
+    public long delete(String email) {
+        if (email == null || email.equals("")) {
             return 0;
         }
-        String query = "DELETE FROM Users WHERE LOGIN=? OR EMAIL=?";
-        int result = 0;
+        final String query = "DELETE FROM Users WHERE EMAIL=?";
+        long result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, user.getLogin());
-            statement.setString(2, user.getEmail());
+            statement.setString(1, email);
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
         return result;
     }
-
-    private int doStaffUser(UserModel user, String query) {
-        int result = 0;
-        try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            result = userFields(statement, user);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    private int userFields(PreparedStatement statement, UserModel user) throws SQLException {
-        statement.setString(1, user.getLogin());
-        statement.setString(2, user.getEmail());
-        statement.setString(3, user.getPassword());
-        return statement.executeUpdate();
-    }
-
 }

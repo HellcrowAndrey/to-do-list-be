@@ -4,26 +4,17 @@ import java.util.Objects;
 
 public class UserModel {
 
-    private long id;
-
     private String login;
 
     private String email;
 
     private String password;
 
-    private String role = "user";
-
-    private String hashLoginPass;
-
-    private String hashEmailPass;
-
-    private Boolean terms;
-
-    public UserModel(long id, String login, String email) {
-        this.id = id;
-        this.login = login;
-        this.email = email;
+    /**
+     * Default constructor
+     */
+    public UserModel() {
+        // Use if need instance new object in loop
     }
 
     public UserModel(final String login, final String email, final String password) {
@@ -32,98 +23,55 @@ public class UserModel {
         this.password = password;
     }
 
-    public UserModel(final long id, final String login,
-                     final String email, final String password) {
-        this.id = id;
-        this.login = login;
-        this.email = email;
-        this.password = password;
-    }
-
-    public UserModel(long id, String login, String email,
-                     String hashLoginPass, String hashEmailPass) {
-        this.id = id;
-        this.login = login;
-        this.email = email;
-        this.hashLoginPass = hashLoginPass;
-        this.hashEmailPass = hashEmailPass;
-    }
-
-    public long getId() {
-        return id;
-    }
-
     public String getLogin() {
         return login;
+    }
+
+    public void setLogin(final String login) {
+        this.login = login;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setEmail(final String email) {
+        this.email = email;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public String getHashEmailPass() {
-        return hashEmailPass;
-    }
-
-    public void setHashEmailPass(String hashEmailPass) {
-        this.hashEmailPass = hashEmailPass;
-    }
-
-    public String getHashLoginPass() {
-        return hashLoginPass;
-    }
-
-    public void setHashLoginPass(String hashLoginPass) {
-        this.hashLoginPass = hashLoginPass;
-    }
-
-    public Boolean getTerms() {
-        return terms;
-    }
-
-    public void setTerms(Boolean terms) {
-        this.terms = terms;
+    public void setPassword(final String password) {
+        this.password = password;
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UserModel model = (UserModel) o;
-        return id == model.id &&
-                Objects.equals(login, model.login) &&
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        UserModel model = (UserModel) object;
+        return Objects.equals(login, model.login) &&
                 Objects.equals(email, model.email) &&
-                Objects.equals(password, model.password) &&
-                Objects.equals(role, model.role);
+                Objects.equals(password, model.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, login, email, password, role);
+        return Objects.hash(login, email, password);
     }
 
     @Override
     public String toString() {
         return "UserModel{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
+                "login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", hashLoginPass='" + hashLoginPass + '\'' +
-                ", hashEmailPass='" + hashEmailPass + '\'' +
                 '}';
     }
 }

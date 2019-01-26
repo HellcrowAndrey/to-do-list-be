@@ -355,69 +355,69 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--&lt;!&ndash; ===================================================================== &ndash;&gt;-->
-            <!--&lt;!&ndash; SCA: Findbugs                                                         &ndash;&gt;-->
-            <!--&lt;!&ndash; ===================================================================== &ndash;&gt;-->
-            <!--<plugin>-->
-            <!--<groupId>org.codehaus.mojo</groupId>-->
-            <!--<artifactId>findbugs-maven-plugin</artifactId>-->
-            <!--<version>${findbugsMavenPluginVersion}</version>-->
-            <!--<configuration>-->
-            <!--<xmlOutput>true</xmlOutput>-->
-            <!--<effort>Max</effort>-->
-            <!--<threshold>Low</threshold>-->
-            <!--<excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>-->
-            <!--<failOnError>false</failOnError>-->
-            <!--</configuration>-->
-            <!--<dependencies>-->
-            <!--<dependency>-->
-            <!--<groupId>org.beiter.michael.util</groupId>-->
-            <!--<artifactId>build-tools</artifactId>-->
-            <!--<version>${buildToolsVersion}</version>-->
-            <!--</dependency>-->
-            <!--</dependencies>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>validate</phase>-->
-            <!--<goals>-->
-            <!--<goal>check</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--&lt;!&ndash; SCA: PMD                                                          &ndash;&gt;-->
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--<plugin>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-pmd-plugin</artifactId>-->
-            <!--<version>${mavenPmdPluginVersion}</version>-->
-            <!--<configuration>-->
-            <!--&lt;!&ndash;<linkXref>true</linkXref>&ndash;&gt;-->
-            <!--<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>-->
-            <!--<minimumTokens>100</minimumTokens>-->
-            <!--<targetJdk>${java.version}</targetJdk>-->
-            <!--<rulesets>-->
-            <!--<ruleset>pmd-rules.xml</ruleset>-->
-            <!--</rulesets>-->
-            <!--</configuration>-->
-            <!--<dependencies>-->
-            <!--<dependency>-->
-            <!--<groupId>org.beiter.michael.util</groupId>-->
-            <!--<artifactId>build-tools</artifactId>-->
-            <!--<version>${buildToolsVersion}</version>-->
-            <!--</dependency>-->
-            <!--</dependencies>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>validate</phase>-->
-            <!--<goals>-->
-            <!--<goal>pmd</goal>-->
-            <!--<goal>cpd</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
+            <!-- ===================================================================== -->
+            <!-- SCA: Findbugs                                                         -->
+            <!-- ===================================================================== -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${findbugsMavenPluginVersion}</version>
+                <configuration>
+                    <xmlOutput>true</xmlOutput>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                    <failOnError>false</failOnError>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.beiter.michael.util</groupId>
+                        <artifactId>build-tools</artifactId>
+                        <version>${buildToolsVersion}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- ================================================================= -->
+            <!-- SCA: PMD                                                          -->
+            <!-- ================================================================= -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${mavenPmdPluginVersion}</version>
+                <configuration>
+                    <!--<linkXref>true</linkXref>-->
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>${java.version}</targetJdk>
+                    <rulesets>
+                        <ruleset>pmd-rules.xml</ruleset>
+                    </rulesets>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.beiter.michael.util</groupId>
+                        <artifactId>build-tools</artifactId>
+                        <version>${buildToolsVersion}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>pmd</goal>
+                            <goal>cpd</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- ================================================================= -->
             <!-- Pack and attach sources                                           -->
             <!-- ================================================================= -->
@@ -504,38 +504,38 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--&lt;!&ndash; SCA: Findbugs                                                     &ndash;&gt;-->
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--<plugin>-->
-            <!--<groupId>org.codehaus.mojo</groupId>-->
-            <!--<artifactId>findbugs-maven-plugin</artifactId>-->
-            <!--<version>${findbugsMavenPluginVersion}</version>-->
-            <!--<configuration>-->
-            <!--<xmlOutput>true</xmlOutput>-->
-            <!--<effort>Max</effort>-->
-            <!--<threshold>Low</threshold>-->
-            <!--<excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--&lt;!&ndash; SCA: PMD                                                          &ndash;&gt;-->
-            <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-            <!--<plugin>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-pmd-plugin</artifactId>-->
-            <!--<version>${mavenPmdPluginVersion}</version>-->
-            <!--<configuration>-->
-            <!--&lt;!&ndash;<linkXref>true</linkXref>&ndash;&gt;-->
-            <!--<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>-->
-            <!--<minimumTokens>100</minimumTokens>-->
-            <!--<skipEmptyReport>false</skipEmptyReport>-->
-            <!--<targetJdk>${java.version}</targetJdk>-->
-            <!--<rulesets>-->
-            <!--<ruleset>pmd-rules.xml</ruleset>-->
-            <!--</rulesets>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
+            <!-- ================================================================= -->
+            <!-- SCA: Findbugs                                                     -->
+            <!-- ================================================================= -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>${findbugsMavenPluginVersion}</version>
+                <configuration>
+                    <xmlOutput>true</xmlOutput>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                </configuration>
+            </plugin>
+            <!-- ================================================================= -->
+            <!-- SCA: PMD                                                          -->
+            <!-- ================================================================= -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${mavenPmdPluginVersion}</version>
+                <configuration>
+                    <!--<linkXref>true</linkXref>-->
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <skipEmptyReport>false</skipEmptyReport>
+                    <targetJdk>${java.version}</targetJdk>
+                    <rulesets>
+                        <ruleset>pmd-rules.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
             <!-- ================================================================= -->
             <!-- SCA: Tag reporting                                                -->
             <!-- ================================================================= -->
@@ -664,98 +664,6 @@
             <build>
                 <plugins>
                     <!-- ===================================================================== -->
-                    <!-- SCA: checkstyle                                                       -->
-                    <!-- ===================================================================== -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <version>${mavenCheckstylePluginVersion}</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.beiter.michael.util</groupId>
-                                <artifactId>build-tools</artifactId>
-                                <version>${buildToolsVersion}</version>
-                            </dependency>
-                        </dependencies>
-                        <executions>
-                            <execution>
-                                <phase>validate</phase>
-                                <configuration>
-                                    <encoding>${project.build.sourceEncoding}</encoding>
-                                    <consoleOutput>true</consoleOutput>
-                                    <failOnViolation>true</failOnViolation>
-                                    <failsOnError>true</failsOnError>
-                                </configuration>
-                                <goals>
-                                    <goal>check</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!--&lt;!&ndash; ===================================================================== &ndash;&gt;-->
-                    <!--&lt;!&ndash; SCA: Findbugs                                                         &ndash;&gt;-->
-                    <!--&lt;!&ndash; ===================================================================== &ndash;&gt;-->
-                    <!--<plugin>-->
-                    <!--<groupId>org.codehaus.mojo</groupId>-->
-                    <!--<artifactId>findbugs-maven-plugin</artifactId>-->
-                    <!--<version>${findbugsMavenPluginVersion}</version>-->
-                    <!--<configuration>-->
-                    <!--<xmlOutput>true</xmlOutput>-->
-                    <!--<effort>Max</effort>-->
-                    <!--<threshold>Low</threshold>-->
-                    <!--<excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>-->
-                    <!--<failOnError>true</failOnError>-->
-                    <!--</configuration>-->
-                    <!--<dependencies>-->
-                    <!--<dependency>-->
-                    <!--<groupId>org.beiter.michael.util</groupId>-->
-                    <!--<artifactId>build-tools</artifactId>-->
-                    <!--<version>${buildToolsVersion}</version>-->
-                    <!--</dependency>-->
-                    <!--</dependencies>-->
-                    <!--<executions>-->
-                    <!--<execution>-->
-                    <!--<phase>validate</phase>-->
-                    <!--<goals>-->
-                    <!--<goal>check</goal>-->
-                    <!--</goals>-->
-                    <!--</execution>-->
-                    <!--</executions>-->
-                    <!--</plugin>-->
-                    <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-                    <!--&lt;!&ndash; SCA: PMD                                                          &ndash;&gt;-->
-                    <!--&lt;!&ndash; ================================================================= &ndash;&gt;-->
-                    <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-pmd-plugin</artifactId>-->
-                    <!--<version>${mavenPmdPluginVersion}</version>-->
-                    <!--<configuration>-->
-                    <!--&lt;!&ndash;<linkXref>true</linkXref>&ndash;&gt;-->
-                    <!--<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>-->
-                    <!--<minimumTokens>100</minimumTokens>-->
-                    <!--<targetJdk>${java.version}</targetJdk>-->
-                    <!--<rulesets>-->
-                    <!--<ruleset>pmd-rules.xml</ruleset>-->
-                    <!--</rulesets>-->
-                    <!--</configuration>-->
-                    <!--<dependencies>-->
-                    <!--<dependency>-->
-                    <!--<groupId>org.beiter.michael.util</groupId>-->
-                    <!--<artifactId>build-tools</artifactId>-->
-                    <!--<version>${buildToolsVersion}</version>-->
-                    <!--</dependency>-->
-                    <!--</dependencies>-->
-                    <!--<executions>-->
-                    <!--<execution>-->
-                    <!--<phase>validate</phase>-->
-                    <!--<goals>-->
-                    <!--<goal>check</goal>-->
-                    <!--<goal>cpd-check</goal>-->
-                    <!--</goals>-->
-                    <!--</execution>-->
-                    <!--</executions>-->
-                    <!--</plugin>-->
-                    <!-- ===================================================================== -->
                     <!-- Build and attach Java docs                                             -->
                     <!-- ===================================================================== -->
                     <plugin>
@@ -801,6 +709,116 @@
         </profile>
         <profile>
             <id>check-style</id>
+            <build>
+                <plugins>
+                    <!-- ===================================================================== -->
+                    <!-- SCA: checkstyle                                                       -->
+                    <!-- ===================================================================== -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                        <version>${mavenCheckstylePluginVersion}</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.beiter.michael.util</groupId>
+                                <artifactId>build-tools</artifactId>
+                                <version>${buildToolsVersion}</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <configuration>
+                                    <encoding>${project.build.sourceEncoding}</encoding>
+                                    <consoleOutput>true</consoleOutput>
+                                    <failOnViolation>true</failOnViolation>
+                                    <failsOnError>true</failsOnError>
+                                </configuration>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>find-bugs</id>
+            <build>
+                <plugins>
+                    <!-- ===================================================================== -->
+                    <!-- SCA: Findbugs                                                         -->
+                    <!-- ===================================================================== -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <version>${findbugsMavenPluginVersion}</version>
+                        <configuration>
+                            <xmlOutput>true</xmlOutput>
+                            <effort>Max</effort>
+                            <threshold>Low</threshold>
+                            <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                            <failOnError>true</failOnError>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.beiter.michael.util</groupId>
+                                <artifactId>build-tools</artifactId>
+                                <version>${buildToolsVersion}</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>pmd</id>
+            <build>
+                <plugins>
+                    <!-- ================================================================= -->
+                    <!-- SCA: PMD                                                          -->
+                    <!-- ================================================================= -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>${mavenPmdPluginVersion}</version>
+                        <configuration>
+                            <!--<linkXref>true</linkXref>-->
+                            <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                            <minimumTokens>100</minimumTokens>
+                            <targetJdk>${java.version}</targetJdk>
+                            <rulesets>
+                                <ruleset>pmd-rules.xml</ruleset>
+                            </rulesets>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.beiter.michael.util</groupId>
+                                <artifactId>build-tools</artifactId>
+                                <version>${buildToolsVersion}</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                    <goal>cpd-check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
             <id>integration-tests</id>

@@ -1,17 +1,19 @@
 package com.todo.app.service.users;
 
-import com.todo.app.controller.model.user.UserModel;
+import com.todo.app.dao.model.UserDaoModel;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
+@Service
+@Primary
 public interface IServiceUsers {
 
-    String create (UserModel user);
+    long create (UserDaoModel user);
 
-    long read(String login, String email);
+    UserDaoModel read(String  user);
 
-    UserModel read(UserModel user);
+    long update(UserDaoModel user);
 
-    boolean update(UserModel user);
-
-    boolean delete(UserModel user);
+    long delete(String user);
 
 }
