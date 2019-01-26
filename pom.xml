@@ -17,6 +17,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--Modules dependency-->
             <dependency>
                 <groupId>to-do-list-be</groupId>
                 <artifactId>helper</artifactId>
@@ -25,6 +26,11 @@
             <dependency>
                 <groupId>to-do-list-be</groupId>
                 <artifactId>data-access-object</artifactId>
+                <version>${modules.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>to-do-list-be</groupId>
+                <artifactId>utils</artifactId>
                 <version>${modules.version}</version>
             </dependency>
             <!--Spring dependencies-->
@@ -170,6 +176,7 @@
         <module>data-access-object</module>
         <module>client-api</module>
         <module>helper</module>
+        <module>utils</module>
     </modules>
 
     <properties>
