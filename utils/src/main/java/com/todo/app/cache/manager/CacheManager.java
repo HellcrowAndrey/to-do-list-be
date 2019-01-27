@@ -1,5 +1,6 @@
 package com.todo.app.cache.manager;
 
+import com.todo.app.cache.CacheTasks;
 import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.method.assistant.IsParams;
 
@@ -30,7 +31,7 @@ public class CacheManager {
     /**
      * This map is cache app. Key is a user token value is a list with tasks.
      */
-    private Map<String, List<TaskModel>> cache = new LinkedHashMap<>();
+    private Map<String, CacheTasks> cache = new LinkedHashMap<>();
 
     /**
      * This method do create instance CacheManager class.
@@ -44,63 +45,125 @@ public class CacheManager {
         return instance;
     }
 
-    public void fetchTasks() {
-
+    private CacheManager() {
     }
 
-    public void fetchTask() {
-    }
-
-    public void addTasks() {
-
-    }
-
-    public long addTask(String token, TaskModel model) {
-        if (!IsParams.isParams(token, model)) {
-            return 0;
-        }
-        long result = 0;
-        if (currentCacheSize == 0) {
-            addToCache(token, model);
-            result = model.getIdTask();
-            deleteFirstElement();
+    public List<TaskModel> fetchTasks(String token) {
+        if (!IsParams.isParams(token)) {
+            return null;
         } else {
-            if (currentCacheSize >= MAX_CACHE_SIZE) {
-                if (deleteFirstElement() != null) {
-                    addToCache(token, model);
-                    result = model.getIdTask();
-                    currentCacheSize++;
+            CacheTasks inCache = cache.get(token);
+            if (inCache != null) {
+                CacheTasks newTimeUseThis = new CacheTasks
+                        .TaskBuilder(inCache.getTasks()).build();
+                cache.put(token, newTimeUseThis);
+                return inCache.getTasks();
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public TaskModel fetchTask(String token, long id) {
+        if (!IsParams.isParams(token) || id <= 0) {
+            return null;
+        }
+        CacheTasks inCache = cache.get(token);
+        if (inCache == null) {
+            return null;
+        } else {
+            CacheTasks newTimeUseThis = new CacheTasks
+                    .TaskBuilder(inCache.getTasks()).build();
+            cache.put(token, newTimeUseThis);
+            return inCache.getTasks()
+                    .stream()
+                    .filter(task -> task.getIdTask() == id)
+                    .findFirst().orElse(null);
+        }
+    }
+
+    public void addTasks(String token, List<TaskModel> tasks) {
+        if (IsParams.isParams(token, tasks)) {
+            if (currentCacheSize == 0) {
+                CacheTasks newTasks = new CacheTasks.TaskBuilder(tasks).build();
+                cache.put(token, newTasks);
+            } else {
+                if (currentCacheSize >= MAX_CACHE_SIZE) {
+                    maxCacheSize(token, tasks);
+                } else {
+                    CacheTasks newTasks = new CacheTasks.TaskBuilder(tasks).build();
+                    cache.put(token, newTasks);
                 }
             }
-            //todo add tasks
+            currentCacheSize++;
         }
-        return result;
     }
 
-    private List<TaskModel> deleteFirstElement() {
-        String key = cache.entrySet().iterator().next().getKey();
-        List<TaskModel> result = null;
-        if (IsParams.isParams(key)) {
-            result = cache.remove(key);
-        }
-        return result;
-    }
-
-    private void addToCache(String token, TaskModel model) {
-        if (IsParams.isParams(token, model)) {
-            List<TaskModel> array = cache.get(token);
+    private void maxCacheSize(String token, List<TaskModel> tasks) {
+        if (IsParams.isParams(token, tasks)) {
             if (cache.get(token) == null) {
-                array = new ArrayList<>();
-                array.add(model);
-                cache.put(token, array);
+                String minKey = minKeyInCache();
+                cache.remove(minKey);
+                CacheTasks newTaskToCache = new CacheTasks
+                        .TaskBuilder(tasks).build();
+                cache.put(token, newTaskToCache);
             } else {
-                array.add(model);
-                cache.put(token, array);
+                CacheTasks existTaskByToken = new CacheTasks
+                        .TaskBuilder(tasks).build();
+                cache.put(token, existTaskByToken);
             }
         }
     }
 
-    public void updateTask() {
+    private String minKeyInCache() {
+        CacheTasks minValue = cache.entrySet()
+                .stream().iterator().next().getValue();
+        String minKey = cache.keySet().iterator().next();
+        for (Map.Entry<String, CacheTasks> currentValue : cache.entrySet()) {
+            if (findMinTimePredicate(minValue, currentValue)) {
+                minKey = currentValue.getKey();
+                minValue = currentValue.getValue();
+            }
+        }
+        return minKey;
+    }
+
+    private boolean findMinTimePredicate(CacheTasks minValue,
+                                         Map.Entry<String, CacheTasks> currentValue) {
+        return minValue.getTimeCreation() >
+                currentValue.getValue().getTimeCreation();
+    }
+
+    public void addTask(String token, TaskModel task) {
+        if (IsParams.isParams(token, task)) {
+            CacheTasks result = cache.get(token);
+            if (result != null) {
+                CacheTasks cacheTasks = new CacheTasks
+                        .TaskBuilder(result.getTasks()).add(task).build();
+                cache.put(token, cacheTasks);
+            } else {
+                CacheTasks cacheTasks = new CacheTasks
+                        .TaskBuilder(new ArrayList<>()).add(task).build();
+                cache.put(token, cacheTasks);
+            }
+        }
+    }
+
+    public long updateTask(String token, TaskModel task) {
+        if (!IsParams.isParams(token, task)) {
+            return 0;
+        }
+        CacheTasks inCache = cache.get(token);
+        if (inCache == null) {
+            CacheTasks newTaskToCache = new CacheTasks
+                    .TaskBuilder(new ArrayList<>()).update(task).build();
+            cache.put(token, newTaskToCache);
+            return task.getIdTask();
+        }
+        CacheTasks newTaskToCache = new CacheTasks
+                .TaskBuilder(inCache.getTasks()).update(task).build();
+        cache.put(token, newTaskToCache);
+        return task.getIdTask();
     }
 
     public void updateTasks() {
@@ -110,10 +173,6 @@ public class CacheManager {
     }
 
     public void removeTask() {
-    }
-
-    private class SeveData {
-
     }
 
 }

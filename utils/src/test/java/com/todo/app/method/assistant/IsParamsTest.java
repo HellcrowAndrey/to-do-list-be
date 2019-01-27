@@ -6,8 +6,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Suite;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -94,12 +96,13 @@ public class IsParamsTest {
         // This field is suppose test result
         private boolean expected;
 
+        // This is parameterised constructor
         public IsParamsSingleString(String data, boolean expected) {
             this.data = data;
             this.expected = expected;
         }
 
-        @Parameterized.Parameters(name = "{index}: fetchTasks")
+        @Parameterized.Parameters(name = "{index}: isParams")
         public static Collection<Object[]> data() {
             return Arrays.asList(new Object[][]{
                     // This is actual test case
@@ -118,8 +121,69 @@ public class IsParamsTest {
         }
 
         @Test
-        public void fetchTasksTest() {
+        public void isParamsTest() {
             boolean actual = IsParams.isParams(data);
+            assertEquals(expected, actual);
+        }
+
+    }
+
+    //==========================================================
+    //========== This test case for testing method       =======
+    //======= isParams(String token, List<TaskModel> tasks) ====
+    //==========================================================
+
+    @RunWith(Parameterized.class)
+    public static class IsParamsStringAndList {
+
+        // Method isParams received this data
+        private String data;
+        //This field keeps tasks
+        private List<TaskModel> taskModelList;
+        // This field is suppose test result
+        private boolean expected;
+
+        // This is parameterised constructor
+        public IsParamsStringAndList(String data, List<TaskModel> taskModelList, boolean expected) {
+            this.data = data;
+            this.taskModelList = taskModelList;
+            this.expected = expected;
+        }
+
+        @Parameterized.Parameters(name = "{index}: isParams")
+        public static Collection<Object[]> data() {
+            return Arrays.asList(new Object[][]{
+                    //This is actual test
+                    {
+                            "data", new ArrayList<>(Arrays.asList(
+                            new TaskModel(1l, "first task", "do test this method", (byte) 1),
+                            new TaskModel(1l, "first task", "do finish of this test", (byte) 1))),
+                            true
+                    },
+                    //Tha data field is null
+                    {
+                            null, new ArrayList<>(Arrays.asList(
+                            new TaskModel(1l, "first task", "do test this method", (byte) 1),
+                            new TaskModel(1l, "first task", "do finish of this test", (byte) 1))),
+                            false
+                    },
+                    //Tha data field is empty
+                    {
+                            "", new ArrayList<>(Arrays.asList(
+                            new TaskModel(1l, "first task", "do test this method", (byte) 1),
+                            new TaskModel(1l, "first task", "do finish of this test", (byte) 1))),
+                            false
+                    },
+                    //Tha array field is null
+                    {
+                            "data", null, false
+                    }
+            });
+        }
+
+        @Test
+        public void isParamsTest() {
+            boolean actual = IsParams.isParams(data, taskModelList);
             assertEquals(expected, actual);
         }
 

@@ -4,7 +4,6 @@ import com.todo.app.controller.model.ResponseModel;
 import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.decorator.UserDecorator;
 import com.todo.app.service.users.IServiceUsers;
-import com.todo.app.cache.manager.CacheManager;
 import com.todo.app.service.tasks.IServiceTasks;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.utils.ControllerUtils;
