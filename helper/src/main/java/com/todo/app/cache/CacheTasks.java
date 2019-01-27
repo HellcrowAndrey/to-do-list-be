@@ -35,6 +35,14 @@ public class CacheTasks {
             return this;
         }
 
+        public TaskBuilder remove(long id) {
+            //todo add check
+            TaskModel result = tasks.stream().filter(t -> t.getIdTask() == id)
+                    .findFirst().orElse(null);
+            tasks.remove(result);
+            return this;
+        }
+
         public CacheTasks build() {
             return new CacheTasks(this);
         }

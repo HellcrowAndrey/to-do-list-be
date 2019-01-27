@@ -133,11 +133,11 @@ public class TasksDelegate {
                 "You mast repeat authorization"), HttpStatus.OK);
     }
 
-    private boolean repeatAuth(String login, CacheManager cacheManager) {
-        if (cacheManager.fetchToken(login) == null) {
-            return true;
-        }
-        return false;
-    }
+//    private boolean repeatAuth(String login, CacheManager cacheManager) {
+//        if (cacheManager.fetchToken(login) == null) {
+//            return true;
+//        }
+//        return false;
+//    }
 
 }

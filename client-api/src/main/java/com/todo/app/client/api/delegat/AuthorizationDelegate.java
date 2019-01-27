@@ -54,19 +54,19 @@ public class AuthorizationDelegate {
         }
     }
 
-    public List<TaskModel> getData(UserModel authUser) {
-        if (authUser == null) {
-            logger.warn("User model is not valid.", AuthorizationDelegate.class);
-            return null;
-        }
-        CacheManager manager = CacheManager.getInstance();
-        UserModel userInCache = manager.fetchUser(authUser);
-        if (userInCache != null) {
-            logger.info("User find in cache.", AuthorizationDelegate.class);
-            return manager.fetchTasks(userInCache);
-        }
-        return findData(authUser);
-    }
+//    public List<TaskModel> getData(UserModel authUser) {
+//        if (authUser == null) {
+//            logger.warn("User model is not valid.", AuthorizationDelegate.class);
+//            return null;
+//        }
+//        CacheManager manager = CacheManager.getInstance();
+//        UserModel userInCache = manager.fetchUser(authUser);
+//        if (userInCache != null) {
+//            logger.info("User find in cache.", AuthorizationDelegate.class);
+//            return manager.fetchTasks(userInCache);
+//        }
+//        return findData(authUser);
+//    }
 
     private List<TaskModel> findData(UserModel authUser) {
         UserDecorator decorator = new UserDecorator();

@@ -28,7 +28,8 @@ public class ServiceTasksImpl implements IServiceTasks {
     @Override
     public TasksListModel read(String data) {
         IDaoTasks tasks = new DaoTasksImpl(source);
-        return tasks.read(data);
+        //return tasks.read(data);
+        return null;
     }
 
     @Override

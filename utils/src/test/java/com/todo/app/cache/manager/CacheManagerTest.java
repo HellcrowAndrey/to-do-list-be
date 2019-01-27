@@ -21,6 +21,7 @@ import static org.junit.Assert.*;
         CacheManagerTest.AddTasksMaxCache.class,
         CacheManagerTest.FetchTasks.class,
         CacheManagerTest.UpdateTask.class,
+        CacheManagerTest.RemoveTask.class,
 })
 public class CacheManagerTest {
 
@@ -538,4 +539,111 @@ public class CacheManagerTest {
             }
         }
     }
+
+    //========================================================================
+    //== This test case for testing method updateTasks in CacheManager class =
+    //========================================================================
+
+    @RunWith(Parameterized.class)
+    public static class RemoveTask {
+
+        //This is user token
+        private String token;
+
+        //This is task id
+        private long id;
+
+        //This is list with tasks
+        private List<TaskModel> tasks;
+
+        //This field is task id
+        private long expected;
+
+        //This is constructor use for parameterized tests
+        public RemoveTask(String token, long id, List<TaskModel> tasks, long expected) {
+            this.token = token;
+            this.id = id;
+            this.tasks = tasks;
+            this.expected = expected;
+        }
+
+        @Parameterized.Parameters(name = "{index}: updateTask")
+        public static Collection<Object[]> data() {
+            return Arrays.asList(new Object[][]{
+                    // This is actual test
+                    {
+                            "41324231412",
+                            4l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1),
+                                    new TaskModel(2l, "second task", "do write many tests", (byte) 1),
+                                    new TaskModel(3l, "new task", "i hope its right step", (byte) 1),
+                                    new TaskModel(4l, "new task two", "i think need add kafka to this project", (byte) 1),
+                                    new TaskModel(5l, "new task three", "i think need read about docker", (byte) 1)
+                            )),
+                            4l
+                    },
+                    // This is actual test
+                    {
+                            "41324231412",
+                            2l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1),
+                                    new TaskModel(2l, "second task", "do write many tests", (byte) 1)
+                            )),
+                            2l
+                    },
+                    // This is actual test
+                    {
+                            "41324231412",
+                            1l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1)
+                                    )),
+                            1l
+                    },
+                    {
+                            "11111111111",
+                            1l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1)
+                            )),
+                            0l
+                    },
+                    // This is doesn't valid test token equals null
+                    {
+                            null,
+                            1l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1)
+                            )),
+                            0l
+                    },
+                    // This is doesn't valid test token equals empty
+                    {
+                            "",
+                            1l,
+                            new ArrayList<>(Arrays.asList(
+                                    new TaskModel(1l, "first task", "do finish of this test", (byte) 1)
+                            )),
+                            0l
+                    }
+            });
+        }
+
+        @Test
+        public void fetchTasksTest() {
+            CacheManager cacheManager = CacheManager.getInstance();
+            cacheManager.addTasks(token, tasks);
+            if (token != null && token.equals("11111111111")) {
+                long actual = cacheManager.removeTask("222222222222222", id);
+                assertEquals(expected, actual);
+            } else {
+                long actual = cacheManager.removeTask(token, id);
+                assertEquals(expected, actual);
+            }
+        }
+    }
+
+
 }

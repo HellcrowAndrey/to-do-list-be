@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/method/assistant/IsParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/method/assistant/IsParams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,6 +32,9 @@
     </option>
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/to_do_list_be$CacheManagerTest_RemoveTask_fetchTasksTest.ic" NAME="CacheManagerTest$RemoveTask.fetchTasksTest Coverage Results" MODIFIED="1548613073131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.todo.app.cache.manager.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/to_do_list_be$TaskModelTest.ic" NAME="TaskModelTest Coverage Results" MODIFIED="1547379016944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.controller.model.task.*</FILTER>
     </SUITE>
@@ -47,6 +50,7 @@
     <SUITE FILE_PATH="coverage/to_do_list_be$Main.ic" NAME="Main Coverage Results" MODIFIED="1546203510987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/to_do_list_be$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1548615213651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/to_do_list_be$UserDaoModelTest.ic" NAME="UserDaoModelTest Coverage Results" MODIFIED="1547383332186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.dao.model.*</FILTER>
     </SUITE>
@@ -63,7 +67,7 @@
     <SUITE FILE_PATH="coverage/to_do_list_be$IsParamsTest.ic" NAME="IsParamsTest Coverage Results" MODIFIED="1548530655388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.method.assistant.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/to_do_list_be$CacheManagerTest.ic" NAME="CacheManagerTest Coverage Results" MODIFIED="1548610721320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/to_do_list_be$CacheManagerTest.ic" NAME="CacheManagerTest Coverage Results" MODIFIED="1548613156083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.cache.manager.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/to_do_list_be$UserModelTest_modelEqualsFailSecondTest.ic" NAME="UserModelTest.modelEqualsFailSecondTest Coverage Results" MODIFIED="1547376398708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -75,6 +79,7 @@
     <SUITE FILE_PATH="coverage/to_do_list_be$CacheManagerTest_AddTasks_addTasksTest.ic" NAME="CacheManagerTest$AddTasks.addTasksTest Coverage Results" MODIFIED="1548596485853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.cache.manager.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/to_do_list_be$All_in_utils.ic" NAME="All in utils Coverage Results" MODIFIED="1548614728088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/to_do_list_be$DaoUsersReadImplTest.ic" NAME="DaoUsersReadImplTest Coverage Results" MODIFIED="1547389023130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.jdbc.dao.users.impl.*</FILTER>
     </SUITE>
@@ -110,91 +115,42 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47205314">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="159" column="37" lean-forward="true" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#860#861#0" expanded="true" />
-                    <element signature="e#895#896#0" expanded="true" />
-                    <element signature="e#936#937#0" expanded="true" />
-                    <element signature="e#964#965#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2700">
-                  <caret line="204" column="13" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="51" selection-start-line="51" selection-end-line="51" />
-                  <folding>
-                    <element signature="e#1138#1139#0" expanded="true" />
-                    <element signature="e#1846#1847#0" expanded="true" />
-                    <element signature="e#1913#1914#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-633">
-                  <caret line="121" selection-start-line="121" selection-end-line="121" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="402">
-                  <caret line="532" column="47" selection-start-line="532" selection-start-column="47" selection-end-line="532" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-45">
-                  <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-305">
+              <caret line="213" column="29" selection-start-line="213" selection-start-column="29" selection-end-line="213" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2700">
+              <caret line="204" column="13" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -235,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data-access-object/src/main/resources/query/table_users" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/CreateDataBase.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/DaoUsersImplIT.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/resources/it/application.properties" />
@@ -254,12 +209,9 @@
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/IServiceTasks.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/decorator/UserDecorator.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/ServiceConfig.java" />
-        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/IDataSource.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlDebugConnection.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/TaskDaoModel.java" />
@@ -284,8 +236,12 @@
         <option value="$PROJECT_DIR$/utils/src/main/resources/debug/application.properties" />
         <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/props/AppProps.java" />
         <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
         <option value="$PROJECT_DIR$/utils/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" />
+        <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java" />
       </list>
     </option>
   </component>
@@ -346,152 +302,6 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -499,63 +309,6 @@
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
@@ -601,56 +354,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="todo" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-              <item name="assistant" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -667,7 +370,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548610904790" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548619711212" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/client-api/src/test/java" />
@@ -678,7 +381,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -722,81 +425,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CacheManagerTest$UpdateTask.fetchTasksTest">
-    <configuration name="CacheManagerTest$AddTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Whole project (2)">
+    <configuration name="All in utils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.cache.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.cache.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.cache.manager.CacheManagerTest$AddTask" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CacheManagerTest$AddTasksMaxCache.addTasksExistInCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.cache.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.cache.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.cache.manager.CacheManagerTest$AddTasksMaxCache" />
-      <option name="METHOD_NAME" value="addTasksExistInCacheTest" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit">
+      <module name="helper" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <dir value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CacheManagerTest$FetchTasks.fetchTasksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.cache.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.cache.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.cache.manager.CacheManagerTest$FetchTasks" />
-      <option name="METHOD_NAME" value="fetchTasksTest" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="Whole project (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.cache.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.cache.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.cache.manager.CacheManagerTest$UpdateTask" />
-      <option name="METHOD_NAME" value="fetchTasksTest" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="Whole project (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CacheManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.cache.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.cache.manager" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.cache.manager.CacheManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="Whole project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in data-access-object" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-access-object" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="PARAMETERS" value="" />
+      <dir value="$PROJECT_DIR$/data-access-object/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -808,13 +497,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.All in utils" />
+      <item itemvalue="JUnit.java in data-access-object" />
+      <item itemvalue="Spring Boot.Main" />
+      <item itemvalue="JUnit.Whole project" />
+      <item itemvalue="JUnit.Whole project (1)" />
+      <item itemvalue="JUnit.Whole project (2)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CacheManagerTest$UpdateTask.fetchTasksTest" />
-        <item itemvalue="JUnit.CacheManagerTest" />
-        <item itemvalue="JUnit.CacheManagerTest$AddTask" />
-        <item itemvalue="JUnit.CacheManagerTest$AddTasksMaxCache.addTasksExistInCacheTest" />
-        <item itemvalue="JUnit.CacheManagerTest$FetchTasks.fetchTasksTest" />
+        <item itemvalue="JUnit.Whole project (2)" />
+        <item itemvalue="JUnit.Whole project (1)" />
+        <item itemvalue="JUnit.Whole project" />
+        <item itemvalue="JUnit.java in data-access-object" />
+        <item itemvalue="JUnit.All in utils" />
       </list>
     </recent_temporary>
   </component>
@@ -887,44 +585,44 @@
       <workItem from="1547983460297" duration="175000" />
       <workItem from="1548518754713" duration="14308000" />
       <workItem from="1548536052303" duration="5139000" />
-      <workItem from="1548589721329" duration="20748000" />
+      <workItem from="1548589721329" duration="29355000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 31m 28s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="All_in_utils - 2019.01.27 at 20h 44m 41s.xml">
+      <configuration name="All in utils" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 32m 03s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="All_in_utils - 2019.01.27 at 20h 45m 31s.xml">
+      <configuration name="All in utils" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 33m 22s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="AllTests - 2019.01.27 at 20h 52m 58s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 36m 41s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="AllTests - 2019.01.27 at 20h 53m 28s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 37m 02s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="AllTests - 2019.01.27 at 20h 53m 34s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 37m 09s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="AllTests - 2019.01.27 at 20h 54m 53s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 37m 38s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="AllTests - 2019.01.27 at 20h 55m 46s.xml">
+      <configuration name="AllTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest$UpdateTask_fetchTasksTest - 2019.01.27 at 19h 38m 15s.xml">
-      <configuration name="CacheManagerTest$UpdateTask.fetchTasksTest" configurationId="JUnit" />
+    <history-entry file="All_in_utils - 2019.01.27 at 20h 56m 14s.xml">
+      <configuration name="All in utils" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest - 2019.01.27 at 19h 38m 37s.xml">
-      <configuration name="CacheManagerTest" configurationId="JUnit" />
+    <history-entry file="java_in_data-access-object - 2019.01.27 at 20h 56m 34s.xml">
+      <configuration name="java in data-access-object" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CacheManagerTest - 2019.01.27 at 19h 38m 42s.xml">
-      <configuration name="CacheManagerTest" configurationId="JUnit" />
+    <history-entry file="Whole_project_(2) - 2019.01.27 at 20h 59m 50s.xml">
+      <configuration name="Whole project (2)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362745000" />
+    <option name="totallyTimeSpent" value="371352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,10 +644,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" weight="0.26840067" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.26840067" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32829374" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36403996" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36403996" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.472808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -967,14 +665,14 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32982844" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4991274" weight="0.32982844" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32982844" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32982844" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32982844" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5008726" side_tool="true" weight="0.32982844" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -1018,6 +716,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/to-do-list-be" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -1038,12 +741,6 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java</url>
-          <line>152</line>
-          <properties />
-          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1073,37 +770,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/IDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TasksListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/resources/it/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/impl/MySqlTestConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1225,13 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/TaskDaoModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1302,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="486" column="86" selection-start-line="486" selection-start-column="86" selection-end-line="486" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Long.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -1333,18 +985,6 @@
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1392,21 +1032,14 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
-          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="336">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
@@ -1417,17 +1050,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="159" column="37" lean-forward="true" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
+        <state relative-caret-position="330">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/TasksDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="140" column="7" lean-forward="true" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/task/TaskModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/cache/manager/CacheManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="532" column="47" selection-start-line="532" selection-start-column="47" selection-end-line="532" selection-end-column="47" />
+        <state relative-caret-position="504">
+          <caret line="632" selection-start-line="632" selection-end-line="632" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/cache/manager/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="213" column="29" selection-start-line="213" selection-start-column="29" selection-end-line="213" selection-end-column="29" />
         </state>
       </provider>
     </entry>

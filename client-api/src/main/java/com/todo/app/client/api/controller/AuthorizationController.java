@@ -44,7 +44,7 @@ public class AuthorizationController {
         }
         ResponseModel responseModel;
         UserModel model = new UserModel(login, email, password);
-        List<TaskModel> response = delegate.getData(model);
+        List<TaskModel> response = null; //delegate.getData(model);
         if (response == null) {
             logger.warn(ControllerUtils.USER_NOT_FOUNT);
             responseModel = new ResponseModel(gen.getCounter(), ControllerUtils.USER_NOT_FOUNT);
