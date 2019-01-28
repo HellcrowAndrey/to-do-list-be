@@ -255,7 +255,7 @@ public class CacheManager {
      *
      * @param token this is user token.
      * @param task  obj model user task.
-     * @return
+     * @return id removed tasks
      */
     public long updateTask(final String token, final TaskModel task) {
         if (!IsParams.isParams(token, task)) {
