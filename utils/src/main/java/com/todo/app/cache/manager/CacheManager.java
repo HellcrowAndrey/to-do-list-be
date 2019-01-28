@@ -63,7 +63,7 @@ public class CacheManager {
      * singleton of this class.
      */
     private CacheManager() {
-        //This is private constructor this class.
+        //This is private constructor of class.
     }
 
     /**
@@ -211,14 +211,26 @@ public class CacheManager {
      *
      * @param minValue
      * @param currentValue this is current value in map
-     * @return true or false 
+     * @return true or false
      */
-    private boolean findMinTimePredicate(CacheTasks minValue,
-                                         Map.Entry<String, CacheTasks> currentValue) {
+    private boolean findMinTimePredicate(final CacheTasks minValue,
+                                         final Map.Entry<String, CacheTasks>
+                                                 currentValue) {
         return minValue.getTimeCreation() >
                 currentValue.getValue().getTimeCreation();
     }
 
+    /**
+     * This method do add task to cache. After call to this
+     * method first to fall do check on valid params if params
+     * doesn't valid do nothing else do check CacheTasks in
+     * cache by token. If this object exist do update in array
+     * else do crete new CacheTasks object and new array and add
+     * task to array next step do put to map.
+     *
+     * @param token this is user token.
+     * @param task  obj model user task.
+     */
     public void addTask(String token, TaskModel task) {
         if (IsParams.isParams(token, task)) {
             CacheTasks result = cache.get(token);
@@ -234,32 +246,54 @@ public class CacheManager {
         }
     }
 
-    public long updateTask(String token, TaskModel task) {
+    /**
+     * This method do update task inside CacheTasks obj.
+     * After call to this method do check on valid params
+     * if params doesn't valid do return zero, else do find
+     * obj in cache if obj equals null do create new CacheTasks
+     * and put to map and return id else do update cache return id.
+     *
+     * @param token this is user token.
+     * @param task  obj model user task.
+     * @return
+     */
+    public long updateTask(final String token, final TaskModel task) {
         if (!IsParams.isParams(token, task)) {
             return 0;
         }
-        CacheTasks inCache = cache.get(token);
+        final CacheTasks inCache = cache.get(token);
         if (inCache == null) {
-            CacheTasks newTaskToCache = new CacheTasks
+            final CacheTasks newTaskToCache = new CacheTasks
                     .TaskBuilder(new ArrayList<>()).update(task).build();
             cache.put(token, newTaskToCache);
             return task.getIdTask();
         }
-        CacheTasks newTaskToCache = new CacheTasks
+        final CacheTasks newTaskToCache = new CacheTasks
                 .TaskBuilder(inCache.getTasks()).update(task).build();
         cache.put(token, newTaskToCache);
         return task.getIdTask();
     }
 
-    public long removeTask(String token, long id) {
+    /**
+     * This method do remove task inside CacheTasks obj.
+     * After call to this method do check on valid params
+     * if params doesn't valid do return zero, else do find
+     * obj in cache if obj equals null do return zero else
+     * create new obj update it and put in cache.
+     *
+     * @param token this is user token.
+     * @param id    this is id user task.
+     * @return id removed tasks
+     */
+    public long removeTask(final String token, final long id) {
         if (!IsParams.isParams(token) || id <= 0) {
             return 0;
         }
-        CacheTasks inCache = cache.get(token);
+        final CacheTasks inCache = cache.get(token);
         if (inCache == null) {
             return 0;
         }
-        CacheTasks newTaskToCache = new CacheTasks
+        final CacheTasks newTaskToCache = new CacheTasks
                 .TaskBuilder(inCache.getTasks()).remove(id).build();
         cache.put(token, newTaskToCache);
         return id;
