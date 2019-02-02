@@ -1,8 +1,9 @@
-package com.todo.app.decorator;
+package com.todo.app.password;
 
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.hash.MDFive;
 
+@Deprecated
 public class UserDecorator {
 
     public UserModel createHash(UserModel user) {

@@ -2,7 +2,7 @@ package com.todo.app.client.api.delegat;
 
 import com.todo.app.controller.model.ResponseModel;
 import com.todo.app.controller.model.task.TaskModel;
-import com.todo.app.decorator.UserDecorator;
+import com.todo.app.password.UserDecorator;
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.service.tasks.IServiceTasks;
 import com.todo.app.controller.model.user.UserModel;
@@ -70,7 +70,7 @@ public class AuthorizationDelegate {
 
     private List<TaskModel> findData(UserModel authUser) {
         UserDecorator decorator = new UserDecorator();
-        //UserModel userInDb = serviceUsers.read(decorator.createHash(authUser));
+        //UserModel userInDb = serviceUsers.read(password.createHash(authUser));
 //        if (userInDb == null) {
 //            logger.warn("User doesn't find in db.", AuthorizationDelegate.class);
 //            return null;

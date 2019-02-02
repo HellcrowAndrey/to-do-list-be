@@ -49,8 +49,8 @@ public class RegistrationDelegate {
 //                logger.info("This user exist in data base.");
 //                return ControllerUtils.USER_EXIT;
 //            }
-//            UserDecorator decorator = new UserDecorator();
-//            UserModel newUser = decorator.createHash(user);
+//            UserDecorator password = new UserDecorator();
+//            UserModel newUser = password.createHash(user);
 //            manager.addUser(newUser);
 //            return serviceUsers.create(newUser);
 //        } else {
