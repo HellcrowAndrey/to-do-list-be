@@ -39,6 +39,9 @@ public class PasswordsImpl implements IPasswords, Serializable {
         for (char i = 'a'; i <= 'z'; i++) {
             tmp.append(i);
         }
+        for (char i = 'A'; i < 'Z'; i++) {
+            tmp.append(i);
+        }
         symbols = tmp.toString().toCharArray();
     }
 

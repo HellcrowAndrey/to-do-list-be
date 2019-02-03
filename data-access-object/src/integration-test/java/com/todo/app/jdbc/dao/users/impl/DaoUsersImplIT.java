@@ -48,8 +48,8 @@ public class DaoUsersImplIT {
         model1.setIdUser(1l);
         model1.setLogin("login1");
         model1.setEmail("email1@gemail.com");
-        model1.setPasswordHash("password_hash1");
-        model1.setSalt("salt1");
+        model1.setHash(new byte[]{'1', '2', '3'});
+        model1.setSalt(new byte[]{'1', '2', '3'});
         model1.setToken("token1");
         model1.setEnable(true);
 
@@ -57,8 +57,8 @@ public class DaoUsersImplIT {
         model2.setIdUser(2l);
         model2.setLogin("login2");
         model2.setEmail("email2@gemail.com");
-        model2.setPasswordHash("password_hash2");
-        model2.setSalt("salt2");
+        model2.setHash(new byte[]{'1', '2', '3'});
+        model2.setSalt(new byte[]{'1', '2', '3'});
         model2.setToken("token2");
         model2.setEnable(true);
 
@@ -66,8 +66,8 @@ public class DaoUsersImplIT {
         model3.setIdUser(3l);
         model3.setLogin("login3");
         model3.setEmail("email3@gemail.com");
-        model3.setPasswordHash("password_hash3");
-        model3.setSalt("salt3");
+        model3.setHash(new byte[]{'1', '2', '3'});
+        model3.setSalt(new byte[]{'1', '2', '3'});
         model3.setToken("token3");
         model3.setEnable(true);
 
@@ -75,8 +75,8 @@ public class DaoUsersImplIT {
         model4.setIdUser(4l);
         model4.setLogin("login4");
         model4.setEmail("email4@gemail.com");
-        model4.setPasswordHash("password_hash4");
-        model4.setSalt("salt4");
+        model4.setHash(new byte[]{'1', '2', '3'});
+        model4.setSalt(new byte[]{'1', '2', '3'});
         model4.setToken("token4");
         model4.setEnable(true);
 
@@ -84,8 +84,8 @@ public class DaoUsersImplIT {
         model5.setIdUser(5l);
         model5.setLogin("login5");
         model5.setEmail("email5@gemail.com");
-        model5.setPasswordHash("password_hash5");
-        model5.setSalt("salt5");
+        model5.setHash(new byte[]{'1', '2', '3'});
+        model5.setSalt(new byte[]{'1', '2', '3'});
         model5.setToken("token5");
         model5.setEnable(true);
 
@@ -114,8 +114,8 @@ public class DaoUsersImplIT {
         model1.setIdUser(1l);
         model1.setLogin("login11");
         model1.setEmail("email1@gemail.com");
-        model1.setPasswordHash("password_hash11");
-        model1.setSalt("salt11");
+        model1.setHash(new byte[]{'1', '2', '3'});
+        model1.setSalt(new byte[]{'1', '2', '3'});
         model1.setToken("token11");
         model1.setEnable(false);
 
@@ -123,8 +123,8 @@ public class DaoUsersImplIT {
         model2.setIdUser(2l);
         model2.setLogin("login22");
         model2.setEmail("email2@gemail.com");
-        model2.setPasswordHash("password_hash22");
-        model2.setSalt("salt22");
+        model2.setHash(new byte[]{'1', '2', '3'});
+        model2.setSalt(new byte[]{'1', '2', '3'});
         model2.setToken("token22");
         model2.setEnable(false);
 
@@ -132,8 +132,8 @@ public class DaoUsersImplIT {
         model3.setIdUser(3l);
         model3.setLogin("login33");
         model3.setEmail("email3@gemail.com");
-        model3.setPasswordHash("password_hash33");
-        model3.setSalt("salt33");
+        model3.setHash(new byte[]{'1', '2', '3'});
+        model3.setSalt(new byte[]{'1', '2', '3'});
         model3.setToken("token33");
         model3.setEnable(false);
 
@@ -141,8 +141,8 @@ public class DaoUsersImplIT {
         model4.setIdUser(4l);
         model4.setLogin("login44");
         model4.setEmail("email4@gemail.com");
-        model4.setPasswordHash("password_hash44");
-        model4.setSalt("salt44");
+        model4.setHash(new byte[]{'1', '2', '3'});
+        model4.setSalt(new byte[]{'1', '2', '3'});
         model4.setToken("token44");
         model4.setEnable(false);
 
@@ -150,8 +150,8 @@ public class DaoUsersImplIT {
         model5.setIdUser(5l);
         model5.setLogin("login55");
         model5.setEmail("email5@gemail.com");
-        model5.setPasswordHash("password_hash55");
-        model5.setSalt("salt55");
+        model5.setHash(new byte[]{'1', '2', '3'});
+        model5.setSalt(new byte[]{'1', '2', '3'});
         model5.setToken("token55");
         model5.setEnable(false);
 

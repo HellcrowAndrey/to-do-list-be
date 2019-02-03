@@ -21,7 +21,7 @@ public class CreateDataBase {
                     "  ID int NOT NULL AUTO_INCREMENT," +
                     "  LOGIN VARCHAR (50) NOT NULL," +
                     "  EMAIL VARCHAR (100) NOT NULL," +
-                    "  PASSWORD_HASH VARCHAR (255) NOT NULL," +
+                    "  HASH VARCHAR (255) NOT NULL," +
                     "  SALT VARCHAR (255) NOT NULL," +
                     "  TOKEN VARCHAR (255) NOT NULL," +
                     "  ENABLE BOOLEAN, " +

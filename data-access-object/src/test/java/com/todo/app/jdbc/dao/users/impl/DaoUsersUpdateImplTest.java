@@ -40,13 +40,14 @@ public class DaoUsersUpdateImplTest {
         when(connectionMock.prepareStatement(any(String.class), any(Integer.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenReturn(connectionMock);
         when(statementMock.executeUpdate()).thenReturn(1);
-
+        byte[] hash = new byte[]{1, 2, 3, 4, 5, 6};
+        byte[] salt = new byte[]{'r', 'q', 'y', 'u', 'i'};
         model = new UserDaoModel();
         model.setIdUser(1l);
         model.setLogin("login");
         model.setEmail("email@gmail.com");
-        model.setPasswordHash("password_hash");
-        model.setSalt("salt");
+        model.setHash(hash);
+        model.setSalt(salt);
         model.setToken("token");
         model.setEnable(true);
     }

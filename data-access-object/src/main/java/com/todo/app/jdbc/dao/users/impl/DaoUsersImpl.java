@@ -60,14 +60,14 @@ public class DaoUsersImpl implements IDaoUsers {
         if (user == null) {
             return 0;
         }
-        final String query = "INSERT INTO Users (LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
         long result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
-            statement.setString(3, user.getPasswordHash());
-            statement.setString(4, user.getSalt());
+            statement.setBytes(3, user.getHash());
+            statement.setBytes(4, user.getSalt());
             statement.setString(5, user.getToken());
             statement.setBoolean(6, user.isEnable());
             result = statement.executeUpdate();
@@ -95,7 +95,7 @@ public class DaoUsersImpl implements IDaoUsers {
      */
     private PreparedStatement getStatement(final Connection connection,
                                            final String data) throws SQLException {
-        final String query = "SELECT ID, LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE" +
+        final String query = "SELECT ID, LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE" +
                 " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
         final PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, data);
@@ -125,8 +125,8 @@ public class DaoUsersImpl implements IDaoUsers {
                 result.setIdUser(resultSet.getLong(1));
                 result.setLogin(resultSet.getString(2));
                 result.setEmail(resultSet.getString(3));
-                result.setPasswordHash(resultSet.getString(4));
-                result.setSalt(resultSet.getString(5));
+                result.setHash(resultSet.getBytes(4));
+                result.setSalt(resultSet.getBytes(5));
                 result.setToken(resultSet.getString(6));
                 result.setEnable(resultSet.getBoolean(7));
             }
@@ -156,12 +156,13 @@ public class DaoUsersImpl implements IDaoUsers {
         if (user == null) {
             return 0;
         }
-        final String query = "UPDATE Users SET LOGIN=?, PASSWORD_HASH=?, ENABLE=? WHERE EMAIL=?;";
+        final String query = "UPDATE Users SET LOGIN=?, HASH=?, ENABLE=? WHERE EMAIL=?;";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection
+                     .prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
-            statement.setString(2, user.getPasswordHash());
+            statement.setBytes(2, user.getHash());
             statement.setBoolean(3, user.isEnable());
             statement.setString(4, user.getEmail());
             result = statement.executeUpdate();

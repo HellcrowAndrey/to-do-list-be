@@ -88,11 +88,13 @@ public class DaoTasksImplIT {
 
     @Before
     public void init() {
+        byte[] hash = new byte[]{1, 2, 3, 4, 5, 6};
+        byte[] salt = new byte[]{'r', 'q', 'y', 'u', 'i'};
         userMock.setIdUser(1l);
         userMock.setLogin("login1");
         userMock.setEmail("email1@gemail.com");
-        userMock.setPasswordHash("password_hash1");
-        userMock.setSalt("salt1");
+        userMock.setHash(hash);
+        userMock.setSalt(salt);
         userMock.setToken("token1");
         userMock.setEnable(true);
 
@@ -154,12 +156,14 @@ public class DaoTasksImplIT {
 
     @Test
     public void createTasksOneIT() {
+        byte[] hash = new byte[]{1, 2, 3, 4, 5, 6};
+        byte[] salt = new byte[]{'r', 'q', 'y', 'u', 'i'};
         UserDaoModel userMock = new UserDaoModel();
         userMock.setIdUser(1l);
         userMock.setLogin("login1");
         userMock.setEmail("email1@gemail.com");
-        userMock.setPasswordHash("password_hash1");
-        userMock.setSalt("salt1");
+        userMock.setHash(hash);
+        userMock.setSalt(salt);
         userMock.setToken("token1");
         userMock.setEnable(true);
         List<TaskDaoModel> tasksMock = createTasksOne();
