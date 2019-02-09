@@ -26,8 +26,8 @@ public class AuthorizationDelegate {
 
     private IServiceTasks serviceTasks;
 
-    public AuthorizationDelegate(@Qualifier("serviceUsersImpl") IServiceUsers serviceUsers,
-                                 @Qualifier("serviceTasksImpl") IServiceTasks serviceTasks) {
+    public AuthorizationDelegate(IServiceUsers serviceUsers,
+                                 IServiceTasks serviceTasks) {
         this.serviceUsers = serviceUsers;
         this.serviceTasks = serviceTasks;
     }

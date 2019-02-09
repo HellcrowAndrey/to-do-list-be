@@ -27,9 +27,9 @@ public class ServiceUsersImpl implements IServiceUsers {
     }
 
     @Override
-    public UserDaoModel read(String  user) {
+    public UserDaoModel read(String login, String email) {
         IDaoUsers users = new DaoUsersImpl(source);
-        return users.read(user);
+        return users.read(login, email);
     }
 
     @Override

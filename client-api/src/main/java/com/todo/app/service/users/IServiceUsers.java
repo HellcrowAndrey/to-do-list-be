@@ -22,11 +22,13 @@ public interface IServiceUsers {
     /**
      * This method call to method read from IDaoUsers interface.
      *
-     * @param user this is login or email, depend on user sent
-     *             to controller
+     * @param login this is login or email, depend on user sent
+     *              to controller
+     * @param email this is login or email, depend on user sent
+     *              to controller
      * @return obj with user data
      */
-    UserDaoModel read(String user);
+    UserDaoModel read(String login, String email);
 
     /**
      * This method call to method update from IDaoUsers interface.

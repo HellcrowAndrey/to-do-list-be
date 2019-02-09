@@ -38,4 +38,12 @@ public class ResponseModel<T> {
     public int hashCode() {
         return Objects.hash(idMessage, response);
     }
+
+    @Override
+    public String toString() {
+        return "ResponseModel{" +
+                "idMessage=" + idMessage +
+                ", response=" + response +
+                '}';
+    }
 }

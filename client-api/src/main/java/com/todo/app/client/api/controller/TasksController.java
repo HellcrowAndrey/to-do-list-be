@@ -19,7 +19,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class TasksController {
 
-    @Autowired
+    //@Autowired
     private TasksDelegate delegate;
 
     private Logger logger = LoggerFactory.getLogger(TasksController.class);

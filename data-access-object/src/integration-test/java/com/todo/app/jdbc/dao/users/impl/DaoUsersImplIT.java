@@ -198,7 +198,7 @@ public class DaoUsersImplIT {
         usersMockFive.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
-            UserDaoModel actualModel = users.read(user.getLogin());
+            UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
     }
@@ -208,7 +208,7 @@ public class DaoUsersImplIT {
         usersMockTwo.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
-            UserDaoModel actualModel = users.read(user.getLogin());
+            UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
     }
@@ -218,7 +218,7 @@ public class DaoUsersImplIT {
         usersMockOne.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
-            UserDaoModel actualModel = users.read(user.getLogin());
+            UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
     }

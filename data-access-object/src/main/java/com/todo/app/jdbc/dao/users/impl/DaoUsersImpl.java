@@ -88,18 +88,19 @@ public class DaoUsersImpl implements IDaoUsers {
      * connection and data.
      *
      * @param connection class connection.
-     * @param data       its user login or email
+     * @param login      This is login.
+     * @param email      This is email.
      * @return object PreparedStatement
      * @throws SQLException An exception that provides information on
      *                      a database access error or other errors.
      */
     private PreparedStatement getStatement(final Connection connection,
-                                           final String data) throws SQLException {
+                                           final String login, final String email) throws SQLException {
         final String query = "SELECT ID, LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE" +
                 " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
         final PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, data);
-        statement.setString(2, data);
+        statement.setString(1, login);
+        statement.setString(2, email);
         return statement;
     }
 
@@ -109,17 +110,19 @@ public class DaoUsersImpl implements IDaoUsers {
      * data valid do read user in db else return null. In this method
      * do handlers on date base exception if catch it do return null.
      *
-     * @param data This is login or email.
+     * @param login This is login.
+     * @param email This is email.
      * @return null or data about user.
      */
     @Override
-    public UserDaoModel read(String data) {
-        if (data == null || data.equals("")) {
+    public UserDaoModel read(String login, String email) {
+        if (login == null || login.equals("") ||
+                email == null || email.equals("")) {
             return null;
         }
         final UserDaoModel result = new UserDaoModel();
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = getStatement(connection, data);
+             PreparedStatement statement = getStatement(connection, login, email);
              ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 result.setIdUser(resultSet.getLong(1));

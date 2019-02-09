@@ -1,5 +1,8 @@
 package com.todo.app.client.api.delegat;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class InfoUpdateDelegate {
 
     public static boolean isParams(String email, String password) {

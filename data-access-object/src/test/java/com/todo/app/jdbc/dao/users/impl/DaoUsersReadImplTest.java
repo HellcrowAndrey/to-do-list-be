@@ -68,21 +68,21 @@ public class DaoUsersReadImplTest {
     @Test
     public void readTest() {
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("login");
+        UserDaoModel expected = daoUsers.read("login","email");
         assertEquals(expected, model);
     }
 
     @Test
     public void readNullTest() {
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read(null);
+        UserDaoModel expected = daoUsers.read(null, null);
         assertEquals(expected, null);
     }
 
     @Test
     public void readEmptyTest() {
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("");
+        UserDaoModel expected = daoUsers.read("", "");
         assertEquals(expected, null);
     }
 
@@ -91,7 +91,7 @@ public class DaoUsersReadImplTest {
         when(connectionMock.prepareStatement(any(String.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenThrow(ClassNotFoundException.class);
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("login");
+        UserDaoModel expected = daoUsers.read("login","email");
         UserDaoModel actual = new UserDaoModel();
         assertEquals(expected, actual);
     }
@@ -101,7 +101,7 @@ public class DaoUsersReadImplTest {
         when(connectionMock.prepareStatement(any(String.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenThrow(IllegalAccessException.class);
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("login");
+        UserDaoModel expected = daoUsers.read("login","email");
         UserDaoModel actual = new UserDaoModel();
         assertEquals(expected, actual);
     }
@@ -111,7 +111,7 @@ public class DaoUsersReadImplTest {
         when(connectionMock.prepareStatement(any(String.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenThrow(InstantiationException.class);
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("login");
+        UserDaoModel expected = daoUsers.read("login", "email");
         UserDaoModel actual = new UserDaoModel();
         assertEquals(expected, actual);
     }
@@ -121,7 +121,7 @@ public class DaoUsersReadImplTest {
         when(connectionMock.prepareStatement(any(String.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenThrow(SQLException.class);
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
-        UserDaoModel expected = daoUsers.read("login");
+        UserDaoModel expected = daoUsers.read("login","email");
         UserDaoModel actual = new UserDaoModel();
         assertEquals(expected, actual);
     }

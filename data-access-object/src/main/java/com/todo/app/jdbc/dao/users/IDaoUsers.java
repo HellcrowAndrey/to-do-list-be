@@ -32,10 +32,11 @@ public interface IDaoUsers {
      * data valid do read user in db else return null. In this method
      * do handlers on date base exception if catch it do return null.
      *
-     * @param data This is login or email.
+     * @param login This is login.
+     * @param email This is email.
      * @return null or data about user.
      */
-    UserDaoModel read(String data);
+    UserDaoModel read(String login, String email);
 
     /**
      * This method do update user in db, received UserDaoModel. After call to this

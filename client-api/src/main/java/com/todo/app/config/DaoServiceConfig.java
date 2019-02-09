@@ -9,13 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan({"com.todo.app.jdbc.dao.data.source",
-        "com.todo.app.jdbc.dao.users",
-        "com.todo.app.jdbc.dao.tasks"})
-public class ServiceConfig {
+@ComponentScan({"com.todo.app.jdbc.dao.data.source"})
+public class DaoServiceConfig {
 
     @Autowired
     private IDataSource source;

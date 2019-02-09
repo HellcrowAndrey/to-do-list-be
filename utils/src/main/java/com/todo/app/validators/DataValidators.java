@@ -1,5 +1,6 @@
 package com.todo.app.validators;
 
+
 import com.todo.app.controller.model.user.UserModel;
 
 public interface DataValidators {

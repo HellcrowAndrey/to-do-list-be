@@ -1,21 +1,23 @@
 package com.todo.app.client.api.delegat;
 
+import com.todo.app.cache.manager.CacheManager;
+import com.todo.app.dao.model.UserDaoModel;
+import com.todo.app.password.IPasswords;
+import com.todo.app.password.impl.PasswordsImpl;
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.controller.model.user.UserModel;
+import com.todo.app.token.IToken;
+import com.todo.app.token.impl.TokenGeneratorImpl;
 import com.todo.app.utils.ControllerUtils;
 import com.todo.app.validators.DataValidators;
 import com.todo.app.validators.impl.UserValidatorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.util.concurrent.CompletableFuture;
+import java.util.ArrayList;
 
 @Component
 public class RegistrationDelegate {
@@ -24,25 +26,49 @@ public class RegistrationDelegate {
 
     private IServiceUsers serviceUsers;
 
-    public RegistrationDelegate(
-            @Qualifier("serviceUsersImpl") IServiceUsers serviceUsers) {
+    public RegistrationDelegate(IServiceUsers serviceUsers) {
         this.serviceUsers = serviceUsers;
     }
 
-    private ResponseEntity<String> doStaffRegistration(UserModel user) {
+    public ResponseEntity<String> submitRegistration(UserModel user) {
         DataValidators validators = new UserValidatorImpl();
         if (!validators.isUserDataValid(user)) {
-            return new ResponseEntity(
+            LOGGER.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
+            return new ResponseEntity<String>(
                     ControllerUtils.IS_NOT_VALID_PARAMS, HttpStatus.OK);
+        }
+        UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
+        if (userDaoModel == null) {
+            IPasswords passwords = new PasswordsImpl();
+            byte[] salt = passwords.getSalt64();
+            byte[] hash = passwords.hash(user.getPassword(), salt);
+            IToken tokenUser = new TokenGeneratorImpl();
+            String token = tokenUser.nextToken();
+            UserDaoModel daoModel = new UserDaoModel();
+            daoModel.setLogin(user.getLogin());
+            daoModel.setEmail(user.getEmail());
+            daoModel.setHash(hash);
+            daoModel.setSalt(salt);
+            daoModel.setToken(token);
+            daoModel.setEnable(true);
+            return createUser(daoModel);
         } else {
-            return null;
+         return new ResponseEntity<String >(
+                    ControllerUtils.USER_EXIT, HttpStatus.OK);
         }
     }
 
-    @Async
-    public CompletableFuture<ResponseEntity> submitRegistration(UserModel user) {
-
-        return CompletableFuture.completedFuture(null);
+    private ResponseEntity<String> createUser(UserDaoModel daoModel) {
+        long result = serviceUsers.create(daoModel);
+        if (result == 0) {
+            return new ResponseEntity<String >(
+                    ControllerUtils.USER_REGISTRATION_FAILURE,
+                    HttpStatus.OK);
+        } else {
+            CacheManager cacheManager = CacheManager.getInstance();
+            cacheManager.addTasks(daoModel.getToken(), new ArrayList<>());
+            return new ResponseEntity<String >(daoModel.getToken(), HttpStatus.OK);
+        }
     }
 
 }
