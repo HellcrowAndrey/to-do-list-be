@@ -1,7 +1,7 @@
 package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.InfoUpdateDelegate;
-import com.todo.app.utils.IdGenerator;
+import com.todo.app.generator.id.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -18,7 +18,6 @@ public class InfoUpdateController {
 
     private IdGenerator gen = IdGenerator.getInstance();
 
-    @Async
     @RequestMapping(value = "/change/password")
     public ResponseEntity changePassword(
             @RequestParam(value = "email") String email,

@@ -1,4 +1,4 @@
-package com.todo.app.utils;
+package com.todo.app.generator.id;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -8,6 +8,9 @@ public class IdGenerator {
 
     private AtomicLong counter = new AtomicLong();
 
+    private IdGenerator() {
+    }
+
     public static synchronized IdGenerator getInstance() {
         if (instance == null) {
             instance = new IdGenerator();
@@ -15,10 +18,8 @@ public class IdGenerator {
         return instance;
     }
 
-    private IdGenerator() {
-    }
-
     public long getCounter() {
         return counter.incrementAndGet();
     }
+
 }

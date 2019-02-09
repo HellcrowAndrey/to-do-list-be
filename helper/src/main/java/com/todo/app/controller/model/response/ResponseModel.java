@@ -1,4 +1,4 @@
-package com.todo.app.controller.model;
+package com.todo.app.controller.model.response;
 
 import java.util.Objects;
 

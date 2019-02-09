@@ -1,8 +1,8 @@
 package com.todo.app.client.api.delegat;
 
-import com.todo.app.utils.IdGenerator;
+import com.todo.app.generator.id.IdGenerator;
 import com.todo.app.service.tasks.IServiceTasks;
-import com.todo.app.controller.model.ResponseModel;
+import com.todo.app.controller.model.response.ResponseModel;
 import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;

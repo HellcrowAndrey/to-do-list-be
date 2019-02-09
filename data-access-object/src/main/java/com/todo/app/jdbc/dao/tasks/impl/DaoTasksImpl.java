@@ -59,7 +59,7 @@ public class DaoTasksImpl implements IDaoTasks {
     }
 
     @Override
-    public List<TaskModel> read(String token) {
+    public List<TaskModel> read(final String token) {
         if (token == null || token.equals("")) {
             return null;
         }

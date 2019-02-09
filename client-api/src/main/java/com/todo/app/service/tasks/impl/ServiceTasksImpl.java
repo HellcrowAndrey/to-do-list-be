@@ -1,5 +1,6 @@
 package com.todo.app.service.tasks.impl;
 
+import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.controller.model.task.TasksListModel;
 import com.todo.app.dao.model.TaskDaoModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
@@ -8,6 +9,8 @@ import com.todo.app.jdbc.dao.tasks.impl.DaoTasksImpl;
 import com.todo.app.service.tasks.IServiceTasks;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Primary
@@ -26,10 +29,9 @@ public class ServiceTasksImpl implements IServiceTasks {
     }
 
     @Override
-    public TasksListModel read(String data) {
+    public List<TaskModel> read(String data) {
         IDaoTasks tasks = new DaoTasksImpl(source);
-        //return tasks.read(data);
-        return null;
+        return tasks.read(data);
     }
 
     @Override

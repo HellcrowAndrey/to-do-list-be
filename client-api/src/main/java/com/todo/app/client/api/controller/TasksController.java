@@ -2,9 +2,9 @@ package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.TasksDelegate;
 import com.todo.app.controller.model.task.TaskModel;
-import com.todo.app.utils.IdGenerator;
 import com.google.gson.Gson;
-import com.todo.app.controller.model.ResponseModel;
+import com.todo.app.controller.model.response.ResponseModel;
+import com.todo.app.generator.id.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,6 @@ public class TasksController {
 
     private Logger logger = LoggerFactory.getLogger(TasksController.class);
 
-    @Async
     @RequestMapping(value = "/tasks/{command}", method = {GET, POST})
     public ResponseEntity tasks(@PathVariable String command,
                                 @RequestParam(value = "data") String data) {

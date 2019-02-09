@@ -1,13 +1,12 @@
 package com.todo.app.client.api.delegat;
 
-import com.todo.app.controller.model.ResponseModel;
+import com.todo.app.controller.model.response.ResponseModel;
 import com.todo.app.controller.model.task.TaskModel;
-import com.todo.app.password.UserDecorator;
+import com.todo.app.generator.id.IdGenerator;
 import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.service.tasks.IServiceTasks;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.utils.ControllerUtils;
-import com.todo.app.utils.IdGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,7 +18,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Primary
 public class AuthorizationDelegate {
 
     private Logger logger = LoggerFactory.getLogger(AuthorizationDelegate.class);
@@ -69,7 +67,6 @@ public class AuthorizationDelegate {
 //    }
 
     private List<TaskModel> findData(UserModel authUser) {
-        UserDecorator decorator = new UserDecorator();
         //UserModel userInDb = serviceUsers.read(password.createHash(authUser));
 //        if (userInDb == null) {
 //            logger.warn("User doesn't find in db.", AuthorizationDelegate.class);

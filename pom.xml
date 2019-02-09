@@ -221,6 +221,7 @@
         <sl4g.logger>1.7.25</sl4g.logger>
         <bcprov-jdk15on.version>1.51</bcprov-jdk15on.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-validator.version>1.4.1</commons-validator.version>
         <!--DB dependency-->
         <my-sql-version>8.0.13</my-sql-version>
         <!--tests versions-->

@@ -9,16 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Configuration
 public class AppConfig {
 
     @Autowired
-    @Qualifier("serviceUsersImpl")
+    @Qualifier(value = "usersService")
     private IServiceUsers serviceUsers;
 
     @Autowired
-    @Qualifier("serviceTasksImpl")
+    @Qualifier(value = "tasksService")
     private IServiceTasks serviceTasks;
 
     @Bean
