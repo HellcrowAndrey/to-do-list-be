@@ -8,6 +8,7 @@ import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.token.IToken;
 import com.todo.app.token.impl.TokenGeneratorImpl;
+import com.todo.app.user.CreateUser;
 import com.todo.app.utils.ControllerUtils;
 import com.todo.app.validators.DataValidators;
 import com.todo.app.validators.impl.UserValidatorImpl;
@@ -39,19 +40,10 @@ public class RegistrationDelegate {
         }
         UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
         if (userDaoModel == null) {
-            IPasswords passwords = new PasswordsImpl();
-            byte[] salt = passwords.getSalt64();
-            byte[] hash = passwords.hash(user.getPassword(), salt);
-            IToken tokenUser = new TokenGeneratorImpl();
-            String token = tokenUser.nextToken();
-            UserDaoModel daoModel = new UserDaoModel();
-            daoModel.setLogin(user.getLogin());
-            daoModel.setEmail(user.getEmail());
-            daoModel.setHash(hash);
-            daoModel.setSalt(salt);
-            daoModel.setToken(token);
-            daoModel.setEnable(true);
-            return createUser(daoModel);
+            CreateUser createUser = new CreateUser.UserBuilder()
+                    .init(new PasswordsImpl(), new TokenGeneratorImpl())
+                    .createParams(user).createUser().build();
+            return createUser(createUser.getDaoModel());
         } else {
          return new ResponseEntity<String >(
                     ControllerUtils.USER_EXIT, HttpStatus.OK);

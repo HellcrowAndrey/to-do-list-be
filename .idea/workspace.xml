@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/DaoServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/user/CreateUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/src/test/java/com/todo/app/user/CreateUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/InfoUpdateDelegate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/AsyncConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/config/ServiceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/IServiceUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/users/impl/ServiceUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/response/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/model/response/ResponseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/validators/DataValidators.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/com/todo/app/validators/DataValidators.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,6 +93,9 @@
     <SUITE FILE_PATH="coverage/to_do_list_be$CacheManagerTest_UpdateTask_fetchTasksTest.ic" NAME="CacheManagerTest$UpdateTask.fetchTasksTest Coverage Results" MODIFIED="1548610884291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.cache.manager.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/to_do_list_be$CreateUserTest.ic" NAME="CreateUserTest Coverage Results" MODIFIED="1549790223262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.todo.app.user.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/to_do_list_be$IsParamsTest.ic" NAME="IsParamsTest Coverage Results" MODIFIED="1548530655388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.todo.app.method.assistant.*</FILTER>
     </SUITE>
@@ -157,10 +141,10 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5002767">
+    <splitter split-orientation="horizontal" split-proportion="0.4975097">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/RegistrationController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="360">
@@ -169,56 +153,15 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="70">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java">
+            <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
-                  <folding>
-                    <element signature="e#1909#1918#0" expanded="true" />
-                    <element signature="e#2424#2433#0" expanded="true" />
-                    <element signature="e#1295#1303#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
-                  <caret line="210" column="44" selection-start-line="210" selection-start-column="44" selection-end-line="210" selection-end-column="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+                <state relative-caret-position="465">
+                  <caret line="51" selection-start-line="51" selection-end-line="51" />
                 </state>
               </provider>
             </entry>
@@ -226,7 +169,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
+                <state relative-caret-position="390">
                   <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
                 </state>
               </provider>
@@ -235,7 +178,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
+                <state relative-caret-position="1455">
                   <caret line="105" selection-start-line="105" selection-end-line="105" />
                 </state>
               </provider>
@@ -244,7 +187,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/validators/impl/UserValidatorImplTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
+                <state relative-caret-position="2880">
                   <caret line="202" column="84" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="84" />
                 </state>
               </provider>
@@ -253,7 +196,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/password/impl/PasswordImplTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
+                <state relative-caret-position="570">
                   <caret line="50" column="69" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="69" />
                 </state>
               </provider>
@@ -268,8 +211,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -303,10 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/password/impl/PasswordsImpl.java" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/token/impl/TokenGeneratorImpl.java" />
-        <option value="$PROJECT_DIR$/utils/src/test/java/com/todo/app/token/impl/TokenGeneratorImplTest.java" />
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/UserDaoModel.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersCreateImplTest.java" />
         <option value="$PROJECT_DIR$/helper/src/test/java/com/todo/app/dao/model/UserDaoModelTest.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/CreateDataBase.java" />
@@ -353,7 +292,11 @@
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java" />
         <option value="$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java" />
+        <option value="$PROJECT_DIR$/helper/src/test/java/com/todo/app/user/CreateUserTest.java" />
+        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/user/CreateUser.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java" />
+        <option value="$PROJECT_DIR$/utils/src/test/java/com/todo/app/user/CreateUserTest.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/user/CreateUser.java" />
       </list>
     </option>
   </component>
@@ -586,6 +529,63 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -618,6 +618,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -633,7 +654,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549743331506" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549790288145" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -649,25 +670,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.todo.app.user" />
       <recent name="com.todo.app.client.api.delegat" />
       <recent name="com.todo.app.validators.impl" />
       <recent name="com.todo.app.controller.model.response" />
       <recent name="com.todo.app.generator.id" />
-      <recent name="com.todo.app.token.impl" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utils/src/main/resources" />
-      <recent name="$PROJECT_DIR$/utils/src/test/resources" />
-      <recent name="$PROJECT_DIR$/utils/src/main/resources/debug" />
-      <recent name="$PROJECT_DIR$/utils/src/test/resources/debug" />
-      <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/it" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.todo.app.jdbc.dao" />
       <recent name="com.todo.app.jdbc.dao.users.impl" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/utils/src/test/resources/debug" />
@@ -675,6 +686,16 @@
       <recent name="$PROJECT_DIR$/data-access-object/src/main/resources" />
       <recent name="$PROJECT_DIR$/client-api/src/main/resources" />
       <recent name="$PROJECT_DIR$/data-access-object/src/integration-test/resources/it" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils/src/main/resources" />
+      <recent name="$PROJECT_DIR$/utils/src/test/resources" />
+      <recent name="$PROJECT_DIR$/utils/src/main/resources/debug" />
+      <recent name="$PROJECT_DIR$/utils/src/test/resources/debug" />
+      <recent name="$PROJECT_DIR$/data-access-object/src/main/resources/it" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -689,7 +710,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RegistrationDelegateTest">
+  <component name="RunManager" selected="JUnit.CreateUserTest">
     <configuration name="AllTests" type="JUnit" factoryName="JUnit">
       <module name="to-do-list-be" />
       <option name="PACKAGE_NAME" value="" />
@@ -705,6 +726,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.todo.app.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.todo.app.user" />
+      <option name="MAIN_CLASS_NAME" value="com.todo.app.user.CreateUserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserTest.builderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.todo.app.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.todo.app.user" />
+      <option name="MAIN_CLASS_NAME" value="com.todo.app.user.CreateUserTest" />
+      <option name="METHOD_NAME" value="builderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistrationDelegateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="client-api" />
       <extension name="coverage">
@@ -716,22 +768,6 @@
       <option name="PACKAGE_NAME" value="com.todo.app.client.api.delegat" />
       <option name="MAIN_CLASS_NAME" value="com.todo.app.client.api.delegat.RegistrationDelegateTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationDelegateTest.submitRegistrationNotValidTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="client-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.client.api.delegat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.client.api.delegat" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.client.api.delegat.RegistrationDelegateTest" />
-      <option name="METHOD_NAME" value="submitRegistrationNotValidTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -768,21 +804,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserValidatorImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="utils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.validators.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.validators.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.validators.impl.UserValidatorImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Whole project" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -806,20 +827,20 @@
     <list>
       <item itemvalue="JUnit.AllTests" />
       <item itemvalue="JUnit.Whole project" />
-      <item itemvalue="JUnit.UserValidatorImplTest" />
-      <item itemvalue="Spring Boot.Main" />
       <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationTest" />
-      <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationNotValidTest" />
       <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationUserExistTest" />
       <item itemvalue="JUnit.RegistrationDelegateTest" />
+      <item itemvalue="Spring Boot.Main" />
+      <item itemvalue="JUnit.CreateUserTest.builderTest" />
+      <item itemvalue="JUnit.CreateUserTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateUserTest" />
+        <item itemvalue="JUnit.CreateUserTest.builderTest" />
         <item itemvalue="JUnit.RegistrationDelegateTest" />
         <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationUserExistTest" />
         <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationTest" />
-        <item itemvalue="JUnit.RegistrationDelegateTest.submitRegistrationNotValidTest" />
-        <item itemvalue="JUnit.UserValidatorImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -905,22 +926,11 @@
       <workItem from="1549729487029" duration="3103000" />
       <workItem from="1549732823911" duration="2171000" />
       <workItem from="1549735031225" duration="7727000" />
+      <workItem from="1549787880930" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 44m 57s.xml">
-      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 45m 44s.xml">
-      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 46m 19s.xml">
-      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 47m 07s.xml">
-      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 47m 30s.xml">
       <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
     </history-entry>
@@ -939,9 +949,21 @@
     <history-entry file="RegistrationDelegateTest - 2019.02.09 at 21h 59m 38s.xml">
       <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RegistrationDelegateTest - 2019.02.10 at 11h 06m 07s.xml">
+      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationDelegateTest - 2019.02.10 at 11h 09m 53s.xml">
+      <configuration name="RegistrationDelegateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CreateUserTest_builderTest - 2019.02.10 at 11h 16m 58s.xml">
+      <configuration name="CreateUserTest.builderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CreateUserTest - 2019.02.10 at 11h 17m 03s.xml">
+      <configuration name="CreateUserTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441402000" />
+    <option name="totallyTimeSpent" value="444380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,6 +976,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -962,10 +985,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.23741007" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.2401771" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741398" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36403996" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36403996" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.472808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -983,7 +1006,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4991274" visible="true" weight="0.32982844" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4991274" weight="0.32982844" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32982844" />
@@ -1082,31 +1105,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/method/assistant/IsParamsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/concurrent/CompletableFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="1868" column="43" selection-start-line="1868" selection-start-column="43" selection-end-line="1868" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1299,13 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1314,13 +1305,6 @@
             <element signature="e#35031#35032#0" expanded="true" />
             <element signature="e#35078#35079#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/validators/impl/UserValidatorImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="202" column="84" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1345,13 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/password/impl/PasswordImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="50" column="69" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/data/source/IDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1363,13 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1398,31 +1368,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java">
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+        <state relative-caret-position="75">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="2865">
           <caret line="210" column="44" selection-start-line="210" selection-start-column="44" selection-end-line="210" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/IDaoUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/validators/impl/UserValidatorImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="202" column="84" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/password/impl/PasswordImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="50" column="69" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/utils/ControllerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/test/java/com/todo/app/user/CreateUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/cache/CacheTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/user/CreateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="39" column="59" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="39" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/test/java/com/todo/app/user/CreateUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/user/CreateUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1433,29 +1491,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/service/tasks/impl/ServiceTasksImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#1909#1918#0" expanded="true" />
-            <element signature="e#2424#2433#0" expanded="true" />
-            <element signature="e#1295#1303#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/RegistrationDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="465">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
