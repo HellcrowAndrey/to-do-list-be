@@ -6,6 +6,8 @@ public class ControllerUtils {
     //=============== Message ==========================
     //==================================================
 
+    public static final String CRETE_USER = "Start process for create user";
+
     public static final String RECEIVED_MESSAGE = "Received message in ";
 
     public static final String IS_NOT_VALID_PARAMS = "Not valid params in controller.";

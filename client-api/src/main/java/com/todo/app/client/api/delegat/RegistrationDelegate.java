@@ -40,11 +40,13 @@ public class RegistrationDelegate {
         }
         UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
         if (userDaoModel == null) {
+            LOGGER.info(ControllerUtils.CRETE_USER);
             CreateUser createUser = new CreateUser.UserBuilder()
                     .init(new PasswordsImpl(), new TokenGeneratorImpl())
                     .createParams(user).createUser().build();
             return createUser(createUser.getDaoModel());
         } else {
+            LOGGER.info(ControllerUtils.USER_EXIT);
          return new ResponseEntity<String >(
                     ControllerUtils.USER_EXIT, HttpStatus.OK);
         }
@@ -53,12 +55,14 @@ public class RegistrationDelegate {
     private ResponseEntity<String> createUser(UserDaoModel daoModel) {
         long result = serviceUsers.create(daoModel);
         if (result == 0) {
+            LOGGER.warn(ControllerUtils.USER_REGISTRATION_FAILURE);
             return new ResponseEntity<String >(
                     ControllerUtils.USER_REGISTRATION_FAILURE,
                     HttpStatus.OK);
         } else {
             CacheManager cacheManager = CacheManager.getInstance();
             cacheManager.addTasks(daoModel.getToken(), new ArrayList<>());
+            LOGGER.info(ControllerUtils.USER_REGISTRATION_SUCCESS);
             return new ResponseEntity<String >(daoModel.getToken(), HttpStatus.OK);
         }
     }

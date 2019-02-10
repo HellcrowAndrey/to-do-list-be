@@ -75,6 +75,12 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-all</artifactId>
                 <version>${mockito.version}</version>
@@ -226,6 +232,7 @@
         <my-sql-version>8.0.13</my-sql-version>
         <!--tests versions-->
         <junit.version>4.12</junit.version>
+        <spring-test.version>5.0.9.RELEASE</spring-test.version>
         <hamcrest-all.version>1.3</hamcrest-all.version>
         <mockito.version>1.10.19</mockito.version>
         <pover.mock.version>1.7.4</pover.mock.version>
