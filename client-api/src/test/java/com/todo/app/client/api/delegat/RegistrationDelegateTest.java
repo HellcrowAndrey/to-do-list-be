@@ -1,5 +1,6 @@
 package com.todo.app.client.api.delegat;
 
+import com.todo.app.controller.model.response.ResponseModel;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.dao.model.UserDaoModel;
 import com.todo.app.service.users.IServiceUsers;
@@ -24,16 +25,22 @@ public class RegistrationDelegateTest {
     @Mock
     private IServiceUsers serviceUsersMock;
 
+    /*
+    This test case testing generate user token and push user data in db.
+     */
     @Test
     public void submitRegistrationTest() {
         UserModel model = new UserModel(
                 "vasia", "john@somewhere.com", "aaZZa44@");
         RegistrationDelegate delegate = new RegistrationDelegate(serviceUsersMock);
         when(serviceUsersMock.create(anyObject())).thenReturn(1l);
-        ResponseEntity<String> actual = delegate.submitRegistration(model);
+        ResponseModel<String> actual = delegate.submitRegistration(model);
         assertThat("This is actual test", actual, Matchers.notNullValue());
     }
 
+    /*
+    This test case testing form user exist status.
+     */
     @Test
     public void submitRegistrationUserExistTest() {
         UserModel model = new UserModel(
@@ -41,12 +48,14 @@ public class RegistrationDelegateTest {
         RegistrationDelegate delegate = new RegistrationDelegate(serviceUsersMock);
         when(serviceUsersMock.read("vasia", "john@somewhere.com"))
                 .thenReturn(new UserDaoModel());
-        ResponseEntity<String> expected = new ResponseEntity<String>(
-                ControllerUtils.USER_EXIT, HttpStatus.OK);
-        ResponseEntity<String> actual = delegate.submitRegistration(model);
-        assertEquals(expected, actual);
+        ResponseModel<String> expected = new ResponseModel<>(1, ControllerUtils.USER_EXIT);
+        ResponseModel<String> actual = delegate.submitRegistration(model);
+        assertEquals(expected.getResponse(), actual.getResponse());
     }
 
+    /*
+    This test case testing form user registration failure.
+     */
     @Test
     public void submitRegistrationFailureTest() {
         UserModel model = new UserModel(
@@ -54,22 +63,24 @@ public class RegistrationDelegateTest {
         RegistrationDelegate delegate = new RegistrationDelegate(serviceUsersMock);
         when(serviceUsersMock.create(anyObject()))
                 .thenReturn(0l);
-        ResponseEntity<String> expected = new ResponseEntity<String >(
-                ControllerUtils.USER_REGISTRATION_FAILURE,
-                HttpStatus.OK);
-        ResponseEntity<String> actual = delegate.submitRegistration(model);
-        assertEquals(expected, actual);
+        ResponseModel<String> expected = new ResponseModel<>(
+                1, ControllerUtils.USER_REGISTRATION_FAILURE);
+        ResponseModel<String> actual = delegate.submitRegistration(model);
+        assertEquals(expected.getResponse(), actual.getResponse());
     }
 
+    /*
+    This test case testing form not valid user params.
+     */
     @Test
     public void submitRegistrationNotValidTest() {
         UserModel model = new UserModel(
                 "vasia", "@someserver", "aaZZa44@");
         RegistrationDelegate delegate = new RegistrationDelegate(serviceUsersMock);
-        ResponseEntity<String> expected = new ResponseEntity<String>(
-                ControllerUtils.IS_NOT_VALID_PARAMS, HttpStatus.OK);
-        ResponseEntity<String> actual = delegate.submitRegistration(model);
-        assertEquals(expected, actual);
+        ResponseModel<String> expected = new ResponseModel<>(
+                1, ControllerUtils.IS_NOT_VALID_PARAMS);
+        ResponseModel<String> actual = delegate.submitRegistration(model);
+        assertEquals(expected.getResponse(), actual.getResponse());
     }
 
 }
