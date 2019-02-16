@@ -41,7 +41,7 @@ public class RegistrationDelegate {
     /**
      * This field is singleton id generator.
      */
-    private static final IdGenerator gen = IdGenerator.getInstance();
+    private static final IdGenerator GENERATOR = IdGenerator.getInstance();
 
     /**
      * This field keeps link on IServiceUser.
@@ -71,7 +71,7 @@ public class RegistrationDelegate {
         DataValidators validators = new UserValidatorImpl();
         if (!validators.isUserDataValid(user)) {
             LOGGER.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
-            return new ResponseModel<>(gen.getCounter(),
+            return new ResponseModel<>(GENERATOR.getCounter(),
                     ControllerUtils.IS_NOT_VALID_PARAMS);
         }
         UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
@@ -83,7 +83,7 @@ public class RegistrationDelegate {
             return createUser(createUser.getDaoModel());
         } else {
             LOGGER.info(ControllerUtils.USER_EXIT);
-            return new ResponseModel<>(gen.getCounter(),
+            return new ResponseModel<>(GENERATOR.getCounter(),
                     ControllerUtils.USER_EXIT);
         }
     }
@@ -100,13 +100,13 @@ public class RegistrationDelegate {
         long result = serviceUsers.create(daoModel);
         if (result == 0) {
             LOGGER.warn(ControllerUtils.USER_REGISTRATION_FAILURE);
-            return new ResponseModel<>(gen.getCounter(),
+            return new ResponseModel<>(GENERATOR.getCounter(),
                     ControllerUtils.USER_REGISTRATION_FAILURE);
         } else {
             CacheManager cacheManager = CacheManager.getInstance();
             cacheManager.addTasks(daoModel.getToken(), new ArrayList<>());
             LOGGER.info(ControllerUtils.USER_REGISTRATION_SUCCESS);
-            return new ResponseModel<>(gen.getCounter(), daoModel.getToken());
+            return new ResponseModel<>(GENERATOR.getCounter(), daoModel.getToken());
         }
     }
 

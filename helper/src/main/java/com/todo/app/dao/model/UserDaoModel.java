@@ -6,6 +6,8 @@ import java.util.Objects;
 
 public class UserDaoModel {
 
+    private static UserDaoModel EMPTY = new UserDaoModel();
+
     private long idUser;
 
     private String login;
@@ -120,5 +122,9 @@ public class UserDaoModel {
                 ", token='" + token + '\'' +
                 ", enable=" + enable +
                 '}';
+    }
+
+    public boolean isEmpty() {
+        return this.equals(EMPTY);
     }
 }

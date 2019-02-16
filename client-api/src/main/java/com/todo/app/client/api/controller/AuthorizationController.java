@@ -17,40 +17,52 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import static com.todo.app.utils.ControllerUtils.RECEIVED_MESSAGE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
+/**
+ * The AuthorizationController class start with app and wait
+ * request with params (login, password or email, password).
+ * This controller do authorization user in this app.
+ * This class has autowired fields authorizationDelegate and
+ * field LOGGER. Request mapping for this controller is
+ * 'authorization'.
+ */
 @RestController
 public class AuthorizationController {
 
+    /**
+     * This field is logger this class.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthorizationController.class);
+
+    /**
+     * This field is link on AuthorizationDelegate.
+     */
     @Autowired
     private AuthorizationDelegate authorizationDelegate;
 
-    private IdGenerator gen = IdGenerator.getInstance();
-
-    private Logger logger = LoggerFactory.getLogger(AuthorizationController.class);
-
+    /**
+     * This is authorization controller. Has get and post methods.
+     * After received request do call to submitAuth and generate
+     * response with status authorization.
+     *
+     * @param login    this is user login
+     * @param email    this is user email
+     * @param password this is user password
+     * @return response on user request.
+     */
     @RequestMapping(value = "/authorization", method = {GET, POST})
     public ResponseEntity<ResponseModel> isAuthorization(
             @RequestParam(value = "login", defaultValue = "") String login,
             @RequestParam(value = "email", defaultValue = "") String email,
             @RequestParam(value = "password") String password) {
-        ResponseEntity valid = AuthorizationDelegate.isParams(login, email, password);
-        if (valid != null) {
-            logger.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
-            return valid;
-        }
-        ResponseModel responseModel;
-        UserModel model = new UserModel(login, email, password);
-        List<TaskModel> response = null; //delegate.getData(model);
-        if (response == null) {
-            logger.warn(ControllerUtils.USER_NOT_FOUNT);
-            responseModel = new ResponseModel(gen.getCounter(), ControllerUtils.USER_NOT_FOUNT);
-            return new ResponseEntity<>(responseModel, HttpStatus.OK);
-        }
-        logger.info(ControllerUtils.USER_AUTHORIZATION_SUCCESS);
-        responseModel = new ResponseModel(gen.getCounter(), response);
-        return new ResponseEntity<>(responseModel, HttpStatus.ACCEPTED);
+        LOGGER.info(RECEIVED_MESSAGE + AuthorizationController.class);
+        final UserModel user = new UserModel(login, email, password);
+        final ResponseModel<String> result = authorizationDelegate.submitAuth(user);
+        LOGGER.info(result.toString());
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
 }

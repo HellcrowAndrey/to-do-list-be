@@ -13,29 +13,31 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
+import static com.todo.app.utils.ControllerUtils.RECEIVED_MESSAGE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
 public class TasksController {
 
-    //@Autowired
-    private TasksDelegate delegate;
+    /**
+     * This field is logger this class.
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(TasksController.class);
 
-    private Logger logger = LoggerFactory.getLogger(TasksController.class);
+    /**
+     * This field is link on TasksDelegate.
+     */
+    @Autowired
+    private TasksDelegate tasksDelegate;
 
-    @RequestMapping(value = "/tasks/{command}", method = {GET, POST})
-    public ResponseEntity tasks(@PathVariable String command,
-                                @RequestParam(value = "data") String data) {
-        if (command == null || command.equals("") ||
-                data == null || data.equals("")) {
-            return new ResponseEntity(
-                    new ResponseModel(IdGenerator.getInstance().getCounter(),
-                            "Incorrect data"), HttpStatus.OK);
-        }
-        Gson gson = new Gson();
-        TaskModel task = gson.fromJson(data, TaskModel.class);
-        return delegate.dispatcher(command, task);
+    @RequestMapping(value = "/tasks", method = {GET, POST})
+    public ResponseEntity<ResponseModel> tasks(
+            @RequestParam(value = "token") String token) {
+        LOGGER.info(RECEIVED_MESSAGE + TasksController.class);
+        final ResponseModel<String> result = tasksDelegate.submitTasks(token);
+        LOGGER.info(result.toString());
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
 }

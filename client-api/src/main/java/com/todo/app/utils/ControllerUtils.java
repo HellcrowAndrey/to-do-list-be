@@ -22,6 +22,12 @@ public class ControllerUtils {
 
     public static final String USER_AUTHORIZATION_SUCCESS = "User authorization success.";
 
+    public static final String USER_AUTHORIZATION_FAILURE = "User authorization failure!";
+
+    public static final String INCORRECT_DATA = "Incorrect login or password!";
+
+    public static final String INCORRECT_TOKEN = "Incorrect token!";
+
     //==================================================
     //=============== Command ==========================
     //==================================================

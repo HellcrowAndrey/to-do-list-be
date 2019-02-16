@@ -120,7 +120,7 @@ public class DaoUsersImpl implements IDaoUsers {
                 email == null || email.equals("")) {
             return null;
         }
-        final UserDaoModel result = new UserDaoModel();
+        UserDaoModel result = new UserDaoModel();
         try (Connection connection = source.getConnect();
              PreparedStatement statement = getStatement(connection, login, email);
              ResultSet resultSet = statement.executeQuery()) {

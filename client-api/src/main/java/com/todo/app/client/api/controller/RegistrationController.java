@@ -3,7 +3,6 @@ package com.todo.app.client.api.controller;
 import com.todo.app.client.api.delegat.RegistrationDelegate;
 import com.todo.app.controller.model.response.ResponseModel;
 import com.todo.app.controller.model.user.UserModel;
-import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.todo.app.utils.ControllerUtils.RECEIVED_MESSAGE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
  * The RegistrationController class start with app and wait
- * request with params (login, email and password). This class
- * has autowired fields registrationDelegate, LOGGER and id gen.
+ * request with params (login, email and password).
+ * This controller do registration user in this app.
+ * This class has autowired fields registrationDelegate, LOGGER.
  * RequestMapping for this controller is 'registration'.
  */
 @RestController
@@ -51,9 +52,10 @@ public class RegistrationController {
             @RequestParam(value = "login") String login,
             @RequestParam(value = "email") String email,
             @RequestParam(value = "password") String password) {
-        LOGGER.info(ControllerUtils.RECEIVED_MESSAGE + RegistrationController.class);
-        UserModel userModel = new UserModel(login, email, password);
-        ResponseModel<String> result = registrationDelegate.submitRegistration(userModel);
+        LOGGER.info(RECEIVED_MESSAGE + RegistrationController.class);
+        final UserModel userModel = new UserModel(login, email, password);
+        final ResponseModel<String> result = registrationDelegate
+                .submitRegistration(userModel);
         LOGGER.info(result.toString());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
