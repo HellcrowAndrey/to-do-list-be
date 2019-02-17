@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 import static com.todo.app.constant.ToDoConstant.MOCK_CONSTANT;
-import static com.todo.app.utils.ControllerUtils.*;
+import static com.todo.app.controller.constant.ControllerUtils.*;
 
 /**
  * The AuthorizationDelegate class user for authorization.

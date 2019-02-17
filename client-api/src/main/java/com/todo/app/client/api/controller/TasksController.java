@@ -1,19 +1,16 @@
 package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.TasksDelegate;
-import com.todo.app.controller.model.task.TaskModel;
-import com.google.gson.Gson;
 import com.todo.app.controller.model.response.ResponseModel;
-import com.todo.app.generator.id.IdGenerator;
+import com.todo.app.controller.model.task.TaskUpdateModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
-import static com.todo.app.utils.ControllerUtils.RECEIVED_MESSAGE;
+import static com.todo.app.controller.constant.ControllerUtils.RECEIVED_MESSAGE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -37,6 +34,16 @@ public class TasksController {
         LOGGER.info(RECEIVED_MESSAGE + TasksController.class);
         final ResponseModel<String> result = tasksDelegate.submitTasks(token);
         LOGGER.info(result.toString());
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/{command}/task")
+    public ResponseEntity<ResponseModel> task(
+            @PathVariable String command,
+            @RequestParam(value = "token") String token,
+            @RequestParam(value = "data") String data) {
+        TaskUpdateModel task = new TaskUpdateModel(command, token, data);
+        ResponseModel<String> result = tasksDelegate.dispatcher(task);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

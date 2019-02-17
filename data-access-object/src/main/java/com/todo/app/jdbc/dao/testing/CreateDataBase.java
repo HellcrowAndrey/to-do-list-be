@@ -1,12 +1,17 @@
-package com.todo.app.jdbc.dao;
+package com.todo.app.jdbc.dao.testing;
 
 import com.todo.app.jdbc.dao.data.source.IDataSource;
+import com.todo.app.jdbc.dao.users.impl.DaoUsersImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class CreateDataBase {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DaoUsersImpl.class);
 
     private IDataSource source;
 
@@ -21,20 +26,20 @@ public class CreateDataBase {
                     "  ID int NOT NULL AUTO_INCREMENT," +
                     "  LOGIN VARCHAR (50) NOT NULL," +
                     "  EMAIL VARCHAR (100) NOT NULL," +
-                    "  HASH VARCHAR (255) NOT NULL," +
-                    "  SALT VARCHAR (255) NOT NULL," +
+                    "  HASH BINARY (255) NOT NULL," +
+                    "  SALT BINARY (255) NOT NULL," +
                     "  TOKEN VARCHAR (255) NOT NULL," +
                     "  ENABLE BOOLEAN, " +
                     "  PRIMARY KEY (ID));";
             stmt.executeUpdate(sql);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 
@@ -51,13 +56,13 @@ public class CreateDataBase {
                     "  FOREIGN KEY (ID_USER) REFERENCES Users(ID));";
             stmt.executeUpdate(sql);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 
@@ -67,13 +72,13 @@ public class CreateDataBase {
             String sql = "DROP TABLE Users;";
             stmt.executeUpdate(sql);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 
@@ -83,13 +88,13 @@ public class CreateDataBase {
             String sql = "DROP TABLE Tasks";
             stmt.executeUpdate(sql);
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage());
         }
     }
 

@@ -56,14 +56,16 @@ public class DaoUsersImpl implements IDaoUsers {
      * in param.
      */
     @Override
-    public long create(UserDaoModel user) {
+    public long create(final UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH," +
+                " SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection
+                     .prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
             statement.setBytes(3, user.getHash());
@@ -95,7 +97,8 @@ public class DaoUsersImpl implements IDaoUsers {
      *                      a database access error or other errors.
      */
     private PreparedStatement getStatement(final Connection connection,
-                                           final String login, final String email) throws SQLException {
+                                           final String login,
+                                           final String email) throws SQLException {
         final String query = "SELECT ID, LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE" +
                 " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
         final PreparedStatement statement = connection.prepareStatement(query);
@@ -115,7 +118,7 @@ public class DaoUsersImpl implements IDaoUsers {
      * @return null or data about user.
      */
     @Override
-    public UserDaoModel read(String login, String email) {
+    public UserDaoModel read(final String login, final String email) {
         if (login == null || login.equals("") ||
                 email == null || email.equals("")) {
             return null;
@@ -155,7 +158,7 @@ public class DaoUsersImpl implements IDaoUsers {
      * @return id or zero if received wrong data or received exception.
      */
     @Override
-    public long update(UserDaoModel user) {
+    public long update(final UserDaoModel user) {
         if (user == null) {
             return 0;
         }
@@ -191,7 +194,7 @@ public class DaoUsersImpl implements IDaoUsers {
      * @return id or zero if received wrong data or catch exception.
      */
     @Override
-    public long delete(String email) {
+    public long delete(final String email) {
         if (email == null || email.equals("")) {
             return 0;
         }

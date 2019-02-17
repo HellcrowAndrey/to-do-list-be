@@ -1,4 +1,4 @@
-package com.todo.app.utils;
+package com.todo.app.controller.constant;
 
 public class ControllerUtils {
 
@@ -27,6 +27,8 @@ public class ControllerUtils {
     public static final String INCORRECT_DATA = "Incorrect login or password!";
 
     public static final String INCORRECT_TOKEN = "Incorrect token!";
+
+    public static final String RESTART_ACCOUNT = "Restart account.";
 
     //==================================================
     //=============== Command ==========================

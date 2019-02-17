@@ -27,10 +27,12 @@ public class DaoTasksImpl implements IDaoTasks {
         if (data == null) {
             return 0;
         }
-        final String query = "INSERT INTO Tasks(NAME, TASK, STATUS, ID_USER) VALUES (?, ?, ?, (SELECT ID FROM Users WHERE TOKEN = ?));";
+        final String query = "INSERT INTO Tasks(NAME, TASK, STATUS, ID_USER)" +
+                " VALUES (?, ?, ?, (SELECT ID FROM Users WHERE TOKEN = ?));";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(
+                     query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, data.getTaskModel().getTaskName());
             statement.setString(2, data.getTaskModel().getTask());
             statement.setByte(3, data.getTaskModel().getStatus());
@@ -89,12 +91,13 @@ public class DaoTasksImpl implements IDaoTasks {
     }
 
     @Override
-    public long update(TaskDaoModel data) {
+    public long update(final TaskDaoModel data) {
         if (data == null) {
             return 0;
         }
         long result = 0;
-        final String query = "UPDATE Tasks SET NAME = ?, TASK = ?, STATUS = ? WHERE ID = ?;";
+        final String query = "UPDATE Tasks SET NAME = ?, TASK = ?," +
+                " STATUS = ? WHERE ID = ?;";
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection.prepareStatement(query,
                      Statement.RETURN_GENERATED_KEYS)) {

@@ -2,7 +2,7 @@ package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.RegistrationDelegate;
 import com.todo.app.controller.model.response.ResponseModel;
-import com.todo.app.utils.ControllerUtils;
+import com.todo.app.controller.constant.ControllerUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

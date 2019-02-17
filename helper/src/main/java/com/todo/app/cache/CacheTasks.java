@@ -28,7 +28,8 @@ public class CacheTasks {
 
         public TaskBuilder update(TaskModel task) {
             //todo add check
-            TaskModel result = tasks.stream().filter(t -> t.getIdTask() == task.getIdTask())
+            TaskModel result = tasks.stream().filter(
+                    t -> t.getIdTask() == task.getIdTask())
                     .findFirst().orElse(null);
             tasks.remove(result);
             tasks.add(task);
@@ -37,7 +38,8 @@ public class CacheTasks {
 
         public TaskBuilder remove(long id) {
             //todo add check
-            TaskModel result = tasks.stream().filter(t -> t.getIdTask() == id)
+            TaskModel result = tasks.stream().filter(
+                    t -> t.getIdTask() == id)
                     .findFirst().orElse(null);
             tasks.remove(result);
             return this;

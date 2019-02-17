@@ -2,10 +2,7 @@ package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.AuthorizationDelegate;
 import com.todo.app.controller.model.response.ResponseModel;
-import com.todo.app.controller.model.task.TaskModel;
 import com.todo.app.controller.model.user.UserModel;
-import com.todo.app.generator.id.IdGenerator;
-import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
-import static com.todo.app.utils.ControllerUtils.RECEIVED_MESSAGE;
+import static com.todo.app.controller.constant.ControllerUtils.RECEIVED_MESSAGE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 

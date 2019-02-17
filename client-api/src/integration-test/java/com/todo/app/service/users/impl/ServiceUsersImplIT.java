@@ -1,10 +1,10 @@
-package com.todo.app.jdbc.dao.users.impl;
+package com.todo.app.service.users.impl;
 
 import com.todo.app.dao.model.UserDaoModel;
-import com.todo.app.jdbc.dao.testing.CreateDataBase;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import com.todo.app.jdbc.dao.data.source.impl.MySqlTestConnection;
-import com.todo.app.jdbc.dao.users.IDaoUsers;
+import com.todo.app.jdbc.dao.testing.CreateDataBase;
+import com.todo.app.service.users.IServiceUsers;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,14 +22,14 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MySqlTestConnection.class)
 @ActiveProfiles("integration-test")
-public class DaoUsersImplIT {
+public class ServiceUsersImplIT {
 
     @Autowired
     private IDataSource connection;
 
     private CreateDataBase dataBase = null;
 
-    private IDaoUsers users = null;
+    private IServiceUsers users = null;
 
     private List<UserDaoModel> usersMockFive;
 
@@ -44,7 +44,7 @@ public class DaoUsersImplIT {
     private List<UserDaoModel> updateUsersMockOne;
 
     private void createUserMock() {
-        UserDaoModel model1 = new UserDaoModel();
+        final UserDaoModel model1 = new UserDaoModel();
         model1.setIdUser(1l);
         model1.setLogin("login1");
         model1.setEmail("email1@gemail.com");
@@ -53,7 +53,7 @@ public class DaoUsersImplIT {
         model1.setToken("token1");
         model1.setEnable(true);
 
-        UserDaoModel model2 = new UserDaoModel();
+        final UserDaoModel model2 = new UserDaoModel();
         model2.setIdUser(2l);
         model2.setLogin("login2");
         model2.setEmail("email2@gemail.com");
@@ -62,7 +62,7 @@ public class DaoUsersImplIT {
         model2.setToken("token2");
         model2.setEnable(true);
 
-        UserDaoModel model3 = new UserDaoModel();
+        final UserDaoModel model3 = new UserDaoModel();
         model3.setIdUser(3l);
         model3.setLogin("login3");
         model3.setEmail("email3@gemail.com");
@@ -71,7 +71,7 @@ public class DaoUsersImplIT {
         model3.setToken("token3");
         model3.setEnable(true);
 
-        UserDaoModel model4 = new UserDaoModel();
+        final UserDaoModel model4 = new UserDaoModel();
         model4.setIdUser(4l);
         model4.setLogin("login4");
         model4.setEmail("email4@gemail.com");
@@ -80,7 +80,7 @@ public class DaoUsersImplIT {
         model4.setToken("token4");
         model4.setEnable(true);
 
-        UserDaoModel model5 = new UserDaoModel();
+        final UserDaoModel model5 = new UserDaoModel();
         model5.setIdUser(5l);
         model5.setLogin("login5");
         model5.setEmail("email5@gemail.com");
@@ -89,7 +89,7 @@ public class DaoUsersImplIT {
         model5.setToken("token5");
         model5.setEnable(true);
 
-        List<UserDaoModel> listFive = new ArrayList<>();
+        final List<UserDaoModel> listFive = new ArrayList<>();
         listFive.add(model1);
         listFive.add(model2);
         listFive.add(model3);
@@ -97,20 +97,20 @@ public class DaoUsersImplIT {
         listFive.add(model5);
         usersMockFive = listFive;
 
-        List<UserDaoModel> listTwo = new ArrayList<>();
+        final List<UserDaoModel> listTwo = new ArrayList<>();
         listTwo.add(model1);
         listTwo.add(model2);
 
         usersMockTwo = listTwo;
 
-        List<UserDaoModel> listOne = new ArrayList<>();
+        final List<UserDaoModel> listOne = new ArrayList<>();
         listOne.add(model1);
 
         usersMockOne = listOne;
     }
 
     private void updateUserMock() {
-        UserDaoModel model1 = new UserDaoModel();
+        final UserDaoModel model1 = new UserDaoModel();
         model1.setIdUser(1l);
         model1.setLogin("login11");
         model1.setEmail("email1@gemail.com");
@@ -119,7 +119,7 @@ public class DaoUsersImplIT {
         model1.setToken("token11");
         model1.setEnable(false);
 
-        UserDaoModel model2 = new UserDaoModel();
+        final UserDaoModel model2 = new UserDaoModel();
         model2.setIdUser(2l);
         model2.setLogin("login22");
         model2.setEmail("email2@gemail.com");
@@ -128,7 +128,7 @@ public class DaoUsersImplIT {
         model2.setToken("token22");
         model2.setEnable(false);
 
-        UserDaoModel model3 = new UserDaoModel();
+        final UserDaoModel model3 = new UserDaoModel();
         model3.setIdUser(3l);
         model3.setLogin("login33");
         model3.setEmail("email3@gemail.com");
@@ -137,7 +137,7 @@ public class DaoUsersImplIT {
         model3.setToken("token33");
         model3.setEnable(false);
 
-        UserDaoModel model4 = new UserDaoModel();
+        final UserDaoModel model4 = new UserDaoModel();
         model4.setIdUser(4l);
         model4.setLogin("login44");
         model4.setEmail("email4@gemail.com");
@@ -146,7 +146,7 @@ public class DaoUsersImplIT {
         model4.setToken("token44");
         model4.setEnable(false);
 
-        UserDaoModel model5 = new UserDaoModel();
+        final UserDaoModel model5 = new UserDaoModel();
         model5.setIdUser(5l);
         model5.setLogin("login55");
         model5.setEmail("email5@gemail.com");
@@ -155,7 +155,7 @@ public class DaoUsersImplIT {
         model5.setToken("token55");
         model5.setEnable(false);
 
-        List<UserDaoModel> listFive = new ArrayList<>();
+        final List<UserDaoModel> listFive = new ArrayList<>();
         listFive.add(model1);
         listFive.add(model2);
         listFive.add(model3);
@@ -163,13 +163,13 @@ public class DaoUsersImplIT {
         listFive.add(model5);
         updateUsersMockFive = listFive;
 
-        List<UserDaoModel> listTwo = new ArrayList<>();
+        final List<UserDaoModel> listTwo = new ArrayList<>();
         listTwo.add(model1);
         listTwo.add(model2);
 
         updateUsersMockTwo = listTwo;
 
-        List<UserDaoModel> listOne = new ArrayList<>();
+        final List<UserDaoModel> listOne = new ArrayList<>();
         listOne.add(model1);
 
         updateUsersMockOne = listOne;
@@ -179,7 +179,7 @@ public class DaoUsersImplIT {
     public void init() {
         dataBase = new CreateDataBase(connection);
         dataBase.createTableUsers();
-        users = new DaoUsersImpl(connection);
+        users = new ServiceUsersImpl(connection);
         createUserMock();
         updateUserMock();
     }
@@ -225,7 +225,7 @@ public class DaoUsersImplIT {
 
     @Test
     public void createUserNullIT() {
-        UserDaoModel model = null;
+        final UserDaoModel model = null;
         long actual1 = users.create(model);
         assertFalse(actual1 > 0);
     }
@@ -266,8 +266,8 @@ public class DaoUsersImplIT {
 
     @Test
     public void updateUserNullIT() {
-        UserDaoModel updateModel1 = null;
-        long actualId1 = users.update(updateModel1);
+        final UserDaoModel updateModel1 = null;
+        final long actualId1 = users.update(updateModel1);
         assertEquals(0, actualId1);
     }
 
@@ -307,10 +307,10 @@ public class DaoUsersImplIT {
 
     @Test
     public void deleteUserNullIT() {
-        UserDaoModel model1 = null;
-        long actual1 = users.create(model1);
+        final UserDaoModel model1 = null;
+        final long actual1 = users.create(model1);
         assertFalse(actual1 > 0);
-        long actualId1 = users.delete("");
+        final long actualId1 = users.delete("");
         assertEquals(actual1, actualId1);
     }
 

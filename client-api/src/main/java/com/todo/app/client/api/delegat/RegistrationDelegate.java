@@ -9,7 +9,7 @@ import com.todo.app.service.users.IServiceUsers;
 import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.token.impl.TokenGeneratorImpl;
 import com.todo.app.user.CreateUser;
-import com.todo.app.utils.ControllerUtils;
+import com.todo.app.controller.constant.ControllerUtils;
 import com.todo.app.validators.DataValidators;
 import com.todo.app.validators.impl.UserValidatorImpl;
 import org.slf4j.Logger;
@@ -75,7 +75,7 @@ public class RegistrationDelegate {
                     ControllerUtils.IS_NOT_VALID_PARAMS);
         }
         UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
-        if (userDaoModel == null) {
+        if (userDaoModel == null || userDaoModel.isEmpty()) {
             LOGGER.info(ControllerUtils.CRETE_USER);
             CreateUser createUser = new CreateUser.UserBuilder()
                     .init(new PasswordsImpl(), new TokenGeneratorImpl())
@@ -97,7 +97,7 @@ public class RegistrationDelegate {
      * @return message with info about registration
      */
     private ResponseModel<String> createUser(UserDaoModel daoModel) {
-        long result = serviceUsers.create(daoModel);
+        final long result = serviceUsers.create(daoModel);
         if (result == 0) {
             LOGGER.warn(ControllerUtils.USER_REGISTRATION_FAILURE);
             return new ResponseModel<>(GENERATOR.getCounter(),

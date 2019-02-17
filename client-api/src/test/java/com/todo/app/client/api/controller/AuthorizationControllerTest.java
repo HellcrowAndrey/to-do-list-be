@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import static com.todo.app.utils.ControllerUtils.*;
+import static com.todo.app.controller.constant.ControllerUtils.*;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
@@ -59,9 +59,9 @@ public class AuthorizationControllerTest {
                 .param("password", "31242134"))
                 .andExpect(status().isOk());
         MvcResult actual = result.andReturn();
-        String tmp = actual.getResponse().getContentAsString();
-        Gson gson = new Gson();
-        ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
+        final String tmp = actual.getResponse().getContentAsString();
+        final Gson gson = new Gson();
+        final ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
         assertEquals(USER_AUTHORIZATION_SUCCESS, parser.getResponse());
         assertEquals(HttpStatus.OK.value(), actual.getResponse().getStatus());
         verify(authorizationDelegateMock, times(1)).submitAuth(anyObject());
@@ -81,9 +81,9 @@ public class AuthorizationControllerTest {
                 .param("password", "31242134"))
                 .andExpect(status().isOk());
         MvcResult actual = result.andReturn();
-        String tmp = actual.getResponse().getContentAsString();
-        Gson gson = new Gson();
-        ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
+        final String tmp = actual.getResponse().getContentAsString();
+        final Gson gson = new Gson();
+        final ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
         assertEquals(USER_AUTHORIZATION_FAILURE, parser.getResponse());
         assertEquals(HttpStatus.OK.value(), actual.getResponse().getStatus());
         verify(authorizationDelegateMock, times(1)).submitAuth(anyObject());
@@ -103,9 +103,9 @@ public class AuthorizationControllerTest {
                 .param("password", "31242134"))
                 .andExpect(status().isOk());
         MvcResult actual = result.andReturn();
-        String tmp = actual.getResponse().getContentAsString();
-        Gson gson = new Gson();
-        ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
+        final String tmp = actual.getResponse().getContentAsString();
+        final Gson gson = new Gson();
+        final ResponseModel parser = gson.fromJson(tmp, ResponseModel.class);
         assertEquals(USER_NOT_FOUNT, parser.getResponse());
         assertEquals(HttpStatus.OK.value(), actual.getResponse().getStatus());
         verify(authorizationDelegateMock, times(1)).submitAuth(anyObject());

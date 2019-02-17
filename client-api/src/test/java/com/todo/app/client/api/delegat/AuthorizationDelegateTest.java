@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static com.todo.app.constant.ToDoConstant.MOCK_CONSTANT;
-import static com.todo.app.utils.ControllerUtils.*;
+import static com.todo.app.controller.constant.ControllerUtils.*;
 import static org.junit.Assert.*;
 import static org.powermock.api.mockito.PowerMockito.when;
 
