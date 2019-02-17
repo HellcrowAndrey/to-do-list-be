@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.todo.app.controller.constant.ControllerUtils.RECEIVED_MESSAGE;
+import static com.todo.app.controller.constant.ControllerUtils.*;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
@@ -47,11 +47,11 @@ public class RegistrationController {
      * @param password this is user password
      * @return response on user request
      */
-    @RequestMapping(value = "/registration", method = {GET, POST})
+    @RequestMapping(value = REGISTRATION, method = {GET, POST})
     public ResponseEntity submitRegistration(
-            @RequestParam(value = "login") String login,
-            @RequestParam(value = "email") String email,
-            @RequestParam(value = "password") String password) {
+            @RequestParam(value = LOGIN) String login,
+            @RequestParam(value = EMAIL) String email,
+            @RequestParam(value = PASSWORD) String password) {
         LOGGER.info(RECEIVED_MESSAGE + RegistrationController.class);
         final UserModel userModel = new UserModel(login, email, password);
         final ResponseModel<String> result = registrationDelegate

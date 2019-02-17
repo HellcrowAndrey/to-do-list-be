@@ -18,6 +18,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
+import static com.todo.app.controller.constant.ControllerUtils.*;
+
 /**
  * The RegistrationDelegate class use for user registration. Has two
  * methods submitRegistration and createUser. Has next fields LOGGER,
@@ -68,23 +70,23 @@ public class RegistrationDelegate {
      * @return message with info about registration
      */
     public ResponseModel<String> submitRegistration(UserModel user) {
-        DataValidators validators = new UserValidatorImpl();
+        final DataValidators validators = new UserValidatorImpl();
         if (!validators.isUserDataValid(user)) {
-            LOGGER.warn(ControllerUtils.IS_NOT_VALID_PARAMS);
+            LOGGER.warn(IS_NOT_VALID_PARAMS);
             return new ResponseModel<>(GENERATOR.getCounter(),
-                    ControllerUtils.IS_NOT_VALID_PARAMS);
+                    IS_NOT_VALID_PARAMS);
         }
-        UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
+        final UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
         if (userDaoModel == null || userDaoModel.isEmpty()) {
-            LOGGER.info(ControllerUtils.CRETE_USER);
-            CreateUser createUser = new CreateUser.UserBuilder()
+            LOGGER.info(CRETE_USER);
+            final CreateUser createUser = new CreateUser.UserBuilder()
                     .init(new PasswordsImpl(), new TokenGeneratorImpl())
                     .createParams(user).createUser().build();
             return createUser(createUser.getDaoModel());
         } else {
-            LOGGER.info(ControllerUtils.USER_EXIT);
+            LOGGER.info(USER_EXIT);
             return new ResponseModel<>(GENERATOR.getCounter(),
-                    ControllerUtils.USER_EXIT);
+                    USER_EXIT);
         }
     }
 
@@ -101,11 +103,11 @@ public class RegistrationDelegate {
         if (result == 0) {
             LOGGER.warn(ControllerUtils.USER_REGISTRATION_FAILURE);
             return new ResponseModel<>(GENERATOR.getCounter(),
-                    ControllerUtils.USER_REGISTRATION_FAILURE);
+                    USER_REGISTRATION_FAILURE);
         } else {
-            CacheManager cacheManager = CacheManager.getInstance();
+            final CacheManager cacheManager = CacheManager.getInstance();
             cacheManager.addTasks(daoModel.getToken(), new ArrayList<>());
-            LOGGER.info(ControllerUtils.USER_REGISTRATION_SUCCESS);
+            LOGGER.info(USER_REGISTRATION_SUCCESS);
             return new ResponseModel<>(GENERATOR.getCounter(), daoModel.getToken());
         }
     }
