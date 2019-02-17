@@ -44,8 +44,15 @@ public class RegistrationDelegateTest {
         final UserModel model = new UserModel(
                 "vasia", "john@somewhere.com", "aaZZa44@");
         final RegistrationDelegate delegate = new RegistrationDelegate(serviceUsersMock);
+        final UserDaoModel userDaoModel = new UserDaoModel();
+        userDaoModel.setLogin("vasia");
+        userDaoModel.setEmail("vasia@gmail.ru");
+        userDaoModel.setHash(new byte[]{1, 2, 3});
+        userDaoModel.setSalt(new byte[]{4, 5, 6});
+        userDaoModel.setToken("token_for_test");
+        userDaoModel.setEnable(true);
         when(serviceUsersMock.read("vasia", "john@somewhere.com"))
-                .thenReturn(new UserDaoModel());
+                .thenReturn(userDaoModel);
         final ResponseModel<String> expected = new ResponseModel<>(1, ControllerUtils.USER_EXIT);
         final ResponseModel<String> actual = delegate.submitRegistration(model);
         assertEquals(expected.getResponse(), actual.getResponse());
