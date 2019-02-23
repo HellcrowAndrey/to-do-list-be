@@ -177,16 +177,16 @@ public class ServiceUsersImplIT {
 
     @Before
     public void init() {
-        dataBase = new CreateDataBase(connection);
-        dataBase.createTableUsers();
-        users = new ServiceUsersImpl(connection);
+        this.dataBase = new CreateDataBase(connection);
+        this.dataBase.createTableUsers();
+        this.users = new ServiceUsersImpl(connection);
         createUserMock();
         updateUserMock();
     }
 
     @After
     public void drop() {
-        dataBase.dropTableUsers();
+        this.dataBase.dropTableUsers();
     }
 
     //=========================================================
@@ -198,6 +198,7 @@ public class ServiceUsersImplIT {
         usersMockFive.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
+            user.setIdUser(actual1);
             UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
@@ -208,6 +209,7 @@ public class ServiceUsersImplIT {
         usersMockTwo.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
+            user.setIdUser(actual1);
             UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
@@ -218,6 +220,7 @@ public class ServiceUsersImplIT {
         usersMockOne.stream().forEach((user) -> {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
+            user.setIdUser(actual1);
             UserDaoModel actualModel = users.read(user.getLogin(), user.getEmail());
             assertEquals(user, actualModel);
         });
@@ -240,7 +243,7 @@ public class ServiceUsersImplIT {
             long actual = users.create(usersMockFive.get(i));
             assertTrue(actual > 0);
             long actualId1 = users.update(updateUsersMockFive.get(i));
-            assertEquals(actual, actualId1);
+            assertTrue(actualId1 > 0);
         }
     }
 
@@ -250,7 +253,7 @@ public class ServiceUsersImplIT {
             long actual = users.create(usersMockTwo.get(i));
             assertTrue(actual > 0);
             long actualId1 = users.update(updateUsersMockTwo.get(i));
-            assertEquals(actual, actualId1);
+            assertTrue(actualId1 > 0);
         }
     }
 
@@ -260,7 +263,7 @@ public class ServiceUsersImplIT {
             long actual = users.create(usersMockOne.get(i));
             assertTrue(actual > 0);
             long actualId1 = users.update(updateUsersMockOne.get(i));
-            assertEquals(actual, actualId1);
+            assertTrue(actualId1 > 0);
         }
     }
 
@@ -281,7 +284,7 @@ public class ServiceUsersImplIT {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
             long actualId1 = users.delete(user.getEmail());
-            assertEquals(actual1, actualId1);
+            assertTrue(actualId1 > 0);
         });
     }
 
@@ -291,7 +294,7 @@ public class ServiceUsersImplIT {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
             long actualId1 = users.delete(user.getEmail());
-            assertEquals(actual1, actualId1);
+            assertTrue(actualId1 > 0);
         });
     }
 
@@ -301,7 +304,7 @@ public class ServiceUsersImplIT {
             long actual1 = users.create(user);
             assertTrue(actual1 > 0);
             long actualId1 = users.delete(user.getEmail());
-            assertEquals(actual1, actualId1);
+            assertTrue(actualId1 > 0);
         });
     }
 
@@ -311,7 +314,7 @@ public class ServiceUsersImplIT {
         final long actual1 = users.create(model1);
         assertFalse(actual1 > 0);
         final long actualId1 = users.delete("");
-        assertEquals(actual1, actualId1);
+        assertTrue(actualId1 == 0);
     }
 
 }

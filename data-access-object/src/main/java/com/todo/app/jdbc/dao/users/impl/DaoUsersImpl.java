@@ -72,7 +72,7 @@ public class DaoUsersImpl implements IDaoUsers {
             statement.setBytes(4, user.getSalt());
             statement.setString(5, user.getToken());
             statement.setBoolean(6, user.isEnable());
-            result = statement.executeUpdate();
+            result = getId(statement);
         } catch (ClassNotFoundException e) {
             LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
@@ -81,6 +81,27 @@ public class DaoUsersImpl implements IDaoUsers {
             LOGGER.error(e.getMessage());
         } catch (SQLException e) {
             LOGGER.error(e.getMessage());
+        }
+        return result;
+    }
+
+    private long getId(PreparedStatement statement) throws SQLException {
+        long result = 0;
+        ResultSet rs = null;
+        try {
+            int affectedRows = statement.executeUpdate();
+            if (affectedRows != 0) {
+                rs = statement.getGeneratedKeys();
+                if (rs.next()) {
+                    result = rs.getLong(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage());
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
         }
         return result;
     }
@@ -166,7 +187,7 @@ public class DaoUsersImpl implements IDaoUsers {
         long result = 0;
         try (Connection connection = source.getConnect();
              PreparedStatement statement = connection
-                     .prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+                     .prepareStatement(query)) {
             statement.setString(1, user.getLogin());
             statement.setBytes(2, user.getHash());
             statement.setBoolean(3, user.isEnable());
@@ -201,8 +222,7 @@ public class DaoUsersImpl implements IDaoUsers {
         final String query = "DELETE FROM Users WHERE EMAIL=?";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, email);
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {

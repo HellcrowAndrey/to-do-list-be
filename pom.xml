@@ -142,6 +142,13 @@
         </dependencies>
     </dependencyManagement>
 
+    <modules>
+        <module>data-access-object</module>
+        <module>client-api</module>
+        <module>helper</module>
+        <module>utils</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.bouncycastle</groupId>
@@ -206,13 +213,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <modules>
-        <module>data-access-object</module>
-        <module>client-api</module>
-        <module>helper</module>
-        <module>utils</module>
-    </modules>
 
     <properties>
         <!--java version-->
@@ -765,6 +765,15 @@
         </profile>
         <profile>
             <id>debug</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>data-access-object</module>
+                <module>client-api</module>
+                <module>helper</module>
+                <module>utils</module>
+            </modules>
         </profile>
         <profile>
             <id>check-style</id>
@@ -883,7 +892,6 @@
             <id>integration-tests</id>
             <properties>
                 <build.profile.id>integration-test</build.profile.id>
-                <duration>7</duration>
                 <skip.unit.tests>true</skip.unit.tests>
             </properties>
             <modules>
@@ -937,19 +945,29 @@
                                     <alias>database</alias>
                                     <name>mysql:8.0.13</name>
                                     <run>
-                                        <wait>
-                                            <log>mysqld: ready for connections</log>
-                                            <time>20000</time>
-                                        </wait>
+                                        <ports>
+                                            <port>6603:3306</port>
+                                        </ports>
                                         <env>
                                             <MYSQL_ROOT_PASSWORD>root</MYSQL_ROOT_PASSWORD>
                                             <MYSQL_DATABASE>tests_db</MYSQL_DATABASE>
                                             <MYSQL_USER>user</MYSQL_USER>
                                             <MYSQL_PASSWORD>password</MYSQL_PASSWORD>
                                         </env>
-                                        <ports>
-                                            <port>6603:3306</port>
-                                        </ports>
+                                        <volumes>
+                                            <bind>
+                                                <volume>${basedir}/docker/scripts/:/docker-entrypoint-initdb.d/</volume>
+                                            </bind>
+                                        </volumes>
+                                        <wait>
+                                            <tcp>
+                                                <ports>
+                                                    <port>3306</port>
+                                                </ports>
+                                            </tcp>
+                                            <log>port: 3306|Shutdown complete</log>
+                                            <time>80000</time>
+                                        </wait>
                                         <log>
                                             <prefix>DB</prefix>
                                             <color>yellow</color>
@@ -971,25 +989,6 @@
                                 <phase>post-integration-test</phase>
                                 <goals>
                                     <goal>stop</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <version>${maven-antrun-plugin}</version>
-                        <executions>
-                            <execution>
-                                <id>wait</id>
-                                <phase>integration-test</phase>
-                                <configuration>
-                                    <target>
-                                        <sleep seconds="${duration}"/>
-                                    </target>
-                                </configuration>
-                                <goals>
-                                    <goal>run</goal>
                                 </goals>
                             </execution>
                         </executions>

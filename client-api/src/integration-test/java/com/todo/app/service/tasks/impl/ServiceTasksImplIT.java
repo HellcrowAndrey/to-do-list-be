@@ -96,17 +96,17 @@ public class ServiceTasksImplIT {
         this.userMock.setToken("token1");
         this.userMock.setEnable(true);
 
-        dataBase = new CreateDataBase(connection);
-        dataBase.createTableUsers();
-        dataBase.createTableTasks();
-        tasks = new ServiceTasksImpl(connection);
-        users = new ServiceUsersImpl(connection);
+        this.dataBase = new CreateDataBase(connection);
+        this.dataBase.createTableUsers();
+        this.dataBase.createTableTasks();
+        this.tasks = new ServiceTasksImpl(connection);
+        this.users = new ServiceUsersImpl(connection);
     }
 
     @After
     public void drop() {
-        dataBase.dropTableTasks();
-        dataBase.dropTableUsers();
+        this.dataBase.dropTableTasks();
+        this.dataBase.dropTableUsers();
     }
 
     //=========================================================

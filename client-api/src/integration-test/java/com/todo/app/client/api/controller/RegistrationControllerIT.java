@@ -41,7 +41,7 @@ import static org.junit.Assert.assertNotNull;
         AppConfig.class, DaoServiceConfig.class})
 @SpringBootTest(classes = MainClientApi.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("debug")
+@ActiveProfiles("integration-test")
 public class RegistrationControllerIT {
 
     /*
@@ -180,7 +180,7 @@ public class RegistrationControllerIT {
         userDaoModel.setToken("token_for_test");
         userDaoModel.setEnable(true);
         serviceUsers.create(userDaoModel);
-        InetAddress address = InetAddress.getLocalHost();
+        final InetAddress address = InetAddress.getLocalHost();
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         final MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
