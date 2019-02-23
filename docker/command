@@ -1,0 +1,7 @@
+This command use if maven doesn't start docker
+
+sudo chmod 776 /var/run/docker.sock
+
+This command do create container with proxy port 6603 -> 3306
+
+docker run --detach --name=db --env="MYSQL_ROOT_PASSWORD=simple" --env="MYSQL_DATABASE=db_in_docker" --env="MYSQL_USER=user" --env="MYSQL_PASSWORD=pass123" --publish 6603:3306 mysql:8.0.13
