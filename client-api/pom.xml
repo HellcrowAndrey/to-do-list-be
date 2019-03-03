@@ -124,7 +124,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.todo.app.RunApp</mainClass>
+                            <mainClass>com.todo.app.MainClientApi</mainClass>
                         </configuration>
                     </execution>
                 </executions>
