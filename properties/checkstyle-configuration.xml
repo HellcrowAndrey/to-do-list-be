@@ -112,8 +112,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
         </module>
 
         <module name="LocalVariableName">
-            <!-- Validates identifiers for local variables against the
-              expression "^[a-z][a-zA-Z0-9]*$". -->
+            <!-- Validates identifiers for local variables against the expression "^[a-z][a-zA-Z0-9]*$". -->
             <property name="severity" value="warning"/>
         </module>
 
