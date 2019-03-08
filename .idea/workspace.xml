@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/command" beforeDir="false" afterPath="$PROJECT_DIR$/docker/command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/checkstyle-configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/properties/checkstyle-configuration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -169,17 +169,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14310">
-              <caret line="954" column="85" selection-start-line="954" selection-start-column="85" selection-end-line="954" selection-end-column="85" />
+            <state relative-caret-position="846">
+              <caret line="964" column="69" selection-start-line="964" selection-start-column="69" selection-end-line="964" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/properties/checkstyle-configuration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -187,8 +205,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
-              <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
+            <state relative-caret-position="120">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -196,8 +214,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="285">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -218,8 +236,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/testing/CreateDataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="75">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#489#490#0" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
@@ -273,8 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/constant/ToDoConstant.java" />
-        <option value="$PROJECT_DIR$/helper/src/main/java/com/todo/app/dao/model/UserDaoModel.java" />
         <option value="$PROJECT_DIR$/data-access-object/src/test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersReadImplTest.java" />
         <option value="$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/AuthorizationDelegateTest.java" />
         <option value="$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/delegat/AuthorizationDelegate.java" />
@@ -324,6 +340,8 @@
         <option value="$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java" />
         <option value="$PROJECT_DIR$/docker/command" />
         <option value="$PROJECT_DIR$/client-api/pom.xml" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/todo/app/Main.java" />
+        <option value="$PROJECT_DIR$/properties/checkstyle-configuration.xml" />
       </list>
     </option>
   </component>
@@ -360,9 +378,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
-    <option name="y" value="27" />
+    <option name="y" value="25" />
     <option name="width" value="1853" />
-    <option name="height" value="1053" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -371,7 +389,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -382,69 +399,24 @@
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="client-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="todo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
-              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,12 +426,12 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551011416411" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552048342707" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/client-api/src/integration-test/java/com/todo/app/client/api/controller" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bitcoinj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -510,7 +482,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.java in data-access-object (1)">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.todo.app.Main" />
+      <module name="utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.todo.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AllTests" type="JUnit" factoryName="JUnit">
       <module name="to-do-list-be" />
       <option name="PACKAGE_NAME" value="" />
@@ -522,21 +507,6 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <dir value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DaoTasksImplIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="data-access-object" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.todo.app.jdbc.dao.task.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.jdbc.dao.task.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.jdbc.dao.task.impl.DaoTasksImplIT" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -596,8 +566,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.AllTests" />
-      <item itemvalue="JUnit.DaoTasksImplIT" />
       <item itemvalue="JUnit.java in data-access-object" />
       <item itemvalue="JUnit.ServiceTasksImplIT" />
       <item itemvalue="JUnit.java in data-access-object (1)" />
@@ -606,11 +576,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.java in data-access-object (1)" />
         <item itemvalue="JUnit.DaoTasksImplIT.createTasksOneIT" />
         <item itemvalue="JUnit.ServiceTasksImplIT" />
         <item itemvalue="JUnit.java in data-access-object" />
-        <item itemvalue="JUnit.DaoTasksImplIT" />
       </list>
     </recent_temporary>
   </component>
@@ -724,6 +694,27 @@
       <workItem from="1551295378830" duration="144000" />
       <workItem from="1551295559741" duration="609000" />
       <workItem from="1551461632580" duration="622000" />
+      <workItem from="1551620346100" duration="981000" />
+      <workItem from="1551625081273" duration="620000" />
+      <workItem from="1551628604866" duration="623000" />
+      <workItem from="1551630596984" duration="599000" />
+      <workItem from="1551632415847" duration="592000" />
+      <workItem from="1551634224722" duration="601000" />
+      <workItem from="1551637361700" duration="597000" />
+      <workItem from="1551639184128" duration="996000" />
+      <workItem from="1551642142208" duration="604000" />
+      <workItem from="1551726438482" duration="599000" />
+      <workItem from="1551813803409" duration="448000" />
+      <workItem from="1551987704777" duration="6000" />
+      <workItem from="1551987859795" duration="282000" />
+      <workItem from="1551988265868" duration="11000" />
+      <workItem from="1551988317386" duration="283000" />
+      <workItem from="1551988934216" duration="226000" />
+      <workItem from="1551989779748" duration="293000" />
+      <workItem from="1551990335018" duration="35000" />
+      <workItem from="1551990717699" duration="429000" />
+      <workItem from="1551991801720" duration="17000" />
+      <workItem from="1552047836090" duration="503000" />
     </task>
     <servers />
   </component>
@@ -760,7 +751,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="623305000" />
+    <option name="totallyTimeSpent" value="632650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,6 +764,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -781,11 +773,11 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25069174" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.30879912" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741398" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38956714" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36625972" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.36625972" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
@@ -949,31 +941,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/TasksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/src/test/java/com/todo/app/client/api/delegat/RegistrationDelegateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/table_users" />
-    <entry file="file://$PROJECT_DIR$/scripts/table_tasks" />
-    <entry file="file://$PROJECT_DIR$/docker/init_db.sh" />
-    <entry file="file://$PROJECT_DIR$/docker/run_db.sh" />
     <entry file="file://$PROJECT_DIR$/scripts/todoproject.sql" />
     <entry file="file://$PROJECT_DIR$/docker/scripts/todoproject.sql" />
     <entry file="file://$PROJECT_DIR$/data-access-object/src/main/resources/it/application.properties">
@@ -998,13 +965,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/target/failsafe-reports/TEST-com.todo.app.jdbc.dao.task.impl.DaoTasksImplIT.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.0.5.RELEASE/spring-boot-test-2.0.5.RELEASE-sources.jar!/org/springframework/boot/test/web/client/TestRestTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="544" column="33" selection-start-line="544" selection-start-column="33" selection-end-line="544" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper/src/main/java/com/todo/app/controller/constant/ControllerUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1230,24 +1190,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14310">
-          <caret line="954" column="85" selection-start-line="954" selection-start-column="85" selection-end-line="954" selection-end-column="85" />
+        <state relative-caret-position="181">
+          <caret line="2992" column="25" selection-start-line="2992" selection-start-column="25" selection-end-line="2992" selection-end-column="25" />
+          <folding>
+            <element signature="e#117893#117894#0" expanded="true" />
+            <element signature="e#117955#117956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="764" column="26" selection-start-line="764" selection-start-column="26" selection-end-line="764" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/todo/app/Main.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/2.0.5.RELEASE/spring-boot-test-2.0.5.RELEASE-sources.jar!/org/springframework/boot/test/web/client/TestRestTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15750">
+          <caret line="1116" column="9" lean-forward="true" selection-start-line="1116" selection-start-column="9" selection-end-line="1116" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/users/impl/DaoUsersImplIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/integration-test/java/com/todo/app/jdbc/dao/task/impl/DaoTasksImplIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="285">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -1264,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data-access-object/src/main/java/com/todo/app/jdbc/dao/testing/CreateDataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="75">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#489#490#0" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />
@@ -1273,10 +1273,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-api/pom.xml">
+    <entry file="file://$PROJECT_DIR$/to-do-list-be/jmeter-template/user-auth.jmx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+        <state relative-caret-position="-1350" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="964" column="69" selection-start-line="964" selection-start-column="69" selection-end-line="964" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/properties/checkstyle-configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
         </state>
       </provider>
     </entry>
