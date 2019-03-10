@@ -30,7 +30,8 @@ public class AuthorizationController {
     /**
      * This field is logger this class.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthorizationController.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(AuthorizationController.class);
 
     /**
      * This field is link on AuthorizationDelegate.
@@ -55,7 +56,8 @@ public class AuthorizationController {
             @RequestParam(value = PASSWORD) String password) {
         LOGGER.info(RECEIVED_MESSAGE + AuthorizationController.class);
         final UserModel user = new UserModel(login, email, password);
-        final ResponseModel<String> result = authorizationDelegate.submitAuth(user);
+        final ResponseModel<String> result =
+                authorizationDelegate.submitAuth(user);
         LOGGER.info(result.toString());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

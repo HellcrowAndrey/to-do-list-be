@@ -29,7 +29,8 @@ public class RegistrationController {
     /**
      * This field is logger this class.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(RegistrationController.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(RegistrationController.class);
 
     /**
      * This field is link on RegistrationDelegate.

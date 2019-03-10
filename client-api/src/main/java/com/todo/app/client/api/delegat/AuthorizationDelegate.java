@@ -37,12 +37,14 @@ public class AuthorizationDelegate {
     /**
      * This field is logger this class.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthorizationDelegate.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(AuthorizationDelegate.class);
 
     /**
      * This field is singleton id generator.
      */
-    private static final IdGenerator GENERATOR = IdGenerator.getInstance();
+    private static final IdGenerator GENERATOR = IdGenerator
+            .getInstance();
 
     /**
      * This field keeps link on IServiceUser.
@@ -124,7 +126,8 @@ public class AuthorizationDelegate {
      * @param result   user data model in db
      * @return response message to user
      */
-    private ResponseModel<String> matchesPassword(final String password, final UserDaoModel result) {
+    private ResponseModel<String> matchesPassword(final String password,
+                                                  final UserDaoModel result) {
         final IPasswords passwords = new PasswordsImpl();
         final boolean tmp = passwords.isExpectedPassword(password,
                 result.getSalt(), result.getHash());

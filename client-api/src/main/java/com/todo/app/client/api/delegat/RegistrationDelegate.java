@@ -38,12 +38,14 @@ public class RegistrationDelegate {
     /**
      * This field is logger this class.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(RegistrationDelegate.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(RegistrationDelegate.class);
 
     /**
      * This field is singleton id generator.
      */
-    private static final IdGenerator GENERATOR = IdGenerator.getInstance();
+    private static final IdGenerator GENERATOR = IdGenerator
+            .getInstance();
 
     /**
      * This field keeps link on IServiceUser.
@@ -76,7 +78,8 @@ public class RegistrationDelegate {
             return new ResponseModel<>(GENERATOR.getCounter(),
                     IS_NOT_VALID_PARAMS);
         }
-        final UserDaoModel userDaoModel = serviceUsers.read(user.getLogin(), user.getEmail());
+        final UserDaoModel userDaoModel = serviceUsers.read(
+                user.getLogin(), user.getEmail());
         if (userDaoModel == null || userDaoModel.isEmpty()) {
             LOGGER.info(CRETE_USER);
             final CreateUser createUser = new CreateUser.UserBuilder()
@@ -108,7 +111,8 @@ public class RegistrationDelegate {
             final CacheManager cacheManager = CacheManager.getInstance();
             cacheManager.addTasks(daoModel.getToken(), new ArrayList<>());
             LOGGER.info(USER_REGISTRATION_SUCCESS);
-            return new ResponseModel<>(GENERATOR.getCounter(), daoModel.getToken());
+            return new ResponseModel<>(GENERATOR.getCounter(),
+                    daoModel.getToken());
         }
     }
 

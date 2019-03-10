@@ -19,9 +19,11 @@ import static com.todo.app.controller.constant.ControllerUtils.*;
 @Component
 public class TasksDelegate {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TasksDelegate.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(TasksDelegate.class);
 
-    private static final IdGenerator GENERATOR = IdGenerator.getInstance();
+    private static final IdGenerator GENERATOR = IdGenerator
+            .getInstance();
 
     private IServiceTasks serviceTasks;
 

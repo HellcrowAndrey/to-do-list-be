@@ -20,7 +20,8 @@ public class TasksController {
     /**
      * This field is logger this class.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(TasksController.class);
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(TasksController.class);
 
     /**
      * This field is link on TasksDelegate.
@@ -32,7 +33,8 @@ public class TasksController {
     public ResponseEntity<ResponseModel> tasks(
             @RequestParam(value = TOKEN) String token) {
         LOGGER.info(RECEIVED_MESSAGE + TasksController.class);
-        final ResponseModel<String> result = tasksDelegate.submitTasks(token);
+        final ResponseModel<String> result =
+                tasksDelegate.submitTasks(token);
         LOGGER.info(result.toString());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

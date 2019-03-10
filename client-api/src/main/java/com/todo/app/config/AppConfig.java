@@ -18,7 +18,8 @@ public class AppConfig {
     @Bean
     public AuthorizationDelegate authService() {
         return new AuthorizationDelegate(
-                daoServiceConfig.usersService(), daoServiceConfig.tasksService());
+                daoServiceConfig.usersService(),
+                daoServiceConfig.tasksService());
     }
 
     @Bean
