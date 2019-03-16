@@ -16,6 +16,7 @@ import java.sql.SQLException;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.when;
 
 @RunWith(PowerMockRunner.class)
@@ -35,10 +36,14 @@ public class DaoUsersUpdateImplTest {
     private UserDaoModel model;
 
     @Before
-    public void init() throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException {
+    public void init() throws SQLException, IllegalAccessException,
+            InstantiationException, ClassNotFoundException {
         assertNotNull(dataSourceMock);
-        when(connectionMock.prepareStatement(any(String.class), any(Integer.class))).thenReturn(statementMock);
+        when(connectionMock.prepareStatement(any(String.class),
+                any(Integer.class))).thenReturn(statementMock);
         when(dataSourceMock.getConnect()).thenReturn(connectionMock);
+        when(connectionMock.prepareStatement(anyString()))
+                .thenReturn(statementMock);
         when(statementMock.executeUpdate()).thenReturn(1);
         byte[] hash = new byte[]{1, 2, 3, 4, 5, 6};
         byte[] salt = new byte[]{'r', 'q', 'y', 'u', 'i'};

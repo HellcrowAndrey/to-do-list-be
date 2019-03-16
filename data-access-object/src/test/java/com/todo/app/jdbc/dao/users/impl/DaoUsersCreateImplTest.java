@@ -56,7 +56,10 @@ public class DaoUsersCreateImplTest {
     }
 
     @Test
-    public void createTest() {
+    public void createTest() throws SQLException {
+        when(statementMock.getGeneratedKeys()).thenReturn(resultSetMock);
+        when(resultSetMock.next()).thenReturn(true);
+        when(resultSetMock.getLong(1)).thenReturn(1l);
         DaoUsersImpl daoUsers = new DaoUsersImpl(dataSourceMock);
         long result = daoUsers.create(model);
         assertEquals(result, 1);
