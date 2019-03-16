@@ -2,11 +2,9 @@ package com.todo.app.service.users.impl;
 
 import com.todo.app.dao.model.UserDaoModel;
 import com.todo.app.service.users.IServiceUsers;
-import com.todo.app.controller.model.user.UserModel;
 import com.todo.app.jdbc.dao.data.source.IDataSource;
 import com.todo.app.jdbc.dao.users.IDaoUsers;
 import com.todo.app.jdbc.dao.users.impl.DaoUsersImpl;
-import com.todo.app.utils.ControllerUtils;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -27,9 +25,9 @@ public class ServiceUsersImpl implements IServiceUsers {
     }
 
     @Override
-    public UserDaoModel read(String  user) {
+    public UserDaoModel read(String login, String email) {
         IDaoUsers users = new DaoUsersImpl(source);
-        return users.read(user);
+        return users.read(login, email);
     }
 
     @Override

@@ -1,144 +1,146 @@
 package com.todo.app.client.api.delegat;
 
-import com.todo.app.utils.IdGenerator;
+import com.google.gson.Gson;
 import com.todo.app.cache.manager.CacheManager;
+import com.todo.app.controller.model.task.TaskUpdateModel;
+import com.todo.app.dao.model.TaskDaoModel;
+import com.todo.app.generator.id.IdGenerator;
 import com.todo.app.service.tasks.IServiceTasks;
-import com.todo.app.controller.model.ResponseModel;
+import com.todo.app.controller.model.response.ResponseModel;
 import com.todo.app.controller.model.task.TaskModel;
-import com.todo.app.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+import static com.todo.app.controller.constant.ControllerUtils.*;
+
 @Component
-@Primary
 public class TasksDelegate {
 
-    private IdGenerator gen = IdGenerator.getInstance();
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(TasksDelegate.class);
 
-    private Logger logger = LoggerFactory.getLogger(TasksDelegate.class);
+    private static final IdGenerator GENERATOR = IdGenerator
+            .getInstance();
 
     private IServiceTasks serviceTasks;
 
-    public TasksDelegate(@Qualifier("serviceTasksImpl") IServiceTasks serviceTasks) {
+    public TasksDelegate(IServiceTasks serviceTasks) {
         this.serviceTasks = serviceTasks;
     }
 
-    public ResponseEntity dispatcher(String command, TaskModel data) {
-        ResponseEntity entity;
-        switch (command) {
-            case ControllerUtils.CREATE:
-                entity = create(data);
-                logger.info(ControllerUtils.CREATE, TasksDelegate.class);
-                break;
-            case ControllerUtils.UPDATE:
-                entity = update(data);
-                logger.info(ControllerUtils.UPDATE, TasksDelegate.class);
-                break;
-            case ControllerUtils.DELETE:
-                entity = delete(data);
-                logger.info(ControllerUtils.DELETE, TasksDelegate.class);
-                break;
-            default:
-                entity = new ResponseEntity(new ResponseModel(gen.getCounter(),
-                        "Command doesn't exist"), HttpStatus.OK);
-                logger.info("Default case.", TasksDelegate.class);
-                break;
+    public ResponseModel<String> submitTasks(final String token) {
+        if (token == null || token.equals("")) {
+            LOGGER.error("Invalid user token!!!");
+            return new ResponseModel<>(GENERATOR.getCounter(), INCORRECT_TOKEN);
         }
-        return entity;
-    }
-
-    private ResponseEntity create(TaskModel data) {
-//        if (data == null) {
-//            logger.error("Incorrect data in method create.",
-//                    TasksDelegate.class);
-//            return new ResponseEntity(
-//                    new ResponseModel(gen.getCounter(), "Incorrect data"),
-//                    HttpStatus.OK);
-//        }
-//        CacheManager cacheManager = CacheManager.getInstance();
-//        if (!repeatAuth(data.getLogin(), cacheManager)) {
-//            int id = serviceTasks.create(data);
-//            if (id > 0) {
-//                cacheManager.addTask(data);
-//                logger.info("Create task " + id, TasksDelegate.class);
-//                return new ResponseEntity(
-//                        new ResponseModel(gen.getCounter(), id), HttpStatus.OK);
-//            } else {
-//                logger.warn("Doesn't create task.", TasksDelegate.class);
-//                return new ResponseEntity(
-//                        new ResponseModel(gen.getCounter(), "TaskModel doesn't create"),
-//                        HttpStatus.OK);
-//            }
-//        }
-        return new ResponseEntity(new ResponseModel(gen.getCounter(),
-                "You mast repeat authorization"), HttpStatus.OK);
-    }
-
-    private ResponseEntity update(TaskModel data) {
-//        if (data == null) {
-//            logger.error("Incorrect data in method update.",
-//                    TasksDelegate.class);
-//            return new ResponseEntity(
-//                    new ResponseModel(gen.getCounter(), "Incorrect data"),
-//                    HttpStatus.OK);
-//        }
-//        CacheManager cacheManager = CacheManager.getInstance();
-//        if (!repeatAuth(data.getLogin(), cacheManager)) {
-//            int id = serviceTasks.update(data);
-//            if (id > 0) {
-//                cacheManager.updateTask(data);
-//                logger.info("Update task " + id, TasksDelegate.class);
-//                return new ResponseEntity(
-//                        new ResponseModel(gen.getCounter(), id),
-//                        HttpStatus.OK);
-//            } else {
-//                logger.warn("Doesn't update task.", TasksDelegate.class);
-//                return new ResponseEntity(new ResponseModel(gen.getCounter(),
-//                        "TaskModel doesn't delete"), HttpStatus.OK);
-//            }
-//        }
-        return new ResponseEntity(new ResponseModel(gen.getCounter(),
-                "You mast repeat authorization"), HttpStatus.OK);
-    }
-
-    private ResponseEntity delete(TaskModel data) {
-//        if (data == null) {
-//            logger.error("Incorrect data in method delete.",
-//                    TasksDelegate.class);
-//            return new ResponseEntity(
-//                    new ResponseModel(gen.getCounter(),
-//                            "Incorrect data"), HttpStatus.OK);
-//        }
-//        CacheManager cacheManager = CacheManager.getInstance();
-//        if (!repeatAuth(data.getLogin(), cacheManager)) {
-//            int id = serviceTasks.delete(data);
-//            if (id > 0) {
-//                cacheManager.deleteTask(data);
-//                logger.info("Delete task " + id, TasksDelegate.class);
-//                return new ResponseEntity(
-//                        new ResponseModel(gen.getCounter(),
-//                                id), HttpStatus.OK);
-//            } else {
-//                logger.warn("Doesn't delete task.", TasksDelegate.class);
-//                return new ResponseEntity(
-//                        new ResponseModel(gen.getCounter(),
-//                                "TaskModel doesn't create"), HttpStatus.OK);
-//            }
-//        }
-        return new ResponseEntity(new ResponseModel(gen.getCounter(),
-                "You mast repeat authorization"), HttpStatus.OK);
-    }
-
-    private boolean repeatAuth(String login, CacheManager cacheManager) {
-        if (cacheManager.fetchToken(login) == null) {
-            return true;
+        final CacheManager cacheManager = CacheManager.getInstance();
+        final List<TaskModel> result = cacheManager.fetchTasks(token);
+        final Gson gson = new Gson();
+        if (result == null || result.isEmpty()) {
+            final List<TaskModel> tmp = serviceTasks.read(token);
+            cacheManager.addTasks(token, tmp);
+            LOGGER.info("Get tasks in db and send to user!");
+            return new ResponseModel<>(GENERATOR.getCounter(),
+                    gson.toJson(tmp));
         }
-        return false;
+        LOGGER.info("Get tasks in cache and send to user!");
+        return new ResponseModel<>(GENERATOR.getCounter(),
+                gson.toJson(result));
+    }
+
+    public ResponseModel<String> dispatcher(final TaskUpdateModel task) {
+        if (task == null || task.isTaskUpdateModel()) {
+            return new ResponseModel<>(
+                    GENERATOR.getCounter(), IS_NOT_VALID_PARAMS);
+        }
+        ResponseModel<String> result = restartAuth(task.getToken());
+        if (result == null) {
+            switch (task.getCommand()) {
+                case CREATE:
+                    return submitCreate(task);
+                case UPDATE:
+                    return submitUpdate(task);
+                case DELETE:
+                    return submitDelete(task);
+                default:
+                    return new ResponseModel<>(
+                            GENERATOR.getCounter(), IS_NOT_VALID_PARAMS);
+            }
+        } else {
+            return result;
+        }
+    }
+
+    private final ResponseModel<String> restartAuth(final String token) {
+        final CacheManager cacheManager = CacheManager.getInstance();
+        final List<TaskModel> result = cacheManager.fetchTasks(token);
+        if (result == null) {
+            return new ResponseModel<>(GENERATOR.getCounter(), RESTART_ACCOUNT);
+        } else {
+            return null;
+        }
+    }
+
+    private final ResponseModel<String> submitCreate(final TaskUpdateModel task) {
+        final TaskModel taskModel = jsonParser(task.getData());
+        if (taskModel != null) {
+            final CacheManager cacheManager = CacheManager.getInstance();
+            cacheManager.addTask(task.getToken(), taskModel);
+            final TaskDaoModel taskDaoModel = new TaskDaoModel();
+            taskDaoModel.setToken(task.getToken());
+            taskDaoModel.setTaskModel(taskModel);
+            final long taskId = serviceTasks.create(taskDaoModel);
+            return new ResponseModel<>(GENERATOR.getCounter(), String.valueOf(taskId));
+        } else {
+            return new ResponseModel<>(GENERATOR.getCounter(), IS_NOT_VALID_PARAMS);
+        }
+    }
+
+    private final ResponseModel<String> submitUpdate(final TaskUpdateModel task) {
+        final TaskModel taskModel = jsonParser(task.getData());
+        if (taskModel != null) {
+            final CacheManager cacheManager = CacheManager.getInstance();
+            cacheManager.updateTask(task.getToken(), taskModel);
+            final TaskDaoModel taskDaoModel = new TaskDaoModel();
+            taskDaoModel.setToken(task.getToken());
+            taskDaoModel.setTaskModel(taskModel);
+            final long taskId = serviceTasks.update(taskDaoModel);
+            return new ResponseModel<>(GENERATOR.getCounter(), String.valueOf(taskId));
+        } else {
+            return new ResponseModel<>(GENERATOR.getCounter(), IS_NOT_VALID_PARAMS);
+        }
+    }
+
+    private final ResponseModel<String> submitDelete(final TaskUpdateModel task) {
+        final Gson gson = new Gson();
+        long id = 0;
+        try {
+            id = gson.fromJson(task.getData(), Long.class);
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+        }
+        if (id > 0) {
+            final CacheManager cacheManager = CacheManager.getInstance();
+            cacheManager.removeTask(task.getToken(), id);
+            final long taskId = serviceTasks.delete(id);
+            return new ResponseModel<>(GENERATOR.getCounter(), String.valueOf(taskId));
+        } else {
+            return new ResponseModel<>(GENERATOR.getCounter(), IS_NOT_VALID_PARAMS);
+        }
+    }
+
+    private final TaskModel jsonParser(final String data) {
+        final Gson gson = new Gson();
+        TaskModel taskModel = null;
+        try {
+            taskModel = gson.fromJson(data, TaskModel.class);
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+        }
+        return taskModel;
     }
 
 }

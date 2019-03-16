@@ -1,9 +1,12 @@
 package com.todo.app.dao.model;
 
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class UserDaoModel {
+
+    private static UserDaoModel EMPTY = new UserDaoModel();
 
     private long idUser;
 
@@ -11,9 +14,9 @@ public class UserDaoModel {
 
     private String email;
 
-    private String passwordHash;
+    private byte[] hash;
 
-    private String salt;
+    private byte[] salt;
 
     private String token;
 
@@ -50,19 +53,19 @@ public class UserDaoModel {
         this.email = email;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public byte[] getHash() {
+        return hash;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setHash(byte[] hash) {
+        this.hash = hash;
     }
 
-    public String getSalt() {
+    public byte[] getSalt() {
         return salt;
     }
 
-    public void setSalt(String salt) {
+    public void setSalt(byte[] salt) {
         this.salt = salt;
     }
 
@@ -84,21 +87,28 @@ public class UserDaoModel {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         UserDaoModel that = (UserDaoModel) o;
         return idUser == that.idUser &&
                 enable == that.enable &&
                 Objects.equals(login, that.login) &&
                 Objects.equals(email, that.email) &&
-                Objects.equals(passwordHash, that.passwordHash) &&
-                Objects.equals(salt, that.salt) &&
+                Arrays.equals(hash, that.hash) &&
+                Arrays.equals(salt, that.salt) &&
                 Objects.equals(token, that.token);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUser, login, email, passwordHash, salt, token, enable);
+        int result = Objects.hash(idUser, login, email, token, enable);
+        result = 31 * result + Arrays.hashCode(hash);
+        result = 31 * result + Arrays.hashCode(salt);
+        return result;
     }
 
     @Override
@@ -107,10 +117,14 @@ public class UserDaoModel {
                 "idUser=" + idUser +
                 ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
-                ", passwordHash='" + passwordHash + '\'' +
-                ", salt='" + salt + '\'' +
+                ", hash=" + Arrays.toString(hash) +
+                ", salt=" + Arrays.toString(salt) +
                 ", token='" + token + '\'' +
                 ", enable=" + enable +
                 '}';
+    }
+
+    public boolean isEmpty() {
+        return this.equals(EMPTY);
     }
 }

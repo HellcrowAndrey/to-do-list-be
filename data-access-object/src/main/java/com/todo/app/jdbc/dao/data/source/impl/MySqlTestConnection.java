@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @Service
-@Profile("integration-tests")
+@Profile("integration-test")
 @PropertySource("classpath:it/application.properties")
 public class MySqlTestConnection implements IDataSource {
 

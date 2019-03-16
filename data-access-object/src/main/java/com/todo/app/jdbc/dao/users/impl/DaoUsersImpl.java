@@ -56,21 +56,23 @@ public class DaoUsersImpl implements IDaoUsers {
      * in param.
      */
     @Override
-    public long create(UserDaoModel user) {
+    public long create(final UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        final String query = "INSERT INTO Users (LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
+        final String query = "INSERT INTO Users (LOGIN, EMAIL, HASH," +
+                " SALT, TOKEN, ENABLE) VALUES (?, ?, ?, ?, ?, ?);";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection
+                     .prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getLogin());
             statement.setString(2, user.getEmail());
-            statement.setString(3, user.getPasswordHash());
-            statement.setString(4, user.getSalt());
+            statement.setBytes(3, user.getHash());
+            statement.setBytes(4, user.getSalt());
             statement.setString(5, user.getToken());
             statement.setBoolean(6, user.isEnable());
-            result = statement.executeUpdate();
+            result = getId(statement);
         } catch (ClassNotFoundException e) {
             LOGGER.error(e.getMessage());
         } catch (IllegalAccessException e) {
@@ -83,23 +85,46 @@ public class DaoUsersImpl implements IDaoUsers {
         return result;
     }
 
+    private long getId(PreparedStatement statement) throws SQLException {
+        long result = 0;
+        ResultSet rs = null;
+        try {
+            int affectedRows = statement.executeUpdate();
+            if (affectedRows != 0) {
+                rs = statement.getGeneratedKeys();
+                if (rs.next()) {
+                    result = rs.getLong(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOGGER.error(e.getMessage());
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+        }
+        return result;
+    }
+
     /**
      * This method do create PreparedStatement object. Received in params
      * connection and data.
      *
      * @param connection class connection.
-     * @param data       its user login or email
+     * @param login      This is login.
+     * @param email      This is email.
      * @return object PreparedStatement
      * @throws SQLException An exception that provides information on
      *                      a database access error or other errors.
      */
     private PreparedStatement getStatement(final Connection connection,
-                                           final String data) throws SQLException {
-        final String query = "SELECT ID, LOGIN, EMAIL, PASSWORD_HASH, SALT, TOKEN, ENABLE" +
+                                           final String login,
+                                           final String email) throws SQLException {
+        final String query = "SELECT ID, LOGIN, EMAIL, HASH, SALT, TOKEN, ENABLE" +
                 " FROM Users WHERE LOGIN = ? OR EMAIL = ?";
         final PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, data);
-        statement.setString(2, data);
+        statement.setString(1, login);
+        statement.setString(2, email);
         return statement;
     }
 
@@ -109,24 +134,26 @@ public class DaoUsersImpl implements IDaoUsers {
      * data valid do read user in db else return null. In this method
      * do handlers on date base exception if catch it do return null.
      *
-     * @param data This is login or email.
+     * @param login This is login.
+     * @param email This is email.
      * @return null or data about user.
      */
     @Override
-    public UserDaoModel read(String data) {
-        if (data == null || data.equals("")) {
+    public UserDaoModel read(final String login, final String email) {
+        if (login == null || login.equals("") ||
+                email == null || email.equals("")) {
             return null;
         }
-        final UserDaoModel result = new UserDaoModel();
+        UserDaoModel result = new UserDaoModel();
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = getStatement(connection, data);
+             PreparedStatement statement = getStatement(connection, login, email);
              ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 result.setIdUser(resultSet.getLong(1));
                 result.setLogin(resultSet.getString(2));
                 result.setEmail(resultSet.getString(3));
-                result.setPasswordHash(resultSet.getString(4));
-                result.setSalt(resultSet.getString(5));
+                result.setHash(resultSet.getBytes(4));
+                result.setSalt(resultSet.getBytes(5));
                 result.setToken(resultSet.getString(6));
                 result.setEnable(resultSet.getBoolean(7));
             }
@@ -152,16 +179,17 @@ public class DaoUsersImpl implements IDaoUsers {
      * @return id or zero if received wrong data or received exception.
      */
     @Override
-    public long update(UserDaoModel user) {
+    public long update(final UserDaoModel user) {
         if (user == null) {
             return 0;
         }
-        final String query = "UPDATE Users SET LOGIN=?, PASSWORD_HASH=?, ENABLE=? WHERE EMAIL=?;";
+        final String query = "UPDATE Users SET LOGIN=?, HASH=?, ENABLE=? WHERE EMAIL=?;";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection
+                     .prepareStatement(query)) {
             statement.setString(1, user.getLogin());
-            statement.setString(2, user.getPasswordHash());
+            statement.setBytes(2, user.getHash());
             statement.setBoolean(3, user.isEnable());
             statement.setString(4, user.getEmail());
             result = statement.executeUpdate();
@@ -187,15 +215,14 @@ public class DaoUsersImpl implements IDaoUsers {
      * @return id or zero if received wrong data or catch exception.
      */
     @Override
-    public long delete(String email) {
+    public long delete(final String email) {
         if (email == null || email.equals("")) {
             return 0;
         }
         final String query = "DELETE FROM Users WHERE EMAIL=?";
         long result = 0;
         try (Connection connection = source.getConnect();
-             PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, email);
             result = statement.executeUpdate();
         } catch (ClassNotFoundException e) {

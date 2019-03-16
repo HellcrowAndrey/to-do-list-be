@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class TaskModel {
 
+    private static TaskModel EMPTY = new TaskModel();
+
     protected long idTask;
 
     protected String taskName;
@@ -92,5 +94,9 @@ public class TaskModel {
                 ", task='" + task + '\'' +
                 ", status=" + status +
                 '}';
+    }
+
+    public boolean isEmpty() {
+        return this.equals(EMPTY);
     }
 }

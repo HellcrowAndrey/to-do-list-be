@@ -18,9 +18,9 @@ public class UserDaoModelTest {
 
     private String email;
 
-    private String passwordHash;
+    private byte[] hash;
 
-    private String salt;
+    private byte[] salt;
 
     private String token;
 
@@ -29,12 +29,12 @@ public class UserDaoModelTest {
     private String toString;
 
     public UserDaoModelTest(long idUser, String login, String email,
-                            String passwordHash, String salt, String token,
+                            byte[] hash, byte[] salt, String token,
                             boolean enable, String toString) {
         this.idUser = idUser;
         this.login = login;
         this.email = email;
-        this.passwordHash = passwordHash;
+        this.hash = hash;
         this.salt = salt;
         this.token = token;
         this.enable = enable;
@@ -46,9 +46,8 @@ public class UserDaoModelTest {
         return Arrays.asList(new Object[][]{
                 //This is actual case
                 {
-                        1l, "login", "email@gmail.com", "321321", "saltMock=-0", "Token2MoCk==", true,
-                        "UserDaoModel{idUser=1, login='login', email='email@gmail.com', passwordHash='321321'," +
-                                " salt='saltMock=-0', token='Token2MoCk==', enable=true}"
+                        1l, "login", "email@gmail.com", new byte[]{'2', '1', '3'}, new byte[]{'5','6','7'}, "Token2MoCk==", true,
+                        "UserDaoModel{idUser=1, login='login', email='email@gmail.com', hash=[50, 49, 51], salt=[53, 54, 55], token='Token2MoCk==', enable=true}"
                 }
         });
     }
@@ -60,7 +59,7 @@ public class UserDaoModelTest {
         model.setIdUser(idUser);
         model.setLogin(login);
         model.setEmail(email);
-        model.setPasswordHash(passwordHash);
+        model.setHash(hash);
         model.setSalt(salt);
         model.setToken(token);
         model.setEnable(enable);
@@ -68,7 +67,7 @@ public class UserDaoModelTest {
         assertEquals(model.getIdUser(), idUser);
         assertEquals(model.getLogin(), login);
         assertEquals(model.getEmail(), email);
-        assertEquals(model.getPasswordHash(), passwordHash);
+        assertEquals(model.getHash(), hash);
         assertEquals(model.getSalt(), salt);
         assertEquals(model.getToken(), token);
         assertEquals(model.isEnable(), enable);
@@ -82,7 +81,7 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);
@@ -90,7 +89,7 @@ public class UserDaoModelTest {
         model2.setIdUser(idUser);
         model2.setLogin(login);
         model2.setEmail(email);
-        model2.setPasswordHash(passwordHash);
+        model2.setHash(hash);
         model2.setSalt(salt);
         model2.setToken(token);
         model2.setEnable(enable);
@@ -106,14 +105,14 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);
 
         model2.setLogin(login);
         model2.setEmail(email);
-        model2.setPasswordHash(passwordHash);
+        model2.setHash(hash);
         model2.setSalt(salt);
         model2.setToken(token);
         model2.setEnable(enable);
@@ -129,7 +128,7 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);
@@ -144,7 +143,7 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);
@@ -160,7 +159,7 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);
@@ -168,7 +167,7 @@ public class UserDaoModelTest {
         model2.setIdUser(idUser);
         model2.setLogin(login);
         model2.setEmail(email);
-        model2.setPasswordHash(passwordHash);
+        model2.setHash(hash);
         model2.setSalt(salt);
         model2.setToken(token);
         model2.setEnable(enable);
@@ -183,7 +182,7 @@ public class UserDaoModelTest {
         model1.setIdUser(idUser);
         model1.setLogin(login);
         model1.setEmail(email);
-        model1.setPasswordHash(passwordHash);
+        model1.setHash(hash);
         model1.setSalt(salt);
         model1.setToken(token);
         model1.setEnable(enable);

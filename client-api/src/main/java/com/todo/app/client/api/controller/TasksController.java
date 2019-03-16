@@ -1,42 +1,52 @@
 package com.todo.app.client.api.controller;
 
 import com.todo.app.client.api.delegat.TasksDelegate;
-import com.todo.app.controller.model.task.TaskModel;
-import com.todo.app.utils.IdGenerator;
-import com.google.gson.Gson;
-import com.todo.app.controller.model.ResponseModel;
+import com.todo.app.controller.model.response.ResponseModel;
+import com.todo.app.controller.model.task.TaskUpdateModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
+import static com.todo.app.controller.constant.ControllerUtils.*;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
 public class TasksController {
 
+    /**
+     * This field is logger this class.
+     */
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(TasksController.class);
+
+    /**
+     * This field is link on TasksDelegate.
+     */
     @Autowired
-    private TasksDelegate delegate;
+    private TasksDelegate tasksDelegate;
 
-    private Logger logger = LoggerFactory.getLogger(TasksController.class);
+    @RequestMapping(value = TASKS, method = {GET, POST})
+    public ResponseEntity<ResponseModel> tasks(
+            @RequestParam(value = TOKEN) String token) {
+        LOGGER.info(RECEIVED_MESSAGE + TasksController.class);
+        final ResponseModel<String> result =
+                tasksDelegate.submitTasks(token);
+        LOGGER.info(result.toString());
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
-    @Async
-    @RequestMapping(value = "/tasks/{command}", method = {GET, POST})
-    public ResponseEntity tasks(@PathVariable String command,
-                                @RequestParam(value = "data") String data) {
-        if (command == null || command.equals("") ||
-                data == null || data.equals("")) {
-            return new ResponseEntity(
-                    new ResponseModel(IdGenerator.getInstance().getCounter(),
-                            "Incorrect data"), HttpStatus.OK);
-        }
-        Gson gson = new Gson();
-        TaskModel task = gson.fromJson(data, TaskModel.class);
-        return delegate.dispatcher(command, task);
+    @RequestMapping(value = TASK_FOR_COMMAND)
+    public ResponseEntity<ResponseModel> task(
+            @PathVariable String command,
+            @RequestParam(value = TOKEN) String token,
+            @RequestParam(value = DATA) String data) {
+        TaskUpdateModel task = new TaskUpdateModel(command, token, data);
+        ResponseModel<String> result = tasksDelegate.dispatcher(task);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
 }
