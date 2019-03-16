@@ -530,7 +530,7 @@
   </component>
   <component name="RunManager" selected="JUnit.java in data-access-object">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.todo.app.jdbc.dao.task.impl.DaoTasksImplIT" />
       <module name="utils" />
       <extension name="coverage">
         <pattern>
@@ -538,9 +538,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.todo.app.jdbc.dao.task.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.todo.app.jdbc.dao.task.impl.DaoTasksImplIT" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -621,8 +618,6 @@
       <item itemvalue="JUnit.java in data-access-object" />
       <item itemvalue="JUnit.java in data-access-object (1)" />
       <item itemvalue="Spring Boot.Main" />
-      <item itemvalue="JUnit.DaoUsersCreateImplTest.createTest" />
-      <item itemvalue="JUnit.DaoUsersUpdateImplTest.updateTest" />
     </list>
     <recent_temporary>
       <list>
