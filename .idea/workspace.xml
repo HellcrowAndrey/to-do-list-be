@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -308,7 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +318,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -627,6 +626,7 @@
       <workItem from="1552753070235" duration="599000" />
       <workItem from="1552807273547" duration="19423000" />
       <workItem from="1554655314166" duration="603000" />
+      <workItem from="1554657000855" duration="700000" />
     </task>
     <servers />
   </component>
@@ -663,7 +663,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="664892000" />
+    <option name="totallyTimeSpent" value="665592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -675,7 +675,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -684,7 +684,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.29330382" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.29662424" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741398" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38956714" />
@@ -693,7 +693,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32963374" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997233" weight="0.32741398" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4997233" visible="true" weight="0.32741398" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002767" side_tool="true" weight="0.32741398" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32741398" />
