@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="5f64b10b-78f0-4f70-9354-e206b6adbccf" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/data-access-object/target/" />
@@ -163,7 +167,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -314,6 +332,115 @@
               <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
               <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< Updated upstream
+=======
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="client-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="todo" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="to-do-list-be" type="b2602c69:ProjectViewProjectNode" />
+              <item name="to-do-list-be" type="462c0819:PsiDirectoryNode" />
+              <item name="data-access-object" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> Stashed changes
           </expand>
           <select />
         </subPane>
@@ -684,7 +811,11 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
+<<<<<<< Updated upstream
       <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.29662424" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.29994467" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741398" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38956714" />
@@ -1024,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-api/src/main/java/com/todo/app/client/api/controller/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="269">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
